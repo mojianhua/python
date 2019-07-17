@@ -1,0 +1,88 @@
+{\rtf1\ansi\ansicpg936\cocoartf1348\cocoasubrtf170
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fnil\fcharset134 STHeitiSC-Light;}
+{\colortbl;\red255\green255\blue255;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural
+
+\f0\fs24 \cf0 Django
+\f1 \'bb\'f9\'b1\'be\'c3\'fc\'c1\'ee
+\f0 \
+1
+\f1 \'a1\'a2
+\f0 startproject    #
+\f1 \'b4\'b4\'bd\'a8\'d2\'bb\'b8\'f6Django\'cf\'ee\'c4\'bf\
+2\'a1\'a2startapp       #\'b4\'b4\'bd\'a8\'d2\'bb\'b8\'f6Django\'d3\'a6\'d3\'c3\
+3\'a1\'a2check           #\'d0\'a3\'d1\'e9\'cf\'ee\'c4\'bf\'cd\'ea\'d5\'fb\'d0\'d4\
+4\'a1\'a2runserver      #\'b1\'be\'b5\'d8\'bc\'f2\'d2\'d7\'d4\'cb\'d0\'d0Django\'cf\'ee\'c4\'bf\
+5\'a1\'a2shell               #\'bd\'f8\'c8\'ebDjango\'cf\'ee\'c4\'bf\'b5\'c4python Shell\'bb\'b7\'be\'b3\
+6\'a1\'a2test    		 #\'d6\'b4\'d0\'d0Django\'d3\'c3\'c0\'fd\'b2\'e2\'ca\'d4 \
+7\'a1\'a2makemigrations #\'b4\'b4\'bd\'a8\'c4\'a3\'d0\'cd\'b1\'e4\'b8\'fc\'b5\'c4\'c7\'a8\'d2\'c6\'ce\'c4\'bc\'fe\
+8\'a1\'a2migrate                #\'d6\'b4\'d0\'d0\'c9\'cf\'d2\'bb\'b8\'f6\'c3\'fc\'c1\'ee\'b4\'b4\'bd\'a8\'b5\'c4\'c7\'a8\'d2\'c6\'ce\'c4\'bc\'fe\
+9\'a1\'a2dumpdata          #\'b0\'d1\'ca\'fd\'be\'dd\'bf\'e2\'ca\'fd\'be\'dd\'b5\'bc\'b3\'f6\'b5\'bd\'ce\'c4\'bc\'fe\
+10\'a1\'a2loaddata          #\'b0\'d1\'ce\'c4\'bc\'fe\'ca\'fd\'be\'dd\'b5\'bc\'c8\'eb\'b5\'bd\'ca\'fd\'be\'dd\'bf\'e2\
+\
+\'d0\'c2\'bd\'a8Django\'cf\'ee\'c4\'bf\
+1\'a1\'a2django-admin startproject \'cf\'ee\'c4\'bf\'c3\'fb\
+\'c6\'f4\'b6\'afdjango\
+2\'a1\'a2python3 runserver manage.py\
+\'b4\'b4\'bd\'a8\'d3\'a6\'d3\'c3\
+3\'a1\'a2python3 manage.py startapp \'d3\'a6\'d3\'c3\'c3\'fb\'b3\'c6\
+\'d7\'a2\'d2\'e2\'a3\'ac\'c4\'bf\'c2\'bc\'c0\'ef\'c3\'e6\'c8\'b1\'c9\'d9urls.py,\'b9\'dc\'c0\'ed\'d3\'a6\'d3\'c3\'c2\'b7\'d3\'c9\'b5\'c4\'b5\'d8\'b7\'bd\
+4\'a1\'a2\'d4\'da\'d3\'a6\'d3\'c3\'c4\'bf\'c2\'bc\'c0\'ef\'c3\'e6\'b5\'c4view.py\'d0\'c2\'bd\'a8\'b7\'bd\'b7\'a8\'a3\'ac\'d3\'c3\'d3\'da\'b0\'f3\'b6\'a8\'b7\'bd\'b7\'a8\'c2\'b7\'d3\'c9\'a3\'ac\'c8\'e7\'c0\'fd\'d7\'d3\'ce\'aablog\'a3\'ac\'d4\'f2\'d4\'dablog\'c0\'ef\'c3\'e6\'d7\'f6\'c2\'b7\'d3\'c9\
+5\'a1\'a2\'d4\'da\'d2\'fd\'d3\'c3\'ce\'c4\'bc\'fe\'bc\'d0\'c0\'ef\'c3\'e6\'d0\'c2\'bd\'a8urls.py\'b0\'f3\'b6\'a8\'d3\'a6\'d3\'c3\'c2\'b7\'d3\'c9\'a3\'ac\'c8\'e7\'c0\'fd\'d7\'d3\'d3\'a6\'d3\'c3\'ce\'aablog\'a1\'a3\'d4\'f2\'d4\'dablog\'c0\'ef\'c3\'e6\'d0\'c2\'bd\'a8urls.py\
+6\'a1\'a2\'d4\'da\'cf\'ee\'c4\'bf\'c2\'b7\'d3\'c9\'a3\'ac\'bc\'b4\'bb\'f9\'b4\'a1\'c2\'b7\'d3\'c9\'d2\'fd\'c8\'eb\'d3\'a6\'d3\'c3\'c2\'b7\'d3\'c9\
+7\'a1\'a2\'d4\'dasetting\'c0\'ef\'c3\'e6INSTALLED_APPS\'b1\'e4\'c1\'bf\'cc\'ed\'bc\'d3\'d3\'a6\'d3\'c3\'cc\'ed\'bc\'d3\'b5\'bd\'cf\'ee\'c4\'bf\'c0\'ef\
+\'a1\'aeblog.apps.blogConfig\'a1\'af\
+8\'a1\'a2\'c4\'a3\'d0\'cd\'b1\'e4\'b8\'fc\'a3\'ac\'c9\'fa\'b3\'c9\'c7\'a8\'d2\'c6\'ce\'c4\'bc\'fe\
+python3 manage.py makemigrations\
+9\'a1\'a2\'d4\'cb\'d0\'d0\'c7\'a8\'d2\'c6\'ce\'c4\'bc\'fe\
+python3 manage.py migrate\
+\
+\
+Django shell\
+10\'a1\'a2\'bd\'f8\'c8\'ebDjango\
+python3 Django shell\
+11\'a1\'a2\'c0\'fb\'d3\'c3Django shell \'b1\'a3\'b4\'e6\'ce\'c4\'d5\'c2\'ca\'fd\'be\'dd\
+from blog.models import Article\
+a = Article()\
+a.title = \'a1\'afTest title\'a1\'af\
+a.brief_content = \'a1\'afTest Django shell\'a1\'af\
+a.content = \'a1\'afTest Django\'a1\'af\
+a.save()\
+\
+12\'a1\'a2\'b2\'e9\'bf\'b4\'ca\'fd\'be\'dd\
+a = Article.objects.all()    #\'bb\'f1\'c8\'a1\'ce\'c4\'d5\'c2\'b1\'ed\'c1\'d0\'b1\'ed\
+a = a[0]                                #\'bb\'f1\'c8\'a1\'b5\'da\'d2\'bb\'cc\'f5\'ca\'fd\'be\'dd\
+print(a.title)			# \'bb\'f1\'c8\'a1\'b5\'da\'d2\'bb\'cc\'d7\'ca\'fd\'be\'dd\'c0\'ef\'c3\'e6\'b5\'c4title\
+\
+Django Admin\
+13\'a1\'a2\'d0\'c2\'bd\'a8\'b3\'ac\'bc\'b6\'b9\'dc\'c0\'ed\'d4\'b1\'d3\'c3\
+python3 mange.py createsuperuser\
+\
+14\'a1\'a2\'ca\'d3\'cd\'bc\'b1\'ea\'c7\'a9\
+14.1 for\'b1\'ea\'c7\'a9\
+\{% for x in list%\},\{% endfor %\}\
+14.2 if\'b1\'ea\'c7\'a9\
+\{% if %\},\{% else %\},\{% end if %\}\
+\
+Django\'c4\'bf\'c2\'bc\'bd\'e1\'b9\'b9\
+1\'a1\'a2WSGI\
+python\'d3\'a6\'d3\'c3\'d3\'ebWeb\'b7\'fe\'ce\'f1\'c6\'f7\'d6\'ae\'bc\'e4\'b5\'c4\'bd\'d3\'bf\'da\
+2\'a1\'a2__init__.py\
+python\'d6\'d0\'c9\'f9\'c3\'f7\'c4\'a3\'bf\'e9\'b5\'c4\'ce\'c4\'bc\'fe\'a3\'ac\'c4\'da\'c8\'dd\'c4\'ac\'c8\'cf\'ce\'aa\'bf\'d5\
+3\'a1\'a2settings.py\
+\'d7\'dc\'c5\'e4\'d6\'c3\'ce\'c4\'bc\'fe\
+\
+\'d3\'a6\'d3\'c3\'c4\'bf\'c2\'bc\'bd\'e9\'c9\'dc\
+1\'a1\'a2migrations\
+\'ca\'fd\'be\'dd\'c7\'a8\'d2\'c6\'c4\'a3\'bf\'e9\
+2\'a1\'a2admin.py\
+\'b8\'c3\'d3\'a6\'d3\'c3\'b5\'c4\'ba\'f3\'cc\'a8\'b9\'dc\'c0\'ed\'c5\'e4\'d6\'c3\
+3\'a1\'a2apps.py\
+\'b5\'b1\'c7\'b0\'d3\'a6\'d3\'c3\'b5\'c4\'c5\'e4\'d6\'c3\
+4\'a1\'a2modles.py\
+\'ca\'fd\'be\'dd\'c4\'a3\'bf\'e9\'a3\'ac\'ca\'b9\'d3\'c3ORM\'bf\'f2\'bc\'dc\
+5\'a1\'a2test.py\
+\'d7\'d4\'b6\'af\'bb\'af\'b2\'e2\'ca\'d4\'c4\'a3\'bf\'e9\
+6\'a1\'a2views.py\
+\'d6\'b4\'d0\'d0\'cf\'e0\'d3\'a6\'b5\'c4\'b4\'fa\'c2\'eb\'cb\'f9\'d4\'da\'c4\'a3\'bf\'e9}
