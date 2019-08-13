@@ -1,14 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f422e7e8-9e6b-4aa8-8e86-2e615f1a9fde" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/day11/wraper.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pythonORM/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pythonORM/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Django/Django基本命令.rtf" beforeDir="false" afterPath="$PROJECT_DIR$/../Django/Django基本命令.rtf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../pythonORM/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../pythonORM/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../pythonORM/pythonORM/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/../pythonORM/pythonORM/settings.py" afterDir="false" />
-    </list>
+    <list default="true" id="f422e7e8-9e6b-4aa8-8e86-2e615f1a9fde" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -126,12 +119,7 @@
             <path>
               <item name="newStudyPython" type="b2602c69:ProjectViewProjectNode" />
               <item name="newStudyPython" type="462c0819:PsiDirectoryNode" />
-              <item name="neizhihanshu" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="newStudyPython" type="b2602c69:ProjectViewProjectNode" />
-              <item name="newStudyPython" type="462c0819:PsiDirectoryNode" />
-              <item name="操作文件" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -142,6 +130,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -205,12 +194,12 @@
       <updated>1563361955955</updated>
       <workItem from="1563361957132" duration="29961000" />
       <workItem from="1563781031439" duration="6753000" />
-      <workItem from="1563797416512" duration="64994000" />
+      <workItem from="1563797416512" duration="65377000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="101708000" />
+    <option name="totallyTimeSpent" value="102091000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -223,7 +212,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="555" y="42" width="789" height="689" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4975" visible="true" weight="0.23962517" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
