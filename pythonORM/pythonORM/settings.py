@@ -20,7 +20,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/2.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 't3ajt_o%h5cuio#x2m169ag7l4wdwn7t9=swvna3!4go-7w)p8'
+SECRET_KEY = '9cunz3snv&uvm_21(*dv$8ltsiof6(u@bsx$r6fev$(xaw$ge_'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -75,8 +75,17 @@ WSGI_APPLICATION = 'pythonORM.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'test_f2c',
+        'USER': 'root',
+        'PASSWORD': '1qa2ws#ED',
+        'HOST': '47.107.45.177',
+        'OPTION': {
+            'init_command': "SET default_storage_engine=INNODB;"
+                            "SET sql_mode='STRICT_TRANS_TABLES';"
+                            "SET GLOBAL group_concat_max_len=102400;"
+                            "SET charset utf8;"
+        }
     }
 }
 
