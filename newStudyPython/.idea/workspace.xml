@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f422e7e8-9e6b-4aa8-8e86-2e615f1a9fde" name="Default Changelist" comment="" />
+    <list default="true" id="f422e7e8-9e6b-4aa8-8e86-2e615f1a9fde" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/re/re.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,11 +34,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/suanfa/erfengsuanfan.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="195">
               <caret line="48" column="26" selection-start-line="48" selection-start-column="26" selection-end-line="48" selection-end-column="26" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/re/re.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="45">
+              <caret line="3" column="25" selection-start-line="3" selection-start-column="25" selection-end-line="3" selection-end-column="25" />
             </state>
           </provider>
         </entry>
@@ -94,6 +106,7 @@
         <option value="$PROJECT_DIR$/neizhihanshu/file.txt" />
         <option value="$PROJECT_DIR$/neizhihanshu/01.py" />
         <option value="$PROJECT_DIR$/suanfa/erfengsuanfan.py" />
+        <option value="$PROJECT_DIR$/re/re.py" />
       </list>
     </option>
   </component>
@@ -115,6 +128,11 @@
             <path>
               <item name="newStudyPython" type="b2602c69:ProjectViewProjectNode" />
               <item name="newStudyPython" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="newStudyPython" type="b2602c69:ProjectViewProjectNode" />
+              <item name="newStudyPython" type="462c0819:PsiDirectoryNode" />
+              <item name="re" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -148,7 +166,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.erfengsuanfan">
+  <component name="RunManager" selected="Python.re">
     <configuration name="erfengsuanfan" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="newStudyPython" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -193,8 +211,31 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="re" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="newStudyPython" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/re" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/re/re.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.re" />
         <item itemvalue="Python.erfengsuanfan" />
         <item itemvalue="Python.generator" />
       </list>
@@ -212,12 +253,12 @@
       <updated>1563361955955</updated>
       <workItem from="1563361957132" duration="29961000" />
       <workItem from="1563781031439" duration="6753000" />
-      <workItem from="1563797416512" duration="69036000" />
+      <workItem from="1563797416512" duration="69455000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="105750000" />
+    <option name="totallyTimeSpent" value="106169000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -232,12 +273,12 @@
     <frame x="555" y="42" width="789" height="689" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4975" visible="true" weight="0.23962517" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4975" visible="true" weight="0.23962517" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" sideWeight="0.5025" side_tool="true" weight="0.23962517" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32998326" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32998326" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -260,6 +301,7 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/newStudyPython$erfengsuanfan.coverage" NAME="erfengsuanfan Coverage Results" MODIFIED="1566095546481" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/suanfa" />
+    <SUITE FILE_PATH="coverage/newStudyPython$re.coverage" NAME="re Coverage Results" MODIFIED="1566096484531" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/re" />
     <SUITE FILE_PATH="coverage/newStudyPython$generator.coverage" NAME="generator Coverage Results" MODIFIED="1564736999706" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/diedaiqi" />
   </component>
   <component name="editorHistoryManager">
@@ -417,6 +459,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
           <caret line="48" column="26" selection-start-line="48" selection-start-column="26" selection-end-line="48" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/re/re.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="25" selection-start-line="3" selection-start-column="25" selection-end-line="3" selection-end-column="25" />
         </state>
       </provider>
     </entry>
