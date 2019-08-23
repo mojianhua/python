@@ -10,3 +10,11 @@ def demo2():
 
 if __name__ == '__main__':
     demo2()
+
+# 模块导入
+# import
+# from 模块名 import 变量
+# as 重命名
+# 都支持多命名导入
+# sys.moudles 记录了所有碑导入的默默
+# sys.path 记录导入模块寻找的路径

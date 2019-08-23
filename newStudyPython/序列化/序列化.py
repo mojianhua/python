@@ -3,6 +3,13 @@ dic = {'k1':'vi'}
 # 序列化
 str_d = json.dumps(dic)
 print(str_d)
+# json.dumps参数
+data = {'username':['jim111','jim222'],'sex':'male','age':16}
+# sort_keys 字典键盘值按照从小到大排序
+# indext字典每个键值缩进排序
+# separators 分割符
+json_dic2 = json.dumps(data,sort_keys=True,indent=4,separators=(',',':'),ensure_ascii=True)
+print(json_dic2)
 #反序列化
 dic_d = json.loads(str_d)
 print(dic_d)
