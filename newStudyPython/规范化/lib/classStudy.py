@@ -1,3 +1,4 @@
+import random
 class Persion:
     # 静态属性
     country = 'China'
@@ -26,9 +27,16 @@ class Persion2:
 
     def attack(self,dog):
         dog.hp = int(dog.hp) - int(self.ack)
-        print('%s 被 %s 攻击, 伤了 %s 点血,还剩下 %s' % (dog.name,self.name,self.ack,dog.hp))
-        if (int(self.hp) == 0):
-            print('%s被 %s 击败了' % (dog.name,self.name))
+        if int (dog.hp) < 0:
+            dog.hp = 0
+            print('%s 被 %s 攻击, 伤了 %s 点血,还剩下 %s' % (dog.name, self.name, self.ack, dog.hp))
+            print('%s被 %s 击败了' % (dog.name, self.name))
+            exit()
+        else:
+            print('%s 被 %s 攻击, 伤了 %s 点血,还剩下 %s' % (dog.name,self.name,self.ack,dog.hp))
+            if (int(self.hp) == 0 or int(self.hp) < 0):
+                print('%s被 %s 击败了' % (dog.name,self.name))
+                exit()
 
 class Dog():
     def __init__(self,*args):
@@ -39,6 +47,13 @@ class Dog():
 
     def bite(self,persion):
         persion.hp = int(persion.hp) - int(self.ack)
-        print('%s 被 % s 攻击, 伤了 %s , 还剩下 %s' % (persion.name,self.name,self.ack,persion.hp))
-        if (int(self.hp) == 0):
+        if int (persion.hp) < 0:
+            persion.hp = 0
+            print('%s 被 % s 攻击, 伤了 %s , 还剩下 %s' % (persion.name, self.name, self.ack, persion.hp))
             print('%s 被 %s 击败了' % (persion.name,self.name))
+            exit()
+        else:
+            print('%s 被 % s 攻击, 伤了 %s , 还剩下 %s' % (persion.name,self.name,self.ack,persion.hp))
+            if (int(self.hp) == 0 or int(self.hp) < 0):
+                print('%s 被 %s 击败了' % (persion.name,self.name))
+                exit()

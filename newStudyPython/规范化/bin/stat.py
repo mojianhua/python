@@ -30,8 +30,8 @@ if __name__ == '__main__':
     # # 类里面重现赋默认值
     # retClass.name = 'jim2'
     # print(retClass.name)
-    retDog = classStudy.Dog('dog1',100,10,'2哈')
-    retPersion = classStudy.Persion2('Jim1',200,20,'boy')
+    retDog = classStudy.Dog('斯莱曼',100,10,'2哈')
+    retPersion = classStudy.Persion2('真传奇',200,20,'boy')
     # 狗咬人
     #retDog.bite(retPersion)
     #print(retPersion.hp)
