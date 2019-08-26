@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9744dd02-0fa8-436c-8239-6f63dff47126" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/newStudyPython/包导入/demo.py" beforeDir="false" afterPath="$PROJECT_DIR$/newStudyPython/包导入/demo.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/newStudyPython/序列化/序列化.py" beforeDir="false" afterPath="$PROJECT_DIR$/newStudyPython/序列化/序列化.py" afterDir="false" />
-    </list>
+    <list default="true" id="9744dd02-0fa8-436c-8239-6f63dff47126" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,7 +23,7 @@
         <entry file="file://$PROJECT_DIR$/newStudyPython/study/01.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="76">
-              <caret line="4" column="28" lean-forward="true" selection-start-line="4" selection-start-column="28" selection-end-line="4" selection-end-column="28" />
+              <caret line="4" column="28" selection-start-line="4" selection-start-column="28" selection-end-line="4" selection-end-column="28" />
             </state>
           </provider>
         </entry>
@@ -35,7 +31,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/newStudyPython/序列化/序列化.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1536">
+            <state relative-caret-position="171">
               <caret line="9" column="16" selection-start-line="9" selection-start-column="16" selection-end-line="9" selection-end-column="16" />
             </state>
           </provider>
@@ -45,7 +41,7 @@
         <entry file="file://$PROJECT_DIR$/newStudyPython/包导入/demo.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="247">
-              <caret line="13" column="6" lean-forward="true" selection-start-line="13" selection-start-column="6" selection-end-line="13" selection-end-column="6" />
+              <caret line="13" column="6" selection-start-line="13" selection-start-column="6" selection-end-line="13" selection-end-column="6" />
             </state>
           </provider>
         </entry>
@@ -93,8 +89,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="845" />
-    <option name="y" value="106" />
+    <option name="x" value="912" />
+    <option name="y" value="115" />
     <option name="width" value="1400" />
     <option name="height" value="892" />
   </component>
@@ -103,34 +99,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="python" type="b2602c69:ProjectViewProjectNode" />
-              <item name="python" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="python" type="b2602c69:ProjectViewProjectNode" />
-              <item name="python" type="462c0819:PsiDirectoryNode" />
-              <item name="newStudyPython" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="python" type="b2602c69:ProjectViewProjectNode" />
-              <item name="python" type="462c0819:PsiDirectoryNode" />
-              <item name="newStudyPython" type="462c0819:PsiDirectoryNode" />
-              <item name="包导入" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="python" type="b2602c69:ProjectViewProjectNode" />
-              <item name="python" type="462c0819:PsiDirectoryNode" />
-              <item name="newStudyPython" type="462c0819:PsiDirectoryNode" />
-              <item name="序列化" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
+      <pane id="ProjectPane" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -292,17 +261,17 @@
       <workItem from="1565764135212" duration="4194000" />
       <workItem from="1566352911704" duration="7426000" />
       <workItem from="1566457747931" duration="11829000" />
+      <workItem from="1566802589891" duration="35000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="23449000" />
+    <option name="totallyTimeSpent" value="23484000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="845" y="106" width="1400" height="892" extended-state="0" />
-    <editor active="true" />
+    <frame x="912" y="115" width="1400" height="892" extended-state="0" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25746268" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26119402" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -403,13 +372,13 @@
     <entry file="file://$PROJECT_DIR$/newStudyPython/study/01.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="76">
-          <caret line="4" column="28" lean-forward="true" selection-start-line="4" selection-start-column="28" selection-end-line="4" selection-end-column="28" />
+          <caret line="4" column="28" selection-start-line="4" selection-start-column="28" selection-end-line="4" selection-end-column="28" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/newStudyPython/序列化/序列化.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1536">
+        <state relative-caret-position="171">
           <caret line="9" column="16" selection-start-line="9" selection-start-column="16" selection-end-line="9" selection-end-column="16" />
         </state>
       </provider>
@@ -417,7 +386,7 @@
     <entry file="file://$PROJECT_DIR$/newStudyPython/包导入/demo.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="247">
-          <caret line="13" column="6" lean-forward="true" selection-start-line="13" selection-start-column="6" selection-end-line="13" selection-end-column="6" />
+          <caret line="13" column="6" selection-start-line="13" selection-start-column="6" selection-end-line="13" selection-end-column="6" />
         </state>
       </provider>
     </entry>
