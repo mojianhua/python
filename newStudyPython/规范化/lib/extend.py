@@ -1,5 +1,11 @@
-class A:pass    # 父类，基类，超类
-class B:pass    # 父类，基类，超类
+class A:   # 父类，基类，超类
+    pass
+    # def func(self):
+    #     print('AAAA')
+
+class B:    # 父类，基类，超类
+    def func(self):
+        print('bbbbb')
 class AB_son(A,B):pass    # 子类，派生类
 class A_son(A):pass          # 子类，派生类
 
@@ -36,3 +42,20 @@ print(jim.ack)
 print(jim.sex)
 # 调用子类里面的方法
 print(jim.attck())
+
+
+# 多继承
+class C:
+    pass
+    # def func(self):
+    #     print('CCCC')
+
+class D(A,B,C):
+    def func(self):
+        print('dddd')
+
+d = D()
+# 找的顺序是A,B,C,D来找
+d.func()
+
+# 新式类，就是广度优先，继承顺序是从左往右
