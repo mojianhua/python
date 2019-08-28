@@ -61,9 +61,9 @@ if __name__ == '__main__':
     # print(ring.perimeter())
 
     # 生日
-    b = classStudy.Birthday(2011,1,16)
-    egg = classStudy.Teacher('sb1',0,'boy',b)
-    # 获取类里面的年纪
-    print(egg.birthday.year)
-    # 获取老师课程
-    print(egg.course.lesson)
+    # b = classStudy.Birthday(2011,1,16)
+    # egg = classStudy.Teacher('sb1',0,'boy',b)
+    # # 获取类里面的年纪
+    # print(egg.birthday.year)
+    # # 获取老师课程
+    # print(egg.course.lesson)
