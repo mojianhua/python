@@ -63,7 +63,7 @@ class Swim_Amimal(metaclass=ABCMeta):
 # 因为继承了 Fly_Animal 和 Walk_Animal，所以类里面要有fly和walk类
 class Eagle(Fly_Animal,Walk_Animal):
     __Eagle_name = 'Private_name'
-    
+
     def __init__(self,age):
         # 私有属性,只能在内部使用
         self.__age = age
@@ -87,8 +87,17 @@ class Eagle(Fly_Animal,Walk_Animal):
 e = Eagle(10)
 e.fly()
 # python没接口类
+    # java没多基础，为了接口隔离原则，设计了接口这个概念，支持多继承
+    # java本来就支持单继承，所以有了抽象类
     # python 中自带多继承，所以我们可以使用class实现接口类
 # python 支持抽象类，一般情况下单继承不能实例化
+
+# 多态-----pythont天生多态
+# 鸭子类型---不依赖父类的情况下实现两个相似类中的同名方法
+
+# 封装---私有的
+# 再python只要名字有__名字，就开始私有化了
+
 # 总结
     # 1、接口类是多继承，抽象类是单继承
     # 2、如果使用from abc import abstractclassmethod,ABCMeta就意味着你要定义一个规范
