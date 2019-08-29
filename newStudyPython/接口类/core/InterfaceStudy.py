@@ -1,5 +1,6 @@
 # 制作一个父类，如果子类方法不存在则直接调用父类里面的方法，目的是兼容错误
 from abc import abstractclassmethod,ABCMeta
+# 抽象类例子
 class Payment(metaclass=ABCMeta):
     """
       @abstractmethod：抽象方法，含abstractmethod方法的类不能实例化，继承了含abstractmethod方法的子类必须复写所有abstractmethod装饰的方法，未被装饰的可以不重写
@@ -33,6 +34,42 @@ class pay:
     def __init__(self,pay_obj,money):
         obj = pay_obj()
         obj.pay(money)
+
+
+# 接口类
+
+"""
+  @abstractmethod：抽象方法，含abstractmethod方法的类不能实例化，继承了含abstractmethod方法的子类必须复写所有abstractmethod装饰的方法，未被装饰的可以不重写
+  @ property：方法伪装属性，方法返回值及属性值，被装饰方法不能有参数，必须实例化后调用，类不能调用
+  @ classmethod：类方法，可以通过实例对象和类对象调用，被该函数修饰的方法第一个参数代表类本身常用cls，被修饰函数内可调用类属性，不能调用实例属性
+  @staticmethod：静态方法，可以通过实例对象和类对象调用，被装饰函数可无参数，被装饰函数内部通过类名.属性引用类属性或类方法，不能引用实例属性
+"""
+
+class Walk_Animal(metaclass=ABCMeta):
+    @abstractclassmethod
+    def walk(self):
+        print('walk')
+
+class Fly_Animal(metaclass=ABCMeta):
+    @abstractclassmethod
+    def fly(self):
+        print('fly')
+
+class Swim_Amimal(metaclass=ABCMeta):
+    @abstractclassmethod
+    def swim(self):
+        print('swim')
+
+# 因为继承了 Fly_Animal 和 Walk_Animal，所以类里面要有fly和walk类
+class Eagle(Fly_Animal,Walk_Animal):
+    def __init__(self):
+        print('Eagle')
+
+    def fly(self):
+        print('eagle fly')
+
+    def walk(self):
+        print('eagle walk')
 
 # python没接口类
     # python 中自带多继承，所以我们可以使用class实现接口类

@@ -13,5 +13,6 @@ sys.path.append(os.path.dirname(os.getcwd()))
 if __name__ == '__main__':
     # alipay = InterfaceStudy.pay(InterfaceStudy.Alipay,300)
     # wc = InterfaceStudy.pay(InterfaceStudy.Wechar,900)
-    applePay = InterfaceStudy.pay(InterfaceStudy.ApplePay,255)
+    # applePay = InterfaceStudy.pay(InterfaceStudy.ApplePay,255)
     # print(applePay.money)
+    eagle = InterfaceStudy.Eagle()
