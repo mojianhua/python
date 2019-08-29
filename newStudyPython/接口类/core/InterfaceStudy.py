@@ -62,15 +62,30 @@ class Swim_Amimal(metaclass=ABCMeta):
 
 # 因为继承了 Fly_Animal 和 Walk_Animal，所以类里面要有fly和walk类
 class Eagle(Fly_Animal,Walk_Animal):
-    def __init__(self):
+    __Eagle_name = 'Private_name'
+    
+    def __init__(self,age):
+        # 私有属性,只能在内部使用
+        self.__age = age
         print('Eagle')
+        # 调用私有方法
+        self.__private_get_age()
+        # 调用私有的变量
+        print(self.__Eagle_name)
 
     def fly(self):
+        print(self.__age)
         print('eagle fly')
 
     def walk(self):
         print('eagle walk')
 
+    # 设置私有方法
+    def __private_get_age(self):
+        print(self.__age)
+
+e = Eagle(10)
+e.fly()
 # python没接口类
     # python 中自带多继承，所以我们可以使用class实现接口类
 # python 支持抽象类，一般情况下单继承不能实例化
