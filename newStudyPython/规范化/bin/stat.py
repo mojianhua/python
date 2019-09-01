@@ -20,6 +20,7 @@ if __name__ == '__main__':
     # # 面向对象
     # # mianxiangduixiang.mianxiangduixiang()
     # # 实例化类，调用加括号往类里面传值
+    # 对象 = 类(参数是init方法)
     # retClass = classStudy.Persion('Jim',100,10,'boy')
     # print(retClass)
     # # 获取class里面的默认值
@@ -38,10 +39,31 @@ if __name__ == '__main__':
     # 人打狗
     #retPersion.attack(retDog)
     #print(retDog.hp)
-    while retDog.hp:
-        retPersion.attack(retDog)
-        # print(retPersion.name , retDog.hp)
-        time.sleep(1)
-        retDog.bite(retPersion)
-        # print(retDog.name, retPersion.hp)
-        time.sleep(1)
+    # while retDog.hp:
+    #     retPersion.attack(retDog)
+    #     # print(retPersion.name , retDog.hp)
+    #     time.sleep(1)
+    #     retDog.bite(retPersion)
+    #     # print(retDog.name, retPersion.hp)
+    #     time.sleep(1)
+
+    # 计算圆
+    # cirecle = classStudy.Circle(6)
+    # ret = cirecle.area()
+    # # 面积
+    # print(ret)
+    # ret = cirecle.perimeter()
+    # print(ret)
+
+    # 圆环计算
+    # ring = classStudy.Ring(10,9)
+    # print(ring.area())
+    # print(ring.perimeter())
+
+    # 生日
+    # b = classStudy.Birthday(2011,1,16)
+    # egg = classStudy.Teacher('sb1',0,'boy',b)
+    # # 获取类里面的年纪
+    # print(egg.birthday.year)
+    # # 获取老师课程
+    # print(egg.course.lesson)
