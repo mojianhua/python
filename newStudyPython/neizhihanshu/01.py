@@ -154,30 +154,84 @@ print(list(ret))
 with open('./file.txt',encoding='utf-8') as r1:
     l = r1.readlines()
 
-page_num  = int(input('请输入页码'))
-pages,mod = divmod(len(l),3)        #求多少页，页数加一
-if mod:
-    pages += 1                      #一共有多少页
-if page_num > pages or pages <= 0:
-    print('输入有错误')
-elif page_num == pages and mod !=0:   #如果是最后一页，且之前有过剩余的行数
-    print(l[3*(page_num-1):])
-    #print(3*(page_num-1))
-else:
-    print(l[(3 * (page_num - 1)):((page_num * 3))])
+# page_num  = int(input('请输入页码'))
+# pages,mod = divmod(len(l),3)        #求多少页，页数加一
+# if mod:
+#     pages += 1                      #一共有多少页
+# if page_num > pages or pages <= 0:
+#     print('输入有错误')
+# elif page_num == pages and mod !=0:   #如果是最后一页，且之前有过剩余的行数
+#     print(l[3*(page_num-1):])
+#     #print(3*(page_num-1))
+# else:
+#     print(l[(3 * (page_num - 1)):((page_num * 3))])
+#
+#
+# # 字典name对应股票名，shares代表股数目，price代表单价，计算总价
+# pro = [
+#     {'name':'IBM','shares':100,'price':91},
+#     {'name':'IBM2','shares':101,'price':111},
+#     {'name': 'IBM3', 'shares': 1111, 'price': 11111},
+# ]
+#
+# # round 保留两个小数
+# ret = map(lambda dit:{dit['name']:round(dit['shares'] * dit['price'],2)},pro)
+# print(list(ret))
+#
+# # file 获取大于100的单价股票数
+# ret = filter(lambda dit:dit['price'] > 100,pro)
+# print(list(ret))
 
 
-# 字典name对应股票名，shares代表股数目，price代表单价，计算总价
-pro = [
-    {'name':'IBM','shares':100,'price':91},
-    {'name':'IBM2','shares':101,'price':111},
-    {'name': 'IBM3', 'shares': 1111, 'price': 11111},
-]
+class Goods:
+    __discount = 0.8
+    def __init__(self,name,price):
+        self.name = name
+        self.__price = price
 
-# round 保留两个小数
-ret = map(lambda dit:{dit['name']:round(dit['shares'] * dit['price'],2)},pro)
-print(list(ret))
 
-# file 获取大于100的单价股票数
-ret = filter(lambda dit:dit['price'] > 100,pro)
-print(list(ret))
+    # 将一个'类中的方法'变成一个属性调用
+    @property
+    def price(self):
+        return self.__price * Goods.__discount
+
+    # 将一个'类中的方法'变成一个属性的方式修改
+    # 其中@price.setter 里面的 @price是可以修改的。对应下面要调用的下面price方法
+    @price.setter
+    def price(self,newPrice):
+        self.__price = newPrice
+
+    # 将一个'类中的方法'变成一个属性的方式删除
+    # 其中@price.setter 里面的 @price是可以修改的。对应下面要调用的下面price方法
+    # @price.deleter
+    # def name(self):
+    #     del self.name
+
+    # 把一个方法变成一个类中方法，这个方法可以直接调用，不需要依托任何对象
+    @classmethod
+    def change_discount(cls,new_discount):
+        cls.__discount = new_discount
+
+    #静态方法
+    @staticmethod
+    def goods_desc():
+        goods_name = input('请输入产品名称')
+        goods_price = input('请输入产品价格')
+        Goods(goods_name,goods_price)
+
+
+apple = Goods('苹果',5)
+# 将一个'类中的方法'变成一个属性调用
+print(apple.price)
+# 将一个'类中的方法'变成一个属性的方式修改
+apple.price = 9
+print(apple.price)
+# 将一个'类中的方法'变成一个属性的方式删除
+# del apple.price
+# print(apple.price)
+
+# 直接调用change_discount
+Goods.change_discount(0.1)
+print(apple.price)
+
+# Goods.goods_desc()
