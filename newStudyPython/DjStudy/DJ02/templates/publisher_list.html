@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>hi</title>
+    <link rel="stylesheet" href="/static/css/test.css">
+</head>
+<body>
+<h1 class="test2">publisher_list</h1>
+<table>
+    <thead>
+        <tr>
+            <th>序号</th>
+            <th>id</th>
+            <th>name</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for publisher_list in publisher_list %}
+            <tr>
+                <!-- for 的计数，类似下标 -->
+                <td>{{ forloop.counter }}</td>
+                <td>{{ publisher_list.id }}</td>
+                <td>{{ publisher_list.name }}</td>
+                <td><a href="/publisher_del/?id={{ publisher_list.id }}">del</a></td>
+                <td><a href="/publisher_update/?id={{ publisher_list.id }}">update</a></td>
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>
+<a href="/publisher_add/">添加管理员</a>
+</body>
+</html>

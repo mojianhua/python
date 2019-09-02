@@ -20,12 +20,16 @@ from django.contrib import admin
 from .views import login,savelogin
 # app里面的视图
 from app01 import views
-
+from BookManageAppp import views as BookManageApppview
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^login/', login),
     url(r'^savelogin/', savelogin),
     url(r'^app01login/', views.login),
     url(r'user_list/',views.user_list),
-    url(r'user_add/',views.user_add)
+    url(r'user_add/',views.user_add),
+    url(r'publisher_list/',BookManageApppview.publisher_list),
+    url(r'publisher_add/',BookManageApppview.publisher_add),
+    url(r'publisher_del/',BookManageApppview.publisher_del),
+    url(r'publisher_update/',BookManageApppview.publisher_update)
 ]

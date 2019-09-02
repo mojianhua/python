@@ -27,6 +27,7 @@ def login(request):
 
 def user_list(request):
     user_list = models.userInfo.objects.all()
+    # print(user_list[1].name) 通过下标获取一条数据
     return render(request,'user_list.html',{"user_list":user_list})
 
 def user_add(request):
