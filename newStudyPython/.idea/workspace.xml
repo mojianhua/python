@@ -2,10 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f422e7e8-9e6b-4aa8-8e86-2e615f1a9fde" name="Default Changelist" comment="">
+<<<<<<< HEAD
       <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/接口类/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/接口类/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/规范化/bin/stat.py" beforeDir="false" afterPath="$PROJECT_DIR$/规范化/bin/stat.py" afterDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/neizhihanshu/01.py" beforeDir="false" afterPath="$PROJECT_DIR$/neizhihanshu/01.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/规范化/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/规范化/.idea/workspace.xml" afterDir="false" />
+>>>>>>> 5185a17f8b92d09e20df5db477b56a40f93e9c2b
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -23,15 +28,23 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
+<<<<<<< HEAD
         <entry file="file://$PROJECT_DIR$/包导入/glance/__init__.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="266">
               <caret line="14" column="19" selection-start-line="14" selection-start-column="19" selection-end-line="14" selection-end-column="19" />
+=======
+        <entry file="file://$PROJECT_DIR$/neizhihanshu/01.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="203">
+              <caret line="232" column="21" selection-start-line="232" selection-start-column="21" selection-end-line="232" selection-end-column="21" />
+>>>>>>> 5185a17f8b92d09e20df5db477b56a40f93e9c2b
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+<<<<<<< HEAD
         <entry file="file://$PROJECT_DIR$/包导入/glance/cmd/__init__.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="19">
@@ -47,11 +60,20 @@
               <caret line="12" column="21" selection-start-line="12" selection-start-column="21" selection-end-line="12" selection-end-column="21" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
+=======
+        <entry file="file://$PROJECT_DIR$/DjStudy/Dj01/socketServer.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="751">
+              <caret line="59" selection-start-line="59" selection-end-line="59" />
+              <folding>
+                <element signature="e#0#13#0" expanded="true" />
+>>>>>>> 5185a17f8b92d09e20df5db477b56a40f93e9c2b
               </folding>
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/封装/core/fengzhuangStudy.py">
           <provider selected="true" editor-type-id="text-editor">
@@ -76,33 +98,55 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="19">
               <caret line="1" column="11" selection-start-line="1" selection-start-column="11" selection-end-line="1" selection-end-column="11" />
+=======
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/DjStudy/Dj01/安装Django.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="15">
+              <caret line="1" column="29" lean-forward="true" selection-start-line="1" selection-start-column="29" selection-end-line="1" selection-end-column="29" />
+>>>>>>> 5185a17f8b92d09e20df5db477b56a40f93e9c2b
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/包导入/包导入2.py">
+        <entry file="file://$PROJECT_DIR$/DjStudy/Dj01/hi.html">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="532">
               <caret line="28" selection-start-line="28" selection-end-line="28" selection-end-column="7" />
+=======
+            <state relative-caret-position="120">
+              <caret line="8" column="6" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
+>>>>>>> 5185a17f8b92d09e20df5db477b56a40f93e9c2b
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/包导入/glance/api/policy.py">
+        <entry file="file://$PROJECT_DIR$/DjStudy/Dj01/hello.html">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="19">
               <caret line="1" column="25" selection-start-line="1" selection-start-column="25" selection-end-line="1" selection-end-column="25" />
+=======
+            <state relative-caret-position="135">
+              <caret line="9" column="7" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
+>>>>>>> 5185a17f8b92d09e20df5db477b56a40f93e9c2b
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/包导入/glance/api/versions.py">
+        <entry file="file://$PROJECT_DIR$/DjStudy/Dj01/error.html">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="19">
               <caret line="1" column="27" selection-start-line="1" selection-start-column="27" selection-end-line="1" selection-end-column="27" />
+=======
+            <state relative-caret-position="105">
+              <caret line="7" column="19" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="19" />
+>>>>>>> 5185a17f8b92d09e20df5db477b56a40f93e9c2b
             </state>
           </provider>
         </entry>
@@ -112,6 +156,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="HTML File" />
         <option value="Python Script" />
       </list>
     </option>
@@ -150,7 +195,6 @@
         <option value="$PROJECT_DIR$/test/test.txt" />
         <option value="$PROJECT_DIR$/test/homeWorld.py" />
         <option value="$PROJECT_DIR$/neizhihanshu/file.txt" />
-        <option value="$PROJECT_DIR$/neizhihanshu/01.py" />
         <option value="$PROJECT_DIR$/suanfa/erfengsuanfan.py" />
         <option value="$PROJECT_DIR$/re/re.py" />
         <option value="$PROJECT_DIR$/re/re复习.py" />
@@ -174,14 +218,28 @@
         <option value="$PROJECT_DIR$/规范化/code/main.py" />
         <option value="$PROJECT_DIR$/封装/core/fengzhuangStudy.py" />
         <option value="$PROJECT_DIR$/规范化/bin/stat.py" />
+        <option value="$PROJECT_DIR$/neizhihanshu/01.py" />
+        <option value="$PROJECT_DIR$/DjStudy/Dj01/socketWeb.py" />
+        <option value="$PROJECT_DIR$/DjStudy/Dj01/hello.html" />
+        <option value="$PROJECT_DIR$/DjStudy/Dj01/error.html" />
+        <option value="$PROJECT_DIR$/DjStudy/Dj01/hi.html" />
+        <option value="$PROJECT_DIR$/DjStudy/Dj01/socketServer.py" />
+        <option value="$PROJECT_DIR$/DjStudy/Dj01/安装Django.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
+<<<<<<< HEAD
     <option name="x" value="1008" />
     <option name="y" value="16" />
     <option name="width" value="894" />
     <option name="height" value="611" />
+=======
+    <option name="x" value="542" />
+    <option name="y" value="302" />
+    <option name="width" value="1000" />
+    <option name="height" value="689" />
+>>>>>>> 5185a17f8b92d09e20df5db477b56a40f93e9c2b
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -200,13 +258,22 @@
             <path>
               <item name="newStudyPython" type="b2602c69:ProjectViewProjectNode" />
               <item name="newStudyPython" type="462c0819:PsiDirectoryNode" />
+<<<<<<< HEAD
               <item name="封装" type="462c0819:PsiDirectoryNode" />
+=======
+              <item name="DjStudy" type="462c0819:PsiDirectoryNode" />
+>>>>>>> 5185a17f8b92d09e20df5db477b56a40f93e9c2b
             </path>
             <path>
               <item name="newStudyPython" type="b2602c69:ProjectViewProjectNode" />
               <item name="newStudyPython" type="462c0819:PsiDirectoryNode" />
+<<<<<<< HEAD
               <item name="封装" type="462c0819:PsiDirectoryNode" />
               <item name="core" type="462c0819:PsiDirectoryNode" />
+=======
+              <item name="DjStudy" type="462c0819:PsiDirectoryNode" />
+              <item name="Dj01" type="462c0819:PsiDirectoryNode" />
+>>>>>>> 5185a17f8b92d09e20df5db477b56a40f93e9c2b
             </path>
           </expand>
           <select />
@@ -216,11 +283,13 @@
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="preferences.editor" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -243,8 +312,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.stat">
-    <configuration name="包导入2" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RunManager" selected="Python.socketWeb">
+    <configuration name="01" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="newStudyPython" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -252,12 +321,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/包导入" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/neizhihanshu" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/包导入/包导入2.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/neizhihanshu/01.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -266,7 +335,11 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+<<<<<<< HEAD
     <configuration name="fengzhuangStudy" type="PythonConfigurationType" factoryName="Python" temporary="true">
+=======
+    <configuration name="包导入2" type="PythonConfigurationType" factoryName="Python" temporary="true">
+>>>>>>> 5185a17f8b92d09e20df5db477b56a40f93e9c2b
       <module name="newStudyPython" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -274,12 +347,20 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
+<<<<<<< HEAD
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/封装/core" />
+=======
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/包导入" />
+>>>>>>> 5185a17f8b92d09e20df5db477b56a40f93e9c2b
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+<<<<<<< HEAD
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/封装/core/fengzhuangStudy.py" />
+=======
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/包导入/包导入2.py" />
+>>>>>>> 5185a17f8b92d09e20df5db477b56a40f93e9c2b
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -288,7 +369,11 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+<<<<<<< HEAD
     <configuration name="os模块 (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
+=======
+    <configuration name="socketWeb" type="PythonConfigurationType" factoryName="Python" temporary="true">
+>>>>>>> 5185a17f8b92d09e20df5db477b56a40f93e9c2b
       <module name="newStudyPython" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -296,12 +381,20 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
+<<<<<<< HEAD
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/os模块dir" />
+=======
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/DjStudy/Dj01" />
+>>>>>>> 5185a17f8b92d09e20df5db477b56a40f93e9c2b
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+<<<<<<< HEAD
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/os模块dir/os模块.py" />
+=======
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/DjStudy/Dj01/socketServer.py" />
+>>>>>>> 5185a17f8b92d09e20df5db477b56a40f93e9c2b
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -356,11 +449,16 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.socketWeb" />
+        <item itemvalue="Python.01" />
         <item itemvalue="Python.stat" />
         <item itemvalue="Python.fengzhuangStudy" />
         <item itemvalue="Python.包导入2" />
         <item itemvalue="Python.sys模块" />
+<<<<<<< HEAD
         <item itemvalue="Python.os模块 (1)" />
+=======
+>>>>>>> 5185a17f8b92d09e20df5db477b56a40f93e9c2b
       </list>
     </recent_temporary>
   </component>
@@ -379,12 +477,20 @@
       <workItem from="1563797416512" duration="86823000" />
       <workItem from="1566698760288" duration="4011000" />
       <workItem from="1566703530941" duration="817000" />
+<<<<<<< HEAD
       <workItem from="1567147839410" duration="385000" />
+=======
+      <workItem from="1567304855580" duration="7273000" />
+>>>>>>> 5185a17f8b92d09e20df5db477b56a40f93e9c2b
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< HEAD
     <option name="totallyTimeSpent" value="128750000" />
+=======
+    <option name="totallyTimeSpent" value="135638000" />
+>>>>>>> 5185a17f8b92d09e20df5db477b56a40f93e9c2b
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -396,10 +502,17 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
+<<<<<<< HEAD
     <frame x="1008" y="16" width="894" height="611" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4975" visible="true" weight="0.3321343" />
+=======
+    <frame x="542" y="302" width="1000" height="689" extended-state="0" />
+    <editor active="true" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4975" visible="true" weight="0.29436326" />
+>>>>>>> 5185a17f8b92d09e20df5db477b56a40f93e9c2b
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" sideWeight="0.5025" side_tool="true" weight="0.23962517" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -428,8 +541,9 @@
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/newStudyPython$erfengsuanfan.coverage" NAME="erfengsuanfan Coverage Results" MODIFIED="1566095546481" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/suanfa" />
     <SUITE FILE_PATH="coverage/newStudyPython$re.coverage" NAME="re复习 Coverage Results" MODIFIED="1566113695092" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/re" />
-    <SUITE FILE_PATH="coverage/newStudyPython$01.coverage" NAME="01 Coverage Results" MODIFIED="1566141390826" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/re" />
+    <SUITE FILE_PATH="coverage/newStudyPython$socketWeb.coverage" NAME="socketWeb Coverage Results" MODIFIED="1567319118784" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/DjStudy/Dj01" />
     <SUITE FILE_PATH="coverage/newStudyPython$2.coverage" NAME="包导入2 Coverage Results" MODIFIED="1566703638044" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/包导入" />
+    <SUITE FILE_PATH="coverage/newStudyPython$01.coverage" NAME="01 Coverage Results" MODIFIED="1567306344278" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/neizhihanshu" />
     <SUITE FILE_PATH="coverage/newStudyPython$sys.coverage" NAME="sys模块 Coverage Results" MODIFIED="1566224498692" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/sys模块" />
     <SUITE FILE_PATH="coverage/newStudyPython$stat.coverage" NAME="stat Coverage Results" MODIFIED="1566704861108" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/规范化/bin" />
     <SUITE FILE_PATH="coverage/newStudyPython$collections.coverage" NAME="collections Coverage Results" MODIFIED="1566138693152" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/collections" />
@@ -439,8 +553,6 @@
     <SUITE FILE_PATH="coverage/newStudyPython$.coverage" NAME="时间模块 Coverage Results" MODIFIED="1566140666745" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/if.py" />
-    <entry file="file://$PROJECT_DIR$/文本登录注册.txt" />
     <entry file="file://$PROJECT_DIR$/py操作文本登录注册.py" />
     <entry file="file://$PROJECT_DIR$/打开文件1.txt" />
     <entry file="file://$PROJECT_DIR$/账号密码.txt" />
@@ -562,13 +674,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/neizhihanshu/01.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2670">
-          <caret line="178" column="16" selection-start-line="178" selection-start-column="16" selection-end-line="178" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/re/re.py" />
     <entry file="file://$PROJECT_DIR$/re/01.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -634,6 +739,43 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/规范化/code/code.py" />
     <entry file="file://$PROJECT_DIR$/包导入/glance/db/model.py">
+<<<<<<< HEAD
+=======
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="4" selection-start-column="4" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/包导入/glance/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="19" selection-start-line="14" selection-start-column="19" selection-end-line="14" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/规范化/core/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/规范化/bin/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/规范化/core/core.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="11" selection-start-line="1" selection-start-column="11" selection-end-line="1" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/包导入/包导入2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="28" selection-start-line="28" selection-end-line="28" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/包导入/glance/api/policy.py">
+>>>>>>> 5185a17f8b92d09e20df5db477b56a40f93e9c2b
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret column="4" selection-start-column="4" selection-end-column="4" />
@@ -647,6 +789,7 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/包导入/glance/cmd/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="19">
@@ -664,11 +807,25 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="19">
           <caret line="1" column="11" selection-start-line="1" selection-start-column="11" selection-end-line="1" selection-end-column="11" />
+=======
+    <entry file="file://$PROJECT_DIR$/规范化/bin/stat.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="9" selection-start-line="2" selection-start-column="9" selection-end-line="2" selection-end-column="9" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/包导入/包导入2.py">
+    <entry file="file://$PROJECT_DIR$/包导入/glance/cmd/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="22" selection-start-line="1" selection-start-column="22" selection-end-line="1" selection-end-column="22" />
+>>>>>>> 5185a17f8b92d09e20df5db477b56a40f93e9c2b
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/neizhihanshu/01.py">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="532">
           <caret line="28" selection-start-line="28" selection-end-line="28" selection-end-column="7" />
         </state>
@@ -692,16 +849,56 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="19">
           <caret line="1" column="10" selection-start-line="1" selection-start-column="6" selection-end-line="1" selection-end-column="10" />
+=======
+        <state relative-caret-position="203">
+          <caret line="232" column="21" selection-start-line="232" selection-start-column="21" selection-end-line="232" selection-end-column="21" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/规范化/bin/stat.py">
+    <entry file="file://$PROJECT_DIR$/DjStudy/Dj01/hello.html">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="7" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DjStudy/Dj01/error.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="19" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DjStudy/Dj01/hi.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="6" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DjStudy/Dj01/socketServer.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="751">
+          <caret line="59" selection-start-line="59" selection-end-line="59" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+          </folding>
+>>>>>>> 5185a17f8b92d09e20df5db477b56a40f93e9c2b
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DjStudy/Dj01/安装Django.py">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="228">
           <caret line="12" column="21" selection-start-line="12" selection-start-column="21" selection-end-line="12" selection-end-column="21" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
           </folding>
+=======
+        <state relative-caret-position="15">
+          <caret line="1" column="29" lean-forward="true" selection-start-line="1" selection-start-column="29" selection-end-line="1" selection-end-column="29" />
+>>>>>>> 5185a17f8b92d09e20df5db477b56a40f93e9c2b
         </state>
       </provider>
     </entry>
