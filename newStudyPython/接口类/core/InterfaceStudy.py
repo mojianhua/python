@@ -103,3 +103,19 @@ e.fly()
     # 2、如果使用from abc import abstractclassmethod,ABCMeta就意味着你要定义一个规范
     # 2.1、      @abstractmethod：抽象方法，含abstractmethod方法的类不能实例化，继承了含abstractmethod方法的子类必须复写所有abstractmethod装饰的方法，未被装饰的可以不重写
     # 2.2、子类的方法只能多不能少，少了会报错
+
+
+class Person(object):
+    def __init__(self,name,age):
+        self.name = name
+        self.age = age
+
+    #当使用print输出对象的时候，只要自己定义了__str__(self)方法，那么就会打印从在这个方法中return的数据
+    def __str__(self):
+        return "<{}{}>".format(self.name,self.age)
+
+p = Person("jim",18)
+print(p)
+
+p = Person("jim222",11111)
+print(p)
