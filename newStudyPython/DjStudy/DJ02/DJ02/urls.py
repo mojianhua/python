@@ -31,5 +31,7 @@ urlpatterns = [
     url(r'publisher_list/',BookManageApppview.publisher_list),
     url(r'publisher_add/',BookManageApppview.publisher_add),
     url(r'publisher_del/',BookManageApppview.publisher_del),
-    url(r'publisher_update/',BookManageApppview.publisher_update)
+    url(r'publisher_update/',BookManageApppview.publisher_update),
+    url(r'book_list/',BookManageApppview.book_list),
+    url(r'book_add/',BookManageApppview.book_add),
 ]

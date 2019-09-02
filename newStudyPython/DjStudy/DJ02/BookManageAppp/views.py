@@ -42,3 +42,13 @@ def publisher_update(request):
         # 查询一条数据
         obj = models.Publisher.objects.get(id = id)
         return render(request,'publisher_edit.html',{"obj":obj})
+
+def book_list(request):
+    book_list = models.Book.objects.all()
+    return render(request,'book_list.html',{"book_list":book_list})
+
+def book_add(request):
+    if request.method == 'POST':
+        pass
+    else:
+        return render(request,'book_add.html')

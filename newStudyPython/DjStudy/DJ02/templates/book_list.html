@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>hi</title>
+    <link rel="stylesheet" href="/static/css/test.css">
+</head>
+<body>
+<h1 class="test2">book_list</h1>
+<table>
+    <thead>
+        <tr>
+            <th>序号</th>
+            <th>id</th>
+            <th>title</th>
+             <th>出版社</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for book_list in book_list %}
+            <tr>
+                <td>{{ forloop.counter }}</td>
+                <td>{{ book_list.id }}</td>
+                <td>{{ book_list.title }}</td>
+                <!-- 因为在book里面的model的外键用叫pid，所以写外键.属性 -->
+                <td>{{ book_list.pid.name }}</td>
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>
+<a href="/book_add/">添加书籍</a>
+</body>
+</html>
