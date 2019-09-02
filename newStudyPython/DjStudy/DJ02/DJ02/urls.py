@@ -26,4 +26,6 @@ urlpatterns = [
     url(r'^login/', login),
     url(r'^savelogin/', savelogin),
     url(r'^app01login/', views.login),
+    url(r'user_list/',views.user_list),
+    url(r'user_add/',views.user_add)
 ]

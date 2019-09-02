@@ -1,7 +1,7 @@
 # Create your views here.
 # 路由测试
 from django.shortcuts import HttpResponse,render,redirect
-
+from app01 import models
 # 登录方法
 def login(request):
     error_msg = ''
@@ -24,3 +24,15 @@ def login(request):
             return render(request,"login.html",{"error_msg":error_msg})
     else:
         return  HttpResponse('报错')
+
+def user_list(request):
+    user_list = models.userInfo.objects.all()
+    return render(request,'user_list.html',{"user_list":user_list})
+
+def user_add(request):
+    if request.method == 'POST':
+        name = request.POST.get('name',None)
+        models.userInfo.objects.create(name=name)
+        return redirect('/user_list/')
+    else:
+        return render(request,'user_add.html')
