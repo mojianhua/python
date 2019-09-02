@@ -154,30 +154,49 @@ print(list(ret))
 with open('./file.txt',encoding='utf-8') as r1:
     l = r1.readlines()
 
-page_num  = int(input('请输入页码'))
-pages,mod = divmod(len(l),3)        #求多少页，页数加一
-if mod:
-    pages += 1                      #一共有多少页
-if page_num > pages or pages <= 0:
-    print('输入有错误')
-elif page_num == pages and mod !=0:   #如果是最后一页，且之前有过剩余的行数
-    print(l[3*(page_num-1):])
-    #print(3*(page_num-1))
-else:
-    print(l[(3 * (page_num - 1)):((page_num * 3))])
+# page_num  = int(input('请输入页码'))
+# pages,mod = divmod(len(l),3)        #求多少页，页数加一
+# if mod:
+#     pages += 1                      #一共有多少页
+# if page_num > pages or pages <= 0:
+#     print('输入有错误')
+# elif page_num == pages and mod !=0:   #如果是最后一页，且之前有过剩余的行数
+#     print(l[3*(page_num-1):])
+#     #print(3*(page_num-1))
+# else:
+#     print(l[(3 * (page_num - 1)):((page_num * 3))])
+#
+#
+# # 字典name对应股票名，shares代表股数目，price代表单价，计算总价
+# pro = [
+#     {'name':'IBM','shares':100,'price':91},
+#     {'name':'IBM2','shares':101,'price':111},
+#     {'name': 'IBM3', 'shares': 1111, 'price': 11111},
+# ]
+#
+# # round 保留两个小数
+# ret = map(lambda dit:{dit['name']:round(dit['shares'] * dit['price'],2)},pro)
+# print(list(ret))
+#
+# # file 获取大于100的单价股票数
+# ret = filter(lambda dit:dit['price'] > 100,pro)
+# print(list(ret))
 
+from math import pi
+class Circle:
+    def __init__(self,r):
+        self.r = r
 
-# 字典name对应股票名，shares代表股数目，price代表单价，计算总价
-pro = [
-    {'name':'IBM','shares':100,'price':91},
-    {'name':'IBM2','shares':101,'price':111},
-    {'name': 'IBM3', 'shares': 1111, 'price': 11111},
-]
+    # @property 把一个方法伪装成一个属性，不能传任何参数
+    @property
+    def perimeter(self):
+        return 2*pi*self.r
 
-# round 保留两个小数
-ret = map(lambda dit:{dit['name']:round(dit['shares'] * dit['price'],2)},pro)
-print(list(ret))
+    # @property 把一个方法伪装成一个属性，不能传任何参数
+    @property
+    def area(self):
+        return self.r**2*pi
 
-# file 获取大于100的单价股票数
-ret = filter(lambda dit:dit['price'] > 100,pro)
-print(list(ret))
+c1 = Circle(9)
+print(c1.area)
+print(c1.perimeter)
