@@ -15,16 +15,15 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
-# 路由测试
-from django.shortcuts import HttpResponse,render
 
-def hiTest(request):
-    # http的请求方式
-    # return HttpResponse('hihihihi')
-    # 指定使用模板
-    return render(request,"hiBase.html")
+# 视图
+from .views import login,savelogin
+# app里面的视图
+from app01 import views
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^hiTest/', hiTest),
+    url(r'^login/', login),
+    url(r'^savelogin/', savelogin),
+    url(r'^app01login/', views.login),
 ]

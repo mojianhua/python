@@ -1,32 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="40bce385-3039-45a7-9f43-1a5d804bade2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../DjStudy/DJ02/.idea/DJ02.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../DjStudy/DJ02/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../DjStudy/DJ02/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../DjStudy/DJ02/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../DjStudy/DJ02/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../DjStudy/DJ02/DJ02/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../DjStudy/DJ02/DJ02/settings.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../DjStudy/DJ02/DJ02/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../DjStudy/DJ02/DJ02/wsgi.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../DjStudy/DJ02/db.sqlite3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../DjStudy/DJ02/manage.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../DjStudy/DJ02/static/css/test.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../DjStudy/DJ02/static/js/test.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../DjStudy/DJ02/templates/hi/hi.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../DjStudy/DJ02/templates/hiBase.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../DjStudy/Dj01/error.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../DjStudy/Dj01/hello.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../DjStudy/Dj01/hi.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../DjStudy/Dj01/socketServer.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../DjStudy/Dj01/安装Django.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/01.py" beforeDir="false" afterPath="$PROJECT_DIR$/01.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../规范化/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../规范化/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../规范化/bin/stat.py" beforeDir="false" afterPath="$PROJECT_DIR$/../规范化/bin/stat.py" afterDir="false" />
-    </list>
+    <list default="true" id="40bce385-3039-45a7-9f43-1a5d804bade2" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,7 +16,7 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/01.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="189">
+            <state relative-caret-position="372">
               <caret line="254" column="20" selection-start-line="254" selection-start-column="20" selection-end-line="254" selection-end-column="20" />
             </state>
           </provider>
@@ -59,7 +34,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
+  <component name="ProjectFrameBounds">
     <option name="x" value="763" />
     <option name="y" value="106" />
     <option name="width" value="911" />
@@ -87,7 +62,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../DjStudy/DJ02" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
   </component>
@@ -142,16 +117,15 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1567149517199</updated>
-      <workItem from="1567149518620" duration="2176000" />
+      <workItem from="1567149518620" duration="2794000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2176000" />
+    <option name="totallyTimeSpent" value="2794000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="763" y="106" width="911" height="689" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info id="Favorites" side_tool="true" />
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24911869" />
@@ -164,7 +138,7 @@
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32972974" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32972974" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -182,7 +156,7 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/01.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
+        <state relative-caret-position="372">
           <caret line="254" column="20" selection-start-line="254" selection-start-column="20" selection-end-line="254" selection-end-column="20" />
         </state>
       </provider>
