@@ -49,6 +49,72 @@ def book_list(request):
 
 def book_add(request):
     if request.method == 'POST':
-        pass
+        title = request.POST.get('title',None)
+        pid = request.POST.get('pid',None)
+        models.Book.objects.create(title=title,pid_id=pid)
+        return redirect('/book_list/')
     else:
-        return render(request,'book_add.html')
+        publisher = models.Publisher.objects.all()
+        return render(request,'book_add.html',{"publisher":publisher})
+
+def book_del(request):
+    id = request.GET.get('id',None)
+    obj = models.Book.objects.get(id = id).delete()
+    return redirect('/book_list/')
+
+def book_update(request):
+    id = request.GET.get('id')
+    if request.method == 'POST':
+        title = request.POST.get('title',None)
+        pid = request.POST.get('pid',None)
+        id = request.POST.get('id', None)
+        book = models.Book.objects.get(id=id)
+        book.pid_id = pid
+        book.title = title
+        book.save()
+        return redirect('/book_list/')
+    else:
+        book = models.Book.objects.get(id=id)
+        publisher = models.Publisher.objects.all()
+        return render(request,'book_update.html',{"publisher":publisher,"book":book})
+
+def author_list(request):
+    author_list = models.Author.objects.all()
+    # author_one = models.Author.objects.get(id = 1)
+    # print(author_one.book.all())
+    return render(request,'author_list.html',{"author_list":author_list})
+
+def author_add(request):
+    if request.method == 'POST':
+        name = request.POST.get('name',None)
+        # post的数据提交多个的时候,多选
+        books = request.POST.getlist('books',None)
+        # 创建作者对象
+        newAuthorObj = models.Author.objects.create(name=name)
+        # 更新作者和数据建立关系
+        newAuthorObj.book.set(books)
+        return redirect('/author_list/')
+    else:
+        book_list = models.Book.objects.all()
+        return render(request,'author_add.html',{"book_list":book_list})
+
+def author_del(request):
+    id = request.GET.get('id',None)
+    # 删除表并且删除对应关系
+    models.Author.objects.get(id=id).delete()
+    return redirect('/author_list/')
+
+def author_update(request):
+    id = request.GET.get('id',None)
+    if request.method == 'POST':
+        name = request.POST.get('name',None)
+        books = request.POST.getlist('books',None)
+        id = request.POST.get('id',None)
+        obj = models.Author.objects.get(id = id)
+        obj.name = name
+        obj.book.set(books)
+        return redirect('/author_list/')
+    else:
+        author = models.Author.objects.get(id=id)
+        book_list = models.Book.objects.all()
+        return render(request,'author_update.html',{"author":author,"book_list":book_list})

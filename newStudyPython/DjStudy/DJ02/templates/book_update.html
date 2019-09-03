@@ -6,19 +6,20 @@
     <link rel="stylesheet" href="/static/css/test.css">
 </head>
 <body>
-<h1 class="test2">book_add</h1>
-<form action="/book_add/" method="post">
-    <p>标题：<input name="title" type="text"></p>
+<h1 class="test2">book_update</h1>
+<form action="/book_update/" method="post">
+    <p>标题：<input name="title" type="text" value="{{ book.title }}"></p>
     <p>出版社：
         <select name="pid">
             {% for publisher in publisher %}
-                <option value="{{ publisher.id }}">
+                <option value="{{ publisher.id }}" {% if book.pid_id == publisher.id %} selected {% endif %}>
                     {{ publisher.name }}
                 </option>
             {% endfor %}
         </select>
     </p>
     <p><input name="submit" type="submit"></p>
+    <input name="id" type="hidden" value="{{ book.id }}">
     {{ msg }}
 </form>
 </body>

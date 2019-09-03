@@ -34,4 +34,10 @@ urlpatterns = [
     url(r'publisher_update/',BookManageApppview.publisher_update),
     url(r'book_list/',BookManageApppview.book_list),
     url(r'book_add/',BookManageApppview.book_add),
+    url(r'book_del/', BookManageApppview.book_del),
+    url(r'book_update/', BookManageApppview.book_update),
+    url(r'author_list/',BookManageApppview.author_list),
+    url(r'author_add/',BookManageApppview.author_add),
+    url(r'author_del/',BookManageApppview.author_del),
+    url(r'author_update/',BookManageApppview.author_update),
 ]

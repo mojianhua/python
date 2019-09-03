@@ -24,6 +24,8 @@
                 <td>{{ book_list.title }}</td>
                 <!-- 因为在book里面的model的外键用叫pid，所以写外键.属性 -->
                 <td>{{ book_list.pid.name }}</td>
+                <td><a href="/book_del/?id={{ book_list.id }}">del</a></td>
+                 <td><a href="/book_update/?id={{ book_list.id }}">update</a></td>
             </tr>
         {% endfor %}
     </tbody>
