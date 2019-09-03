@@ -37,3 +37,22 @@
 # 5.6、执行以下两个命令创建表
   # 5.6.1、python manage.py makemigrations   #检测model.py记录下来，保存到app01/makemigrations
   # 5.6.2、python manage.py migrate   #把改动翻译成sql语言到数据库执行
+  
+# 模板语言
+# 1、{{ name }} -->变量
+# 2、for循环
+#{% for i in book_list%}
+#	{{ forloop.counter}}   计算
+#   {{ forloop.last }}     当最后一个
+#	{%i}
+#{% endfor %}
+# 3、if 判断
+# {% if 10 > 5%}
+# 。。。。 
+# {% else %}
+# 。。。
+# {$ endif %}
+# {% if name in name_list%}
+# ......
+# {% else %}
+# {% if %}
