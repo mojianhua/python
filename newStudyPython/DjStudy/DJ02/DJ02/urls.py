@@ -39,5 +39,5 @@ urlpatterns = [
     url(r'author_list/',BookManageApppview.author_list),
     url(r'author_add/',BookManageApppview.author_add),
     url(r'author_del/',BookManageApppview.author_del),
-    url(r'author_update/',BookManageApppview.author_update),
+    url(r'template_test/',views.template_test),
 ]

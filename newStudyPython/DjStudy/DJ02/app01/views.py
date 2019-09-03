@@ -37,3 +37,39 @@ def user_add(request):
         return redirect('/user_list/')
     else:
         return render(request,'user_add.html')
+
+# 模板测试类
+class Persion(object):
+    def __init__(self,name,age):
+        self.name = name
+        self.age = age
+
+    def dream(self):
+        return 'aaaaadddddddweeeee'
+
+    def __str__(self):
+        return "<Persion Object:{}>".format(self.name)
+
+
+# 模板语言
+def template_test(request):
+    name = 'jim'
+    name_list = ["a",'a1','a2']
+    name_dict = {"key1":"val1","key2":"val2"}
+    p1 = Persion('jim',2)
+    p2 = Persion('jim2',5)
+    file_size = 3354445656
+    from datetime import datetime
+    now = datetime.now()
+    a_html = "<a href='http://www.baidu.com'>百度</a>"
+    return render(request,'template_test.html',
+                  {"name":name,
+                   "name_list":name_list,
+                   "name_dict":name_dict,
+                   "p1":p1,
+                   "p2": p2,
+                   "file_size":file_size,
+                   "now":now,
+                   "a_html":a_html
+                   }
+                  )

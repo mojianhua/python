@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>template_test</title>
+</head>
+<body>
+<h1>模板测试</h1>
+<h1>变量赋值:{{ name }}</h1>
+<h1>循环</h1>
+<ul>
+    {% for name in name_list %}
+        <li>{{ name }}</li>
+    {% endfor %}
+</ul>
+<h1>获取字典</h1>
+<p>{{ name_dict.key1 }}*************{{ name_dict.key2 }}</p>
+<h1>类中方法的调用</h1>
+<p>{{ p1.name }}</p>
+<p>{{ p2.dream }}</p>
+<h1>文件大小,自动转换文件大小</h1>
+<p>{{ file_size | filesizeformat }}</p>
+<h1>切片</h1>
+<p>{{ name_list|slice:"1:-1" }}-----下标从第一个开始切到倒数最后一个</p>
+<h1>格式化时间</h1>
+<p>{{ now|date:"Y-m-d H:i:s" }}</p>
+<h1>使用html</h1>
+<p>{{ a_html|safe }}</p>
+</body>
+</html>
