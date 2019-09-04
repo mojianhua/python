@@ -1,4 +1,6 @@
 from django.shortcuts import HttpResponse,render,redirect
+from django.http import JsonResponse
+import json
 from BookManageAppp import models
 # Create your views here.
 def publisher_list(request):
@@ -127,7 +129,61 @@ def author_update(request):
         book_list = models.Book.objects.all()
         return render(request,'author_update.html',{"author":author,"book_list":book_list})
     
-    
+
+def json_test(request):
+    data = {"name":"jin1是否","age":12}
+    data2 = [1,2,3,4,5,6]
+    # 传统的
+    # data_str = json.dumps(data)
+    # return HttpResponse(data_str)
+    # Djang封装的json,只能接受字典的
+    # return JsonResponse(data)
+    # 如果返回列表则加safe
+    return JsonResponse(data2,safe=False)
+
+def json_test_re1(request):
+    data = {"name":"jin1是否","age":12}
+    data2 = [1,2,3,4,5,6]
+    # 传统的
+    # data_str = json.dumps(data)
+    # return HttpResponse(data_str)
+    # Djang封装的json,只能接受字典的
+    # return JsonResponse(data)
+    # 如果返回列表则加safe
+    return JsonResponse(data2,safe=False)
+
+def json_test_re2(request,re1):
+    data = {"name":"jin1是否","age":12}
+    data2 = [1,2,3,4,5,6]
+    print(re1)
+    # 传统的
+    # data_str = json.dumps(data)
+    # return HttpResponse(data_str)
+    # Djang封装的json,只能接受字典的
+    # return JsonResponse(data)
+    # 如果返回列表则加safe
+    return JsonResponse(data2,safe=False)
+
+def json_test_re3(request,**kwargs):
+    data = {"name":"jin1是否","age":12}
+    data2 = [1,2,3,4,5,6]
+    print(kwargs)
+    return JsonResponse(data2,safe=False)
+
+def publisher_del_re(request,pid):
+    id = pid
+    # 根据id查数据
+    obj = models.Publisher.objects.get(id=id)
+    # 删除
+    obj.delete()
+    return redirect('/publisher_list/')
+
+def json_page(request,page = "1"):
+    data = {"name":"jin1是否","age":12}
+    data2 = [1,2,3,4,5,6]
+    print(page)
+    return JsonResponse(data2,safe=False)
+
 #CBV版添加出版社
 from django.views import View
 class CbvAddPublisher(View):

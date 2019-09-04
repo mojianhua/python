@@ -37,6 +37,10 @@
 # 5.6、执行以下两个命令创建表
   # 5.6.1、python manage.py makemigrations   #检测model.py记录下来，保存到app01/makemigrations
   # 5.6.2、python manage.py migrate   #把改动翻译成sql语言到数据库执行
+# 6、指定静态文件配置地址，在settings.py里面修改
+# STATICFILES_DIRS = [
+#    os.path.join(BASE_DIR,"static")
+#]
   
 # 模板语言
 # 1、{{ name }} -->变量
@@ -56,3 +60,37 @@
 # ......
 # {% else %}
 # {% if %}
+
+
+
+# request
+# 1、request.POST.get('下标',默认值) #获取post提交的值
+# 2、request.get('下标',默认值) #获取get提交的值
+# 3、request.method     #获取提交方式
+# 4、request.path_info  #获取用户请求的路径，不包含ip和url参数
+
+# response
+# (一)from django.shortcuts import HttpResponse,render,redirect
+# 1、HttpResponse        ---->返回字符串内容
+# 2、render ---->返回内容
+# 3、redirect --->返回重定向
+# (二) from django.http import JsonResponse
+# 返回json格式类型
+# 1、 return JsonResponse(data)
+# 2、 如果返回列表则加safe
+#    return JsonResponse(data2,safe=False)
+
+# 路由系统
+
+
+
+
+
+
+
+
+
+
+
+
+

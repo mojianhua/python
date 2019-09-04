@@ -23,6 +23,7 @@
                 <td>{{ publisher_list.id }}</td>
                 <td>{{ publisher_list.name }}</td>
                 <td><a href="/publisher_del/?id={{ publisher_list.id }}">del</a></td>
+                <td><a href="/publisher_re_del/{{ publisher_list.id }}">re___del</a></td>
                 <td><a href="/publisher_update/?id={{ publisher_list.id }}">update</a></td>
             </tr>
         {% endfor %}
