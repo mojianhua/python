@@ -15,6 +15,7 @@
 #     ]
 #3.当出现403令牌报错，注释掉settings.py，46行，django.middleware.csrf.CsrfViewMiddleware',
 #4.Django的app
+# 4.1.1 新建项目 django-admin startproject projectName
 # 4.1、新建app命令 python manage.py startapp [app名称]
 # 4.2、引入app,在settings.py里面的INSTALLED_APPS新建app,如：app01.apps.App01Config
 #5.ORM
