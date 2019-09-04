@@ -9,6 +9,14 @@ def publisher_add(request):
     msg = ''
     if request.method == 'POST':
         new_name = request.POST.get('name')
+        # 上传文件
+        # print(request.FILES)   # 查看所有上传文件
+        # print(request.FILES['images'])  # 查看指定文件里面images是file里面的name
+        # print(request.FILES['images'].name) # 查看上传文件名称
+        filename = request.FILES['images'].name
+        with open('./static/images/'+filename,"wb") as f:
+            for i in request.FILES['images'].chunks():
+                f.write(i)
         if new_name :
             models.Publisher.objects.create(name=new_name)
             return redirect('/publisher_list/')
@@ -118,3 +126,24 @@ def author_update(request):
         author = models.Author.objects.get(id=id)
         book_list = models.Book.objects.all()
         return render(request,'author_update.html',{"author":author,"book_list":book_list})
+    
+    
+#CBV版添加出版社
+from django.views import View
+class CbvAddPublisher(View):
+    def get(self,request):
+        # 获取当前执行url路径，不带get参数不带域名
+        print(request.path_info)
+        return render(request,'publisher_add.html')
+
+    def post(self,request):
+        new_name = request.POST.get('name')
+        # post 的数据是从body提取出来的
+        print(request.body)
+        if new_name:
+            models.Publisher.objects.create(name=new_name)
+            return redirect('/publisher_list/')
+        else:
+            msg = '名字不能为空'
+            return render(request, 'publisher_add.html', {"msg": msg})
+

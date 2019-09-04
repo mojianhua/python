@@ -40,4 +40,6 @@ urlpatterns = [
     url(r'author_add/',BookManageApppview.author_add),
     url(r'author_del/',BookManageApppview.author_del),
     url(r'template_test/',views.template_test),
+    # CBV版添加出版社
+    url(r'publisher_add_cbv/',BookManageApppview.CbvAddPublisher.as_view()),
 ]
