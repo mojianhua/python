@@ -81,7 +81,14 @@
 # 2、 如果返回列表则加safe
 #    return JsonResponse(data2,safe=False)
 
-# 路由系统
+# Django连接现有mysql数据库
+# 1、新建项目
+# 2、新建应用
+# 3、在settings.py导入应用
+# 4、在__init__里面添加
+# import pymysql
+# pymysql.install_as_MySQLdb()
+# 5、运行运行python mysite/manage.py inspectdb > mysite/myapp/models.py 目的是将旧的数据库写入到model中
 
 
 
