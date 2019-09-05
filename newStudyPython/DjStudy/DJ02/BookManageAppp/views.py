@@ -1,5 +1,6 @@
 from django.shortcuts import HttpResponse,render,redirect
 from django.http import JsonResponse
+import datetime
 import json
 from BookManageAppp import models
 # Create your views here.
@@ -179,6 +180,14 @@ def publisher_del_re(request,pid):
     return redirect('/publisher_list/')
 
 def json_page(request,page = "1"):
+    # 时间间隔
+    now = datetime.datetime.now()
+    print(now)
+    # 7 天后的时间
+    add_time = datetime.timedelta(days=7)
+    print(add_time)
+    ret = now + add_time
+    print(ret)
     data = {"name":"jin1是否","age":12}
     data2 = [1,2,3,4,5,6]
     print(page)

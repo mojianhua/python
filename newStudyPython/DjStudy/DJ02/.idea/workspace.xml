@@ -2,7 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e64f6cc8-66bc-4d29-817e-4d678131cf46" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app01/migrations/0004_persion.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app01/migrations/0005_auto_20190905_1214.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app01/migrations/0006_persion.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app01/migrations/0007_newpersion_chars.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app01/migrations/0008_auto_20190905_1513.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BookManageAppp/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/BookManageAppp/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DJ02/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/DJ02/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app01/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/app01/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../F2cDj/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../F2cDj/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../F2cDj/F2c/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/../F2cDj/F2c/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../F2cDj/F2c/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/../F2cDj/F2c/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../F2cDj/F2cDj/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/../F2cDj/F2cDj/settings.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -35,8 +47,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/DJ02/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2660">
-              <caret line="140" column="19" lean-forward="true" selection-start-line="140" selection-start-column="19" selection-end-line="140" selection-end-column="19" />
+            <state relative-caret-position="19">
+              <caret line="87" column="31" selection-start-line="87" selection-start-column="31" selection-end-line="87" selection-end-column="31" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app01/models.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="144">
+              <caret line="279" column="24" selection-start-line="279" selection-start-column="24" selection-end-line="279" selection-end-column="24" />
             </state>
           </provider>
         </entry>
@@ -44,8 +65,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/BookManageAppp/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3363">
-              <caret line="180" column="31" selection-start-line="180" selection-start-column="31" selection-end-line="180" selection-end-column="31" />
+            <state relative-caret-position="173">
+              <caret line="185" column="13" selection-start-line="185" selection-start-column="13" selection-end-line="185" selection-end-column="13" />
               <folding>
                 <element signature="e#0#57#0" expanded="true" />
               </folding>
@@ -62,11 +83,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app01/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-832">
-              <caret line="20" column="13" lean-forward="true" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
+            <state relative-caret-position="361">
+              <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
               <folding>
                 <element signature="e#33#90#0" expanded="true" />
               </folding>
@@ -77,7 +98,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/author_list.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
+            <state relative-caret-position="513">
               <caret line="27" column="29" selection-start-line="27" selection-start-column="29" selection-end-line="27" selection-end-column="29" />
             </state>
           </provider>
@@ -86,8 +107,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app01/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="133">
-              <caret line="7" column="2" lean-forward="true" selection-start-line="7" selection-start-column="2" selection-end-line="7" selection-end-column="2" />
+            <state relative-caret-position="114">
+              <caret line="7" column="2" selection-start-line="7" selection-start-column="2" selection-end-line="7" selection-end-column="2" />
               <folding>
                 <element signature="e#0#32#0" expanded="true" />
               </folding>
@@ -98,8 +119,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/DJ02/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="54">
-              <caret line="15" selection-start-line="15" selection-end-line="15" selection-end-column="40" />
+            <state relative-caret-position="282">
+              <caret line="33" column="40" lean-forward="true" selection-start-line="33" selection-start-column="40" selection-end-line="33" selection-end-column="40" />
               <folding>
                 <element signature="e#638#678#0" expanded="true" />
               </folding>
@@ -125,6 +146,8 @@
       <find>delete</find>
       <find>key1</find>
       <find>template_test</find>
+      <find>defa</find>
+      <find>json_page</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -142,7 +165,6 @@
         <option value="$PROJECT_DIR$/DJ02/__init__.py" />
         <option value="$PROJECT_DIR$/templates/user_list.html" />
         <option value="$PROJECT_DIR$/templates/user_add.html" />
-        <option value="$PROJECT_DIR$/app01/models.py" />
         <option value="$PROJECT_DIR$/templates/publisher_edit.html" />
         <option value="$PROJECT_DIR$/templates/book_list.html" />
         <option value="$PROJECT_DIR$/templates/book_add.html" />
@@ -154,12 +176,13 @@
         <option value="$PROJECT_DIR$/templates/template_test.html" />
         <option value="$PROJECT_DIR$/templates/publisher_add.html" />
         <option value="$PROJECT_DIR$/templates/publisher_list.html" />
-        <option value="$PROJECT_DIR$/DJ02/settings.py" />
-        <option value="$PROJECT_DIR$/BookManageAppp/views.py" />
         <option value="$PROJECT_DIR$/BookManageAppp/urls.py" />
-        <option value="$PROJECT_DIR$/DJ02/urls.py" />
         <option value="$PROJECT_DIR$/app01/urls.py" />
         <option value="$PROJECT_DIR$/app01/views.py" />
+        <option value="$PROJECT_DIR$/DJ02/settings.py" />
+        <option value="$PROJECT_DIR$/DJ02/urls.py" />
+        <option value="$PROJECT_DIR$/BookManageAppp/views.py" />
+        <option value="$PROJECT_DIR$/app01/models.py" />
       </list>
     </option>
   </component>
@@ -174,8 +197,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1078" />
-    <option name="y" value="246" />
+    <option name="x" value="150" />
+    <option name="y" value="193" />
     <option name="width" value="834" />
     <option name="height" value="689" />
   </component>
@@ -185,6 +208,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -227,7 +251,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -299,12 +322,13 @@
       <workItem from="1567320953860" duration="3709000" />
       <workItem from="1567391127985" duration="8926000" />
       <workItem from="1567407140988" duration="5606000" />
-      <workItem from="1567647875044" duration="2953000" />
+      <workItem from="1567647875044" duration="4486000" />
+      <workItem from="1567656134029" duration="4531000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="52097000" />
+    <option name="totallyTimeSpent" value="58161000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -316,15 +340,15 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1078" y="246" width="834" height="689" extended-state="0" />
+    <frame x="150" y="193" width="834" height="689" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49462366" visible="true" weight="0.29457363" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49462366" visible="true" weight="0.30232558" />
       <window_info id="Structure" order="1" sideWeight="0.50537634" side_tool="true" weight="0.16468842" />
       <window_info id="Favorites" order="2" sideWeight="0.50537634" side_tool="true" weight="0.26086956" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32972974" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32972974" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -335,7 +359,7 @@
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5005875" side_tool="true" weight="0.32972974" />
       <window_info anchor="bottom" id="Terminal" order="11" weight="0.32972974" />
       <window_info anchor="bottom" id="Python Console" order="12" weight="0.32972974" />
-      <window_info anchor="bottom" id="manage.py@DJ02" order="13" sideWeight="0.49941245" weight="0.32972974" />
+      <window_info active="true" anchor="bottom" id="manage.py@DJ02" order="13" sideWeight="0.49941245" visible="true" weight="0.32972974" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -481,13 +505,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app01/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="8" column="55" selection-start-line="8" selection-start-column="55" selection-end-line="8" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/BookManageAppp/models.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="132">
@@ -526,23 +543,6 @@
       </provider>
     </entry>
     <entry file="file://D:/python3/Lib/site-packages/django/urls/conf.py" />
-    <entry file="file://$PROJECT_DIR$/DJ02/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2660">
-          <caret line="140" column="19" lean-forward="true" selection-start-line="140" selection-start-column="19" selection-end-line="140" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BookManageAppp/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3363">
-          <caret line="180" column="31" selection-start-line="180" selection-start-column="31" selection-end-line="180" selection-end-column="31" />
-          <folding>
-            <element signature="e#0#57#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/BookManageAppp/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="19">
@@ -550,10 +550,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app01/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="361">
+          <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
+          <folding>
+            <element signature="e#33#90#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/author_list.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="513">
+          <caret line="27" column="29" selection-start-line="27" selection-start-column="29" selection-end-line="27" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app01/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="7" column="2" lean-forward="true" selection-start-line="7" selection-start-column="2" selection-end-line="7" selection-end-column="2" />
+        <state relative-caret-position="114">
+          <caret line="7" column="2" selection-start-line="7" selection-start-column="2" selection-end-line="7" selection-end-column="2" />
           <folding>
             <element signature="e#0#32#0" expanded="true" />
           </folding>
@@ -562,28 +579,35 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/DJ02/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="15" selection-start-line="15" selection-end-line="15" selection-end-column="40" />
+        <state relative-caret-position="282">
+          <caret line="33" column="40" lean-forward="true" selection-start-line="33" selection-start-column="40" selection-end-line="33" selection-end-column="40" />
           <folding>
             <element signature="e#638#678#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/author_list.html">
+    <entry file="file://$PROJECT_DIR$/DJ02/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="27" column="29" selection-start-line="27" selection-start-column="29" selection-end-line="27" selection-end-column="29" />
+        <state relative-caret-position="19">
+          <caret line="87" column="31" selection-start-line="87" selection-start-column="31" selection-end-line="87" selection-end-column="31" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app01/views.py">
+    <entry file="file://$PROJECT_DIR$/BookManageAppp/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-832">
-          <caret line="20" column="13" lean-forward="true" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
+        <state relative-caret-position="173">
+          <caret line="185" column="13" selection-start-line="185" selection-start-column="13" selection-end-line="185" selection-end-column="13" />
           <folding>
-            <element signature="e#33#90#0" expanded="true" />
+            <element signature="e#0#57#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app01/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="279" column="24" selection-start-line="279" selection-start-column="24" selection-end-line="279" selection-end-column="24" />
         </state>
       </provider>
     </entry>

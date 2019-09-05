@@ -829,9 +829,9 @@ class F2CProductCn(models.Model):
     hot_sort = models.IntegerField(blank=True, null=True)
     is_recommend = models.IntegerField(blank=True, null=True)
     recommend_sort = models.IntegerField(blank=True, null=True)
-    modify_time = models.DateTimeField(blank=True, null=True)
-    pubdate = models.DateTimeField(blank=True, null=True)
-    create_time = models.DateTimeField(blank=True, null=True)
+    modify_time = models.DateTimeField(blank=True, null=True, auto_now=True)
+    pubdate = models.DateTimeField(blank=True, null=True, auto_now=True)
+    create_time = models.DateTimeField(blank=True, null=True, auto_now=True)
     is_update = models.IntegerField(blank=True, null=True)
     is_en = models.IntegerField(blank=True, null=True)
 
