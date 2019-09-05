@@ -28,7 +28,7 @@ urlpatterns = [
     url(r'^savelogin/', savelogin),
     # 导入应用BookManageApppview 的路由
     # 里面的访问方式变成/BookManageApppview/+应用路由
-    #url(r'BookManageApppview',include(BookManageApppurl)),
+    url(r'BookManageApppview',include(BookManageApppurl)),
     # 导入app01应用路由
     url(r'app01', include(app01urls)),
     # url(r'^login/', app01views.login),
