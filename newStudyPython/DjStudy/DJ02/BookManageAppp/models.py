@@ -7,12 +7,18 @@ class Publisher(models.Model):
     # 指定默认值
     addr = models.CharField(max_length=255,default='广州市')
 
+    def __str__(self):
+        return "<models object:{}>".format(self.name)
+
 # 书
 class Book(models.Model):
     id = models.AutoField(primary_key=True)
     title = models.CharField(max_length=255,null=False)
     # 一对多的
-    pid = models.ForeignKey(to="Publisher",on_delete=models.CASCADE)
+    pid = models.ForeignKey(to="Publisher",on_delete=models.CASCADE,related_name="back_book")
+
+    def __str__(self):
+        return "<models object:{}>".format(self.title)
 
 # 作者表
 class Author(models.Model):

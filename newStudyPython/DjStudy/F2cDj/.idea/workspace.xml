@@ -2,17 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e55100b9-de30-4336-a222-7671f777358e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../DJ02/app01/migrations/0004_persion.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../DJ02/app01/migrations/0005_auto_20190905_1214.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../DJ02/app01/migrations/0006_persion.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../DJ02/app01/migrations/0007_newpersion_chars.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../DJ02/app01/migrations/0008_auto_20190905_1513.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DJ02/BookManageAppp/migrations/0005_auto_20190906_1637.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../DJ02/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../DJ02/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../DJ02/BookManageAppp/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/../DJ02/BookManageAppp/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DJ02/BookManageAppp/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/../DJ02/BookManageAppp/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../DJ02/DJ02/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/../DJ02/DJ02/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../DJ02/app01/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/../DJ02/app01/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/F2c/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/F2c/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/F2c/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/F2c/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/F2cDj/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/F2cDj/settings.py" afterDir="false" />
     </list>
@@ -57,8 +51,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/F2c/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="152">
-              <caret line="8" column="31" lean-forward="true" selection-start-line="8" selection-start-column="31" selection-end-line="8" selection-end-column="31" />
+            <state relative-caret-position="171">
+              <caret line="9" column="31" selection-start-line="9" selection-start-column="31" selection-end-line="9" selection-end-column="31" />
               <folding>
                 <element signature="e#0#57#0" expanded="true" />
               </folding>
@@ -70,7 +64,7 @@
         <entry file="file://$PROJECT_DIR$/F2cDj/urls.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="205">
-              <caret line="20" column="15" lean-forward="true" selection-start-line="20" selection-start-column="15" selection-end-line="20" selection-end-column="15" />
+              <caret line="20" column="15" selection-start-line="20" selection-start-column="15" selection-end-line="20" selection-end-column="15" />
               <folding>
                 <element signature="e#639#671#0" expanded="true" />
               </folding>
@@ -94,16 +88,16 @@
         <option value="$PROJECT_DIR$/F2cDj/settings.py" />
         <option value="$PROJECT_DIR$/F2cDj/__init__.py" />
         <option value="$PROJECT_DIR$/F2cDj/urls.py" />
-        <option value="$PROJECT_DIR$/F2c/views.py" />
         <option value="$PROJECT_DIR$/F2c/models.py" />
+        <option value="$PROJECT_DIR$/F2c/views.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="1">
-    <option name="x" value="610" />
-    <option name="y" value="248" />
+    <option name="x" value="417" />
+    <option name="y" value="238" />
     <option name="width" value="834" />
-    <option name="height" value="689" />
+    <option name="height" value="768" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -196,15 +190,15 @@
       <option name="presentableId" value="Default" />
       <updated>1567592070327</updated>
       <workItem from="1567592074530" duration="2188000" />
-      <workItem from="1567655159850" duration="2181000" />
+      <workItem from="1567655159850" duration="4755000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4369000" />
+    <option name="totallyTimeSpent" value="6943000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="610" y="248" width="834" height="689" extended-state="1" />
+    <frame x="417" y="238" width="834" height="768" extended-state="1" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25581396" />
@@ -212,7 +206,7 @@
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32972974" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.28864354" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -256,7 +250,7 @@
     <entry file="file://$PROJECT_DIR$/F2cDj/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="205">
-          <caret line="20" column="15" lean-forward="true" selection-start-line="20" selection-start-column="15" selection-end-line="20" selection-end-column="15" />
+          <caret line="20" column="15" selection-start-line="20" selection-start-column="15" selection-end-line="20" selection-end-column="15" />
           <folding>
             <element signature="e#639#671#0" expanded="true" />
           </folding>
@@ -279,8 +273,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/F2c/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="8" column="31" lean-forward="true" selection-start-line="8" selection-start-column="31" selection-end-line="8" selection-end-column="31" />
+        <state relative-caret-position="171">
+          <caret line="9" column="31" selection-start-line="9" selection-start-column="31" selection-end-line="9" selection-end-column="31" />
           <folding>
             <element signature="e#0#57#0" expanded="true" />
           </folding>
