@@ -15,6 +15,10 @@ class Book(models.Model):
     id = models.AutoField(primary_key=True)
     title = models.CharField(max_length=255,null=False)
     price = models.DecimalField(max_digits=5,decimal_places=2,default='99.99')
+    # 库存
+    kuncun = models.IntegerField(default=1000)
+    # 卖出
+    maichu = models.IntegerField(default=0)
     # 一对多的
     pid = models.ForeignKey(
         to="Publisher",
