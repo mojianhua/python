@@ -149,7 +149,7 @@ class F2CArticleCat(models.Model):
 
 
 class F2CAssociator(models.Model):
-    user_id = models.IntegerField()
+    user_id = models.OneToOneField(to="F2CAssociatorContacts",on_delete=models.CASCADE)
     company = models.CharField(max_length=255, blank=True, null=True)
     telphone = models.CharField(max_length=20, blank=True, null=True)
     address = models.CharField(max_length=255, blank=True, null=True)
@@ -185,7 +185,7 @@ class F2CAssociatorContacts(models.Model):
     password = models.CharField(max_length=32, blank=True, null=True)
     email = models.CharField(max_length=255, blank=True, null=True)
     role_id = models.IntegerField()
-    associator = models.ForeignKey(F2CAssociator, models.DO_NOTHING, unique=True)
+    associator = models.OneToOneField(to="F2CAssociator", unique=True,on_delete=models.CASCADE)
     grade = models.IntegerField(blank=True, null=True)
     is_check = models.IntegerField(blank=True, null=True)
     status = models.IntegerField(blank=True, null=True)
