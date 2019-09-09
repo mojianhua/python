@@ -14,8 +14,15 @@ class Publisher(models.Model):
 class Book(models.Model):
     id = models.AutoField(primary_key=True)
     title = models.CharField(max_length=255,null=False)
+    price = models.DecimalField(max_digits=5,decimal_places=2,default='99.99')
     # 一对多的
-    pid = models.ForeignKey(to="Publisher",on_delete=models.CASCADE,related_name="back_book")
+    pid = models.ForeignKey(
+        to="Publisher",
+        on_delete=models.CASCADE,
+        related_name="back_book",
+        # 外键允许为空
+        null=True
+    )
 
     def __str__(self):
         return "<models object:{}>".format(self.title)

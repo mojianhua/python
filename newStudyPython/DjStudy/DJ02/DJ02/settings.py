@@ -85,11 +85,11 @@ DATABASES = {
     # }
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'HOST':'1111',
-        'PORT':3603,
-        'NAME':'f2c_Django',
+        'HOST':'127.0.0.1',
+        'PORT':3306,
+        'NAME':'Django',
         'USER':'root',
-        'PASSWORD':'111'
+        'PASSWORD':''
     }
 }
 
