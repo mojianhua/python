@@ -81,11 +81,11 @@ if __name__ == '__main__':
 
 
     # 多对多
-    author_obj = models.Author.objects.first()
-    print(author_obj.name)
-    # 查询jim1写过的书
-    ret = author_obj.book.all()
-    print(ret)
+    # author_obj = models.Author.objects.first()
+    # print(author_obj.name)
+    # # 查询jim1写过的书
+    # ret = author_obj.book.all()
+    # print(ret)
 
     # 1.create，在jim1里面在添加一本书
     # 通过作者创建一本书，会自动保存
@@ -146,7 +146,29 @@ if __name__ == '__main__':
 
 
     # 每个作者出书的总价
-    ret = models.Author.objects.all().annotate(price_sum=Sum("book__price"))
-    for i in ret:
-        print("作者：{},总价：{}".format(i.name,i.price_sum))
-    print(ret.values_list("name","price_sum"))
+    # ret = models.Author.objects.all().annotate(price_sum=Sum("book__price"))
+    # for i in ret:
+    #     print("作者：{},总价：{}".format(i.name,i.price_sum))
+    # print(ret.values_list("name","price_sum"))
+
+    # F 和 Q
+    from django.db.models import F
+    # 取出库存数大于卖出数的数据,可用于字段间比较
+    ret = models.Book.objects.filter(kuncun__gt=F("maichu"))
+    print(ret)
+    # 把没一本书的卖出数乘以3
+    ret = models.Book.objects.update(maichu=F("maichu") * 3)
+
+    # 给每一本数的书名后面加上第一版
+    from django.db.models.functions import Concat
+    from django.db.models import Value
+    models.Book.objects.update(title=Concat(F("title"),Value("第一版")))
+
+    # Q查询
+    from django.db.models import Q
+    # 卖出数大度100或价格小于10的数据
+    ret = models.Book.objects.filter(Q(maichu__gt=100) | Q(price__lt=10))
+    print(ret)
+    # 卖出数大度100或价格小于10的数据,并且书名包含2的数据
+    ret = models.Book.objects.filter(Q(maichu__gt=100) | Q(price__lt=10),title__contains='2')
+    print(ret)
