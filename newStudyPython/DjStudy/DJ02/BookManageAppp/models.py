@@ -37,6 +37,14 @@ class Author(models.Model):
     name = models.CharField(max_length=255,null=False)
     # 告诉ORM多对多，我这表和book是多对多关系
     book = models.ManyToManyField(to="Book")
+    # 一对一，和AuthorDetial对应
+    detail = models.OneToOneField("AuthorDetial",on_delete=models.CASCADE)
 
     def __str__(self):
         return "<Author object:{}>".format(self.name)
+
+class AuthorDetial(models.Model):
+    # 爱好
+    hobby = models.CharField(max_length=32)
+    # 地址
+    addr = models.CharField(max_length=32)
