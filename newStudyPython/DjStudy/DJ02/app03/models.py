@@ -36,7 +36,7 @@ class Author(models.Model):
     id = models.AutoField(primary_key=True)
     name = models.CharField(max_length=255,null=False)
     # 告诉ORM多对多，我这表和book是多对多关系
-    book = models.ManyToManyField(to="Book")
+    book = models.ManyToManyField(to="Book",related_name="author")
     # 一对一，和AuthorDetial对应
     detail = models.OneToOneField("AuthorDetial",on_delete=models.CASCADE)
     # 自定义多对多关系,to通过那张吧表，through通过哪张表建立关系，through_fields,第一个参数表示，通过中间表那个字段找到当前表，另外一个参数是外键表
