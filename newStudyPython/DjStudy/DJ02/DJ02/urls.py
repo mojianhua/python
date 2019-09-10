@@ -20,6 +20,7 @@ from .views import login,savelogin
 # app里面的视图
 from app01 import views as app01views
 from app01 import urls as app01urls
+from app04 import views as v4
 from BookManageAppp import views as BookManageApppview
 from BookManageAppp import urls as BookManageApppurl
 urlpatterns = [
@@ -35,4 +36,6 @@ urlpatterns = [
     # url(r'^user_list/', app01views.user_list),
     # url(r'^user_add/', app01views.user_add),
     # url(r'^template_test/', app01views.template_test)
+    url(r'^v4login/$',v4.login),
+    url(r'^v4transfer/$',v4.transfer)
 ]
