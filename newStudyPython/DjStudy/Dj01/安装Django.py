@@ -88,7 +88,7 @@
 # 4、在__init__里面添加
 # import pymysql
 # pymysql.install_as_MySQLdb()
-# 5、运行运行python mysite/manage.py inspectdb > mysite/myapp/models.py 目的是将旧的数据库写入到model中
+# 5、运行运行python mysite/manage.py inspectdb > mysite/myapp/models.py 目的是将旧的数据库写入到myapp的models里面
 
 
 

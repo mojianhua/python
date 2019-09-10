@@ -55,9 +55,9 @@ class AuthorDetial(models.Model):
 class Author2Book(models.Model):
     id = models.AutoField(primary_key=True)
     # 作者id
-    author = models.ForeignKey(to="Author")
+    author = models.ForeignKey(to="Author", on_delete=models.CASCADE)
     # 书的ID
-    book = models.ForeignKey(to="Book")
+    book = models.ForeignKey(to="Book", on_delete=models.CASCADE)
     # 去重，作者id和书的id去重
     class Meta:
         unique_together = ("author","book")
