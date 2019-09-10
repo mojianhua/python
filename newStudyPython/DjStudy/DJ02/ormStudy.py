@@ -64,6 +64,10 @@ if __name__ == '__main__':
     ret = App05Models.EmployeeNew.objects.values("name","dept__name")
     print(ret)
 
-    # 查询出所有员工和部门
+    # 查询出所有员工和部门，用于一对一和多对一比较好
     ret = App05Models.EmployeeNew.objects.select_related().values("name","dept__name")
+    print(ret)
+
+    # 查询出所有员工和部门还有所在地，prefetch_related用于一对多还有多对多比较好
+    ret = App05Models.EmployeeNew2.objects.prefetch_related().values("name","city__city_cn","dept__name")
     print(ret)
