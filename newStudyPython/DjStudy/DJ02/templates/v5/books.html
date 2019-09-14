@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>v5books</title>
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>序号</th>
+                <th>id</th>
+                <td>书名</td>
+            </tr>
+        </thead>
+        <tbody>
+        {% for book in all_book %}
+            <tr>
+                <td>{{ forloop.counter }}</td>
+                <td>{{ book.bid }}</td>
+                <td>{{ book.title }}</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    <ul>
+        <li>总页码：{{ count_page }}</li>
+        {{ page_html|safe }}
+    </ul>
+</body>
+</html>

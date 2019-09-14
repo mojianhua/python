@@ -23,6 +23,7 @@ from app01 import urls as app01urls
 from app04 import views as v4
 from BookManageAppp import views as BookManageApppview
 from BookManageAppp import urls as BookManageApppurl
+from app05 import views as App05Views
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^login/', login),
@@ -37,5 +38,9 @@ urlpatterns = [
     # url(r'^user_add/', app01views.user_add),
     # url(r'^template_test/', app01views.template_test)
     url(r'^v4login/$',v4.login),
-    url(r'^v4transfer/$',v4.transfer)
+    url(r'^v4transfer/$',v4.transfer),
+    url(r'^v5Books/$',App05Views.Books),
+    url(r'^v5login',App05Views.v5login),
+    url(r'^v5home',App05Views.v5home),
+    url(r'^v5index',App05Views.v5index)
 ]

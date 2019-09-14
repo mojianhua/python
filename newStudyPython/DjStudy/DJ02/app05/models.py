@@ -78,3 +78,7 @@ class EmployeeNew2City(models.Model):
 
     class Meta:
         db_table = "EmployeeNew2City"
+
+class Book(models.Model):
+    bid = models.AutoField(primary_key = True)
+    title = models.CharField(max_length = 32)
