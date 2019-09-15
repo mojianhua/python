@@ -143,3 +143,66 @@ def v5loginout(request):
     # 删除cookie
     rep.delete_cookie("is_login")
     return rep
+
+
+
+# 装饰器登录校验
+def check_login_session(func):
+    # 装饰器修复技术
+    @wraps(func)
+    def inner(request,*args,**kwargs):
+        # 获取session
+        ret = request.session.get('is_login')
+        if ret == 1:
+        # 已经登录过则执行
+            return func(request,*args,**kwargs)
+        else:
+            # 获取当然url
+            next_url = request.path_info
+            print(next_url)
+            return redirect('/v5loginSession/?next_url={}'.format(next_url))
+    return inner
+
+def v5loginSession(request):
+    # 当前访问的全路径
+    print(request.get_full_path())
+    # 当前请求的路径
+    print(request.path_info)
+    if request.method == 'POST':
+        user = request.POST.get('user',None)
+        pwd = request.POST.get('pwd',None)
+        # 从url获取数据
+        next_url = request.GET.get('next_url')
+        if user == 'jim' and pwd == '123456':
+            # 设置cookie
+            if next_url:
+                rep = redirect(next_url)
+            else:
+                rep = redirect('/Session/v5home/')
+                # 设置session
+                request.session["is_login"] = 1
+            return rep
+        else:
+            return HttpResponse('error')
+    else:
+        return render(request,'v5/Session/login.html')
+
+def v5homeSession(request):
+    # 获取session
+    ret = request.session.get('is_login')
+    if ret == 1:
+        return render(request,'v5/Session/home.html')
+    else:
+        return redirect('/Session/v5login/')
+
+@check_login_session
+def v5indexSession(request):
+    return render(request,'v5/Session/index.html')
+
+# 登出
+def v5loginoutSession(request):
+    print(2222)
+    # 删除SESSION和cookie
+    # ret = request.session.flush()
+    # return redirect('/Session/v5login/')
+    pass
