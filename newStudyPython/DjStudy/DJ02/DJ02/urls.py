@@ -42,5 +42,6 @@ urlpatterns = [
     url(r'^v5Books/$',App05Views.Books),
     url(r'^v5login',App05Views.v5login),
     url(r'^v5home',App05Views.v5home),
-    url(r'^v5index',App05Views.v5index)
+    url(r'^v5index',App05Views.v5index),
+    url(r'^v5loginout',App05Views.v5loginout)
 ]

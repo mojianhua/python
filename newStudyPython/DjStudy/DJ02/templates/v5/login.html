@@ -5,7 +5,7 @@
     <title>v5login</title>
 </head>
 <body>
-    <form action="/v5login/" method="post">
+    <form action="{{ request.path_info }}" method="post">
         <p>
             用户名：
             <input name="user" type="text">

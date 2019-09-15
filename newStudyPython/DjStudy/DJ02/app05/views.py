@@ -87,7 +87,7 @@ def check_login(func):
     # 装饰器修复技术
     @wraps(func)
     def inner(request,*args,**kwargs):
-        ret = request.get_signed_cookie('zmkm', default=99, salt="abc")
+        ret = request.get_signed_cookie('is_login', default=99, salt="abc")
         if ret == "1":
         # 已经登录过则执行
             return func(request,*args,**kwargs)
@@ -95,19 +95,28 @@ def check_login(func):
             # 获取当然url
             next_url = request.path_info
             print(next_url)
-            return redirect('/v5login/')
+            return redirect('/v5login/?next_url={}'.format(next_url))
     return inner
 
 def v5login(request):
+    # 当前访问的全路径
+    print(request.get_full_path())
+    # 当前请求的路径
+    print(request.path_info)
     if request.method == 'POST':
         user = request.POST.get('user',None)
         pwd = request.POST.get('pwd',None)
+        # 从url获取数据
+        next_url = request.GET.get('next_url')
         if user == 'jim' and pwd == '123456':
             # 设置cookie
-            rep = redirect('/v5home/')
+            if next_url:
+                rep = redirect(next_url)
+            else:
+                rep = redirect('/v5home/')
             # rep.set_cookie('zmkm',"2")
             # 设置加密cookie,max_age 设置过期时间
-            rep.set_signed_cookie('zmkm',"1",salt="abc",max_age=10)
+            rep.set_signed_cookie('is_login',"1",salt="abc",max_age=10)
             return rep
         else:
             return HttpResponse('error')
@@ -118,7 +127,7 @@ def v5home(request):
     # 获取cookie
     # ret = request.COOKIES.get('zmkm',99)
     # 获取加密cookie
-    ret = request.get_signed_cookie('zmkm',default=0,salt="abc")
+    ret = request.get_signed_cookie('is_login',default=0,salt="abc")
     if ret == '1':
         return render(request,'v5/home.html')
     else:
@@ -127,3 +136,10 @@ def v5home(request):
 @check_login
 def v5index(request):
     return render(request,'v5/index.html')
+
+# 登出
+def v5loginout(request):
+    rep = redirect('/v5login/')
+    # 删除cookie
+    rep.delete_cookie("is_login")
+    return rep
