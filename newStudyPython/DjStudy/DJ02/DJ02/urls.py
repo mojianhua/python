@@ -40,12 +40,12 @@ urlpatterns = [
     url(r'^v4login/$',v4.login),
     url(r'^v4transfer/$',v4.transfer),
     url(r'^v5Books/$',App05Views.Books),
-    url(r'^v5login',App05Views.v5login),
-    url(r'^v5home',App05Views.v5home),
-    url(r'^v5index',App05Views.v5index),
-    url(r'^v5loginout',App05Views.v5loginout),
-    url(r'^Session/v5login', App05Views.v5loginSession),
-    url(r'^Session/v5home', App05Views.v5homeSession),
-    url(r'^Session/v5index', App05Views.v5indexSession),
-    url(r'^Session/v5loginout', App05Views.v5loginoutSession)
+    url(r'^v5login/$',App05Views.v5login),
+    url(r'^v5home/$',App05Views.v5home),
+    url(r'^v5index/$',App05Views.v5index),
+    url(r'^v5loginout/$',App05Views.v5loginout),
+    url(r'^Session/v5login/$', App05Views.v5loginSession),
+    url(r'^Session/v5home/$', App05Views.v5homeSession),
+    url(r'^Session/v5index/$', App05Views.v5indexSession),
+    url(r'^Session/v5loginout/$', App05Views.v5loginoutSession)
 ]
