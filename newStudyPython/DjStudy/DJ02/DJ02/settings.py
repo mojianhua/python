@@ -42,7 +42,8 @@ INSTALLED_APPS = [
     'app02.apps.App02Config',
     'app03.apps.App03Config',
     'app04.apps.App04Config',
-    'app05.apps.App05Config'
+    'app05.apps.App05Config',
+    'appJson.apps.AppjsonConfig'
 ]
 
 MIDDLEWARE = [
@@ -89,11 +90,11 @@ DATABASES = {
     # }
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'HOST':'127.0.0.1',
-        'PORT':3306,
-        'NAME':'Django',
-        'USER':'root',
-        'PASSWORD':''
+        'HOST': '192.168.118.171',
+        'PORT': 3603,
+        'NAME': 'Django',
+        'USER': 'dev',
+        'PASSWORD': '123456'
     }
 }
 

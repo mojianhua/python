@@ -21,6 +21,7 @@ from .views import login,savelogin
 from app01 import views as app01views
 from app01 import urls as app01urls
 from app04 import views as v4
+from appJson import urls as appJsonurls
 from BookManageAppp import views as BookManageApppview
 from BookManageAppp import urls as BookManageApppurl
 from app05 import views as App05Views
@@ -33,6 +34,7 @@ urlpatterns = [
     url(r'BookManageApppview',include(BookManageApppurl)),
     # 导入app01应用路由
     url(r'app01', include(app01urls)),
+    url(r'appJson',include(appJsonurls)),
     # url(r'^login/', app01views.login),
     # url(r'^user_list/', app01views.user_list),
     # url(r'^user_add/', app01views.user_add),

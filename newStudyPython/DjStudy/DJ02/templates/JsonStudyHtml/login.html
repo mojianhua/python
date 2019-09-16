@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="/static/js/jquery.js"></script>
+</head>
+<body>
+    <p>用户名：<input name="username" value="" type="text" id="username"></p>
+    <p>密码：<input name="pwd" value="" type="password" id="pwd"></p>
+     <p>提交<input type="button" value="ajax提交" id="sub"></p>
+</body>
+<script>
+    $("#sub").on("click",function () {
+        $.ajax({
+            url:"/appJson/JsonStudy/",
+            method:"POST",
+            data:{"username":$('#username').val(),"pwd":$('#pwd').val()},
+            success:function (arg) {
+                alert(arg)
+            },
+            error:function (arg) {
+                alert(arg)
+            }
+        })
+    })
+</script>
+</html>
