@@ -21,6 +21,19 @@ def JsonStudy(request):
     else:
         return render(request,'JsonStudyHtml/login.html')
 
+from appJson import models
+def JsonPersions(request):
+    ret = models.Persions.objects.all()
+    # person_list = []
+    # for i in ret:
+    #     person_list.append({"name":i.name,"age":i.age})
+    # str = json.dumps(person_list)
+    # print(str)
+    # 序列化
+    from django.core import serializers
+    ret = serializers.serialize("json",ret)
+    return HttpResponse(ret)
+
 class Person(object):
     def __init__(self,name):
         self.name = name
