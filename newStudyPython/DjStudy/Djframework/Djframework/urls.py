@@ -16,6 +16,7 @@ Including another URLconf
 from django.conf.urls import url
 from django.contrib import admin
 from app01 import views as app01views
+from api import views as apiViews
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
@@ -26,5 +27,8 @@ urlpatterns = [
     url(r'^students/',app01views.Student.as_view()),
     url(r'^studentsCbv/',app01views.StudentCbv.as_view()),
     # framework
-    url(r'^dogCbv/',app01views.DogCbv.as_view())
+    url(r'^dogCbv/',app01views.DogCbv.as_view()),
+    # api
+    url(r'^api/v1/auth/$',apiViews.AuthView.as_view()),
+    url(r'^api/v1/order/$',apiViews.OrderView.as_view())
 ]
