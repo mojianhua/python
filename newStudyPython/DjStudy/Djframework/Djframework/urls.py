@@ -30,5 +30,6 @@ urlpatterns = [
     url(r'^dogCbv/',app01views.DogCbv.as_view()),
     # api
     url(r'^api/v1/auth/$',apiViews.AuthView.as_view()),
-    url(r'^api/v1/order/$',apiViews.OrderView.as_view())
+    url(r'^api/v1/order/$',apiViews.OrderView.as_view()),
+    url(r'^api/v1/user/$',apiViews.UserView.as_view())
 ]

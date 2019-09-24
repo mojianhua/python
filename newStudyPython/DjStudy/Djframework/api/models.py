@@ -12,5 +12,5 @@ class UserInfo(models.Model):
     password = models.CharField(max_length=64)
 
 class UserToken(models.Model):
-    user = models.OneToOneField(to="UserInfo")
+    user = models.OneToOneField(to="UserInfo",on_delete=models.CASCADE)
     token = models.CharField(max_length=64)

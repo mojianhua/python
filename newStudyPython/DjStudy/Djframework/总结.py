@@ -21,3 +21,16 @@
 # 包含restframework,前面没变，只是dispatch反射改变了
 
 #安装，pip install djangorestframework
+
+# 认证流程
+# 1、先走dispatch，先对request封装，在走get_authenticators里面的authentication_classes进行验证
+# 2、再走get_authenticators里面的initial，走perform_authticate实现验证
+# 3、到user里面的_authenticate(),最后走自定义认证类Authotication
+
+
+# 认证ps
+# 可以局部使用
+
+# 内置认证
+# 认证类必须继承：from rest_framework.authentication import BasicAuthentication
+# 其他认证类：BasicAuthentication

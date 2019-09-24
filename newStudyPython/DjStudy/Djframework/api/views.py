@@ -38,6 +38,9 @@ class AuthView(APIView):
     """
     用户登录认证
     """
+
+    # 因为不需要认证，所以定义一个空的认证
+    authentication_classes = []
     def post(self,request,*args,**kwargs):
         ret = {'code':10000,'msg':None}
         username = request._request.POST.get('username')
@@ -62,26 +65,12 @@ class AuthView(APIView):
 
         return JsonResponse(ret)
 
-
-class Authotication(object):
-    def authenticate(self,request):
-        token = request._request.GET.get('token')
-        print(token)
-        token_obj = models.UserToken.objects.filter(token=token).first()
-        if not token_obj:
-            raise exceptions.AuthenticationFailed('用户认证失败')
-        # 在rest framework,将这两个字段赋值给request以供后续使用
-        return (token_obj.user,token_obj)
-
-    def authenticate_header(self,request):
-        pass
-
 class OrderView(APIView):
     """
     订单
     """
-    # 运行首要执行的类
-    authentication_classes = [Authotication,]
+    # # 运行首要执行的类
+    # authentication_classes = [FirstAuthotication,Authotication]
 
     def get(self,request,*args,**kwargs):
 
@@ -125,6 +114,53 @@ class OrderView(APIView):
         except Exception as e:
             ret['code'] = 10002
             ret['msg'] = '系统异常'
+        return JsonResponse(ret)
 
 
+class UserView(APIView):
+    """
+    用户
+    """
+    def get(self,request,*args,**kwargs):
+        print(request.user)
+        # # 获取token，未登录
+        # token = request._request.GET.get('token')
+        # if not token:
+        #     ret = {"code": 10001, "msg": "用户未登录", 'data': None}
+        #     return JsonResponse(ret)
+
+        # 这是上面Authotication方法中raise第一个值，即token_obj.user
+        one = request.user
+        print(one)
+        # 这是上面Authotication方法中raise第二个值，即token_obj
+        two = request.auth
+        print(two)
+        ret = {"code":10000,"msg":None,'data':None}
+        try:
+            ret['data'] = ORDER_DICT
+        except Exception as e:
+            pass
+        return JsonResponse(ret)
+
+
+    def post(self,request,*args,**kwargs):
+        ret = {'code':10000,'msg':None}
+        username = request._request.POST.get('username')
+        pwd = request._request.POST.get('password')
+        obj = models.UserInfo.objects.filter(username=username,password=pwd).first()
+        try:
+            if not obj:
+                ret['code'] = 10001
+                ret['msg'] = '用户名或密码错误'
+
+            # 为用户保存token
+            token = md5(username)
+            # 存在就跟新，不存在新建
+            models.UserToken.objects.update_or_create(user=obj,defaults={'token':token})
+            ret['token'] = token
+            ret['msg'] = '登录成功'
+
+        except Exception as e:
+            ret['code'] = 10002
+            ret['msg'] = '系统异常'
         return JsonResponse(ret)

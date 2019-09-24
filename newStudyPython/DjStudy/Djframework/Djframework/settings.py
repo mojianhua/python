@@ -38,7 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'app01.apps.App01Config',
-    'api.apps.ApiConfig'
+    'api.apps.ApiConfig',
+    'rest_framework'
 ]
 
 MIDDLEWARE = [
@@ -82,11 +83,11 @@ DATABASES = {
     # }
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'HOST':'127.0.0.1',
-        'PORT':3306,
+        'HOST':'192.168.118.171',
+        'PORT':3603,
         'NAME':'DjangoFramework',
-        'USER':'root',
-        'PASSWORD':''
+        'USER':'dev',
+        'PASSWORD':'123456'
     }
 }
 
@@ -127,3 +128,12 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
 STATIC_URL = '/static/'
+
+REST_FRAMEWORK = {
+    # 全局使用的认证类
+    "DEFAULT_AUTHENTICATION_CLASSES":['api.utils.auth.FirstAuthotication','api.utils.auth.Authotication'],
+    # 匿名用户设置
+    # "UNAUTHENTICATED_USER":lambda : "匿名用户"
+    "UNAUTHENTICATED_USER":None, # 匿名或者未登录，结果request.user = None
+    "UNAUTHENTICATED_TOKEN":None, # 匿名或者未登录，结果request.auth = None
+}
