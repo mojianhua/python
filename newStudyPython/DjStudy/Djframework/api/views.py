@@ -9,12 +9,16 @@ from rest_framework.authentication import BasicAuthentication
 # Create your views here.
 
 # md5加密
+'''
+update(arg)传入arg对象来更新hash的对象。必须注意的是，该方法只接受byte类型，否则会报错。这就是要在参数前添加b来转换类型的原因。
+同时要注意，重复调用update(arg)方法，是会将传入的arg参数进行拼接，而不是覆盖。也就是说，m.update(a); m.update(b) 等价于m.update(a+b)。
+hexdigest()在英语中hex有十六进制的意思，因此该方法是将hash中的数据转换成数据，其中只包含十六进制的数字。
+'''
 def md5(username):
     import hashlib
     import time
-
     ctime = str(time.time())
-
+    #中文进行加密,要转码
     m = hashlib.md5(bytes(username,encoding='utf-8'))
     m.update(bytes(ctime,encoding='utf-8'))
     return m.hexdigest()
