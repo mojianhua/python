@@ -23,8 +23,8 @@
 #安装，pip install djangorestframework
 
 # 认证流程
-# 1、先走dispatch，先对request封装，在走get_authenticators里面的authentication_classes进行验证
-# 2、再走get_authenticators里面的initial，走perform_authticate实现验证
+# 1、先走dispatch，先对request封装，在走get_authenticators里面的authentication_classes进行验证（获取认证类，局部或者全局，通过列表生成对象）
+# 2、再走get_authenticators里面的initial，走perform_authticate实现验证，request.user
 # 3、到user里面的_authenticate(),最后走自定义认证类Authotication
 
 
