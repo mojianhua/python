@@ -34,3 +34,17 @@
 # 内置认证
 # 认证类必须继承：from rest_framework.authentication import BasicAuthentication
 # 其他认证类：BasicAuthentication
+
+
+# 用户认证使用流程
+# 1、认证类必须继承：from rest_framework.authentication import BasicAuthentication，必须包含authenticate方法，里面写认证逻辑
+# 2、返回值有3种返回值，None表示下一个认证来执行，
+# 2.1、如果raise则抛出exceptions.AuthenticationFailed('用户认证失败')异常，需要导入from rest_framework import exceptions
+# 2.2、正确执行（元素1，元素2），赋值给request.user,元素2返回request.auth
+# 3、可以全局使用或局部使用
+# 3.1、在类里面写静态字段
+'''
+ # # 运行首要执行的类
+    # authentication_classes = [FirstAuthotication,Authotication]
+    '''
+#3.2可以是全局使用，在setting里面设置REST_FRAMEWORK
