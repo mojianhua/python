@@ -39,7 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'app01.apps.App01Config',
     'api.apps.ApiConfig',
-    'rest_framework'
+    'rest_framework',
+    'api02.apps.Api02Config'
 ]
 
 MIDDLEWARE = [
@@ -145,5 +146,13 @@ REST_FRAMEWORK = {
         # 一分钟访问3次，JimLimit记录的key，对应访问限制类里面的scope
         "JimLimit": '3/m',
         "JimLimitUser": '10/m'
-    }
+    },
+    # 默认版本号
+    "DEFAULT_VERSION":'v1',
+    # 允许通过的版本
+    "ALLOWED_VERSIONS":['v1','v2'],
+    # 版本key
+    "VERSION_PARAM":'version',
+    # 根据urls.py控制版本
+    "DEFAULT_VERSIONING_CLASS":"rest_framework.versioning.URLPathVersioning"
 }
