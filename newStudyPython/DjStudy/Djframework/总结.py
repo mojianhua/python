@@ -73,3 +73,22 @@
     全局调用：
         "DEFAULT_PERMISSION_CLASSES":['api.utils.Permission.SVIPPermisson']
 '''
+
+
+# --------------------------------------访问频率限制--------------------------------------------------------------------
+'''
+    1、基本使用，from rest_framework.throttling import BaseThrottle,SimpleRateThrottle
+        - 类，继承BaseThrottle，必须包含allow_request和wait方法
+        - 类，继承SimpleRateThrottle，要有get_cache_key、里面要用scope = "JimLimit",配置setting里面的key
+    使用
+        - 局部： throttle_classes = [VisteThrottle,]
+        - 全局：在setting.py里面配置
+            # 设置全局使用访问次数
+            "DEFAULT_THROTTLE_CLASSES": ['api.utils.Throttle.UserVisteThrottle'],
+            # 全局使用内置访问次数限制
+            "DEFAULT_THROTTLE_RATES":{
+                # 一分钟访问3次，JimLimit记录的key，对应访问限制类里面的scope
+                "JimLimit": '3/m',
+                "JimLimitUser": '10/m'
+            }
+'''

@@ -137,5 +137,13 @@ REST_FRAMEWORK = {
     "UNAUTHENTICATED_USER":None, # 匿名或者未登录，结果request.user = None
     "UNAUTHENTICATED_TOKEN":None, # 匿名或者未登录，结果request.auth = None
     # 设置全局使用权限类
-    "DEFAULT_PERMISSION_CLASSES":['api.utils.Permission.SVIPPermisson']
+    "DEFAULT_PERMISSION_CLASSES":['api.utils.Permission.SVIPPermisson'],
+    # 设置全局使用访问次数
+    "DEFAULT_THROTTLE_CLASSES": ['api.utils.Throttle.UserVisteThrottle'],
+    # 全局使用内置访问次数限制
+    "DEFAULT_THROTTLE_RATES":{
+        # 一分钟访问3次，JimLimit记录的key，对应访问限制类里面的scope
+        "JimLimit": '3/m',
+        "JimLimitUser": '10/m'
+    }
 }

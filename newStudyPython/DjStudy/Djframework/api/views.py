@@ -5,10 +5,13 @@ from api import models
 from rest_framework.request import Request
 from rest_framework import exceptions
 from rest_framework.authentication import BasicAuthentication
+from rest_framework.throttling import BaseThrottle
 # 引入权限文件
 from api.utils.Permission import SVIPPermisson
 from api.utils.Permission import OtherPermisson
-
+# 引入自定义访问限制
+from api.utils.Throttle import VisteThrottle
+import time
 # Create your views here.
 
 # md5加密
@@ -45,9 +48,13 @@ class AuthView(APIView):
     """
     用户登录认证
     """
-
     # 因为不需要认证，所以定义一个空的认证
     authentication_classes = []
+    # 权限认证，因为不需要，所以定义为空
+    permission_classes = []
+    # 局部调用，自定义限制访问次数类
+    throttle_classes = [VisteThrottle,]
+
     def post(self,request,*args,**kwargs):
         ret = {'code':10000,'msg':None}
         username = request._request.POST.get('username')
