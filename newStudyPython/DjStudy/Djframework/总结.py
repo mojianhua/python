@@ -48,3 +48,28 @@
     # authentication_classes = [FirstAuthotication,Authotication]
     '''
 #3.2可以是全局使用，在setting里面设置REST_FRAMEWORK
+
+
+
+
+# -------------------------------------------------权限-----------------------------------------------------------------
+# 基本使用
+'''
+1、使用，必须继承：BasePermission，必须实现，has_permission方法
+   from rest_framework.permissions import BasePermission
+   返回：True,有权访问
+   返回：False,无权访问
+    class SVIPPermisson(BasePermission):
+        # 提示信息
+        message = "必须是SVIP才能访问"
+        def has_permission(self,request,view):
+            if request.user.user_type == 3:
+                return True
+            return False
+    
+    局部调用：
+        # # # 局部设置权限，如果写了以当前为准
+    # permission_classes = [OtherPermisson,]
+    全局调用：
+        "DEFAULT_PERMISSION_CLASSES":['api.utils.Permission.SVIPPermisson']
+'''

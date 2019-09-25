@@ -5,6 +5,9 @@ from api import models
 from rest_framework.request import Request
 from rest_framework import exceptions
 from rest_framework.authentication import BasicAuthentication
+# 引入权限文件
+from api.utils.Permission import SVIPPermisson
+from api.utils.Permission import OtherPermisson
 
 # Create your views here.
 
@@ -120,25 +123,17 @@ class OrderView(APIView):
             ret['msg'] = '系统异常'
         return JsonResponse(ret)
 
-
 class UserView(APIView):
     """
     用户
     """
-    def get(self,request,*args,**kwargs):
-        print(request.user)
-        # # 获取token，未登录
-        # token = request._request.GET.get('token')
-        # if not token:
-        #     ret = {"code": 10001, "msg": "用户未登录", 'data': None}
-        #     return JsonResponse(ret)
+    # # # 局部设置权限，如果写了以当前为准
+    # permission_classes = [OtherPermisson,]
 
-        # 这是上面Authotication方法中raise第一个值，即token_obj.user
-        one = request.user
-        print(one)
-        # 这是上面Authotication方法中raise第二个值，即token_obj
-        two = request.auth
-        print(two)
+    def get(self,request,*args,**kwargs):
+        # 权限的判断，因为在验证类那边已经保存
+        print(request.user.user_type)
+        print(request.user.username)
         ret = {"code":10000,"msg":None,'data':None}
         try:
             ret['data'] = ORDER_DICT

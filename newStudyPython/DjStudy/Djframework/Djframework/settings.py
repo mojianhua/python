@@ -136,4 +136,6 @@ REST_FRAMEWORK = {
     # "UNAUTHENTICATED_USER":lambda : "匿名用户"
     "UNAUTHENTICATED_USER":None, # 匿名或者未登录，结果request.user = None
     "UNAUTHENTICATED_TOKEN":None, # 匿名或者未登录，结果request.auth = None
+    # 设置全局使用权限类
+    "DEFAULT_PERMISSION_CLASSES":['api.utils.Permission.SVIPPermisson']
 }
