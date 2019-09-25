@@ -27,5 +27,28 @@ class UsersViews(APIView):
         # # 获取版本，通过GET
         # version = request.query_params.get('version')
         # print(version)
+        # # 内置获取版本，通过GET
         print(request.version)
+        return HttpResponse('ok5555')
+
+
+
+# -------------------------------解释器----------------------------------------
+from rest_framework.parsers import JSONParser,FormParser,MultiPartParser,FileUploadParser
+class UsersJieXiQiViews(APIView):
+    authentication_classes = []
+    permission_classes = []
+    throttle_classes = []
+
+    '''
+    JSONParser:只能接收json发送来数据
+    FormParser:能处理x-www-form-urlencoded提交的数据
+    MultiPartParser:form提交的
+    FileUploadParser:上传文件的
+    '''
+    # # 局部解析器调用方法
+    # parser_classes = [JSONParser,FormParser]
+    def post(self,request,*args,**kwargs):
+        # 获取请求请求头，获取用户请求体，根据用户的请求头和parser_classes的请求进行比较
+        print(request.data)
         return HttpResponse('ok5555')

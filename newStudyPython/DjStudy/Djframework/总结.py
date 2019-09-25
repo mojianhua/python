@@ -92,3 +92,38 @@
                 "JimLimitUser": '10/m'
             }
 '''
+
+
+
+#----------------版本-----------------------
+'''
+    总结
+        使用
+            配置文件
+            REST_FRAMEWORK = {
+                # 默认版本号
+                "DEFAULT_VERSION":'v1',
+                # 允许通过的版本
+                "ALLOWED_VERSIONS":['v1','v2'],
+                # 版本key
+                "VERSION_PARAM":'version',
+                # 根据urls.py控制版本
+                "DEFAULT_VERSIONING_CLASS":"rest_framework.versioning.URLPathVersioning"
+            }
+        路由系统：
+          url(r'^api2/',include('api02.urls'))
+            urlpatterns = [
+                url(r'^(?P<version>[v1|v2]+)/users/$',views.UsersViews.as_view())
+            ]
+        视图使用方式：
+'''
+
+#-----------------------------------------解析器-------------------
+'''
+    使用：
+        全局使用："DEFAULT_PARSER_CLASS":["rest_framework.parsers.JSONParser","rest_framework.parsers.FormParser","rest_framework.parsers.MultiPartParser","rest_framework.parsers.FileUploadParser"]
+        局部使用：parser_classes = [JSONParser,FormParser]
+    调用
+         # 获取请求请求头，获取用户请求体，根据用户的请求头和parser_classes的请求进行比较
+        print(request.data)
+'''
