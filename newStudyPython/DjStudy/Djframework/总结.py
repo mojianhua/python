@@ -118,7 +118,7 @@
         视图使用方式：
 '''
 
-#-----------------------------------------解析器-------------------
+#-----------------------------------------解析器------------------------------------------------------------------------
 '''
     使用：
         全局使用："DEFAULT_PARSER_CLASS":["rest_framework.parsers.JSONParser","rest_framework.parsers.FormParser","rest_framework.parsers.MultiPartParser","rest_framework.parsers.FileUploadParser"]
@@ -126,4 +126,97 @@
     调用
          # 获取请求请求头，获取用户请求体，根据用户的请求头和parser_classes的请求进行比较
         print(request.data)
+'''
+
+
+# ---------------------------------------------------序列化-------------------------------------------------------------
+'''
+    from rest_framework import serializers
+    # 需要序列化的字段
+    class RolesSerializers(serializers.Serializer):
+        title = serializers.CharField()
+        id = serializers.IntegerField()
+    
+    
+    class RolesViews(APIView):
+        authentication_classes = []
+        permission_classes = []
+        throttle_classes = []
+        def get(self,request,*args,**kwargs):
+            #
+            # # 基础django
+            # roles = models.Role.objects.all().values('id','title')
+            # roles = list(roles)
+            # ret = json.dumps(roles)
+            # # 中文不转行
+            # # ret = json.dumps(roles,ensure_ascii=False)
+    
+            #rest_framework 里面的对[obj,obj,obj]解决序列化
+            roles = models.Role.objects.all()
+            # 如果多条数据就要加many=True,单条加False
+            ser = RolesSerializers(instance=roles,many=True)
+            # 序列化后结果,ser.data,是一个字典
+            print(ser.data)
+            ret = json.dumps(ser.data,ensure_ascii=False)
+            return HttpResponse(ret)
+
+        class UserInfoSerializers(serializers.Serializer):
+            # sourc代表源的意思，对应数据库的字段，abc代表别名
+            abc = serializers.IntegerField(source='user_type')
+            # # 获取model里面的可执行的值
+            # cba = serializers.CharField(source="get_user_type_display")
+            username = serializers.CharField()
+            password = serializers.CharField()
+            # 通过外键链表查询，一对一的查询
+            gp = serializers.CharField(source="group.title")
+            # 多对多的，链表查询,自定显示
+            # rls = serializers.CharField(source="role.all")
+            # 自定义显示
+            rls = serializers.SerializerMethodField()
+        
+            # 多对多链表查询跟上面rls对应
+            def get_rls(self,row):
+                role_obj = row.role.all()
+                ret = []
+                for item in role_obj:
+                    ret.append({'id':item.id,'title':item.title})
+                return ret
+        
+        class UserInfoView(APIView):
+            authentication_classes = []
+            permission_classes = []
+            throttle_classes = []
+            def get(self,request,*args,**kwargs):
+                user = models.UserInfo.objects.all()
+                ser = UserInfoSerializers(instance=user,many=True)
+                ret = json.dumps(ser.data,ensure_ascii=True)
+                return HttpResponse(ret)
+        
+        # 获取表里面的所有字段
+        class UserInfoModelSerializer(serializers.ModelSerializer):
+            # # 获取model里面的可执行的值
+            user_type = serializers.CharField(source="get_user_type_display")
+            # 自定义显示
+            rls = serializers.SerializerMethodField()
+            group = serializers.CharField(source="group.title")
+            class Meta:
+                model = models.UserInfo
+                fields = ['id','username','password','user_type','rls','group']
+        
+            def get_rls(self,row):
+                role_obj = row.role.all()
+                ret = []
+                for item in role_obj:
+                    ret.append({'id':item.id,'title':item.title})
+                return ret
+        
+        class UserInfoModelView(APIView):
+            authentication_classes = []
+            permission_classes = []
+            throttle_classes = []
+            def get(self,request,*args,**kwargs):
+                user = models.UserInfo.objects.all()
+                ser = UserInfoModelSerializer(instance=user,many=True)
+                ret = json.dumps(ser.data,ensure_ascii=True)
+                return HttpResponse(ret)
 '''
