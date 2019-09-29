@@ -1,0 +1,7 @@
+1、安装虚拟环境
+conda create -n 环境名称 python==3.6.9
+2、进入pycharm启动虚拟环境
+activate 环境名称
+3、安装指定文件python扩展
+pip install -r 文件名
+4、在pycharm的setting选中python路径，默认是在anaconda里面目录的envs
