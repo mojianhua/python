@@ -40,7 +40,7 @@ INSTALLED_APPS = [
     'app01.apps.App01Config',
     'api.apps.ApiConfig',
     'rest_framework',
-    'api02.apps.Api02Config'
+    'api02.apps.Api02Config',
 ]
 
 MIDDLEWARE = [
