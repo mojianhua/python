@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django.http import JsonResponse
+from django.http import JsonResponse,HttpResponse
 from rest_framework.views import APIView
 from api import models
 from rest_framework.request import Request
@@ -170,3 +170,39 @@ class UserView(APIView):
             ret['code'] = 10002
             ret['msg'] = '系统异常'
         return JsonResponse(ret)
+
+# ---------------------分页---------------------------
+from api.utils.Serializer.pagerSerializer import pagerSerializers
+import json
+from api02 import models as api02Model
+from rest_framework.pagination import PageNumberPagination,LimitOffsetPagination,CursorPagination
+
+class MyPages(PageNumberPagination):
+    # 每页显示个数
+    page_size = 2
+    # 页码的标识
+    page_query_param = 'page'
+    # 每页传递个数的标识
+    page_size_query_param = 'size'
+    # 每页最大显示数
+    page_query_param = 4
+
+class UserGroupPageView(APIView):
+    authentication_classes = []
+    permission_classes = []
+    throttle_classes = []
+
+    def get(self,request,*args,**kwargs):
+        roles = api02Model.Role.objects.all()
+        # ser = pagerSerializers(instance=roles,many=True)
+        # 分页
+        pg = MyPages()
+        page_roles = pg.paginate_queryset(queryset=roles,request=request,view=self)
+        print(page_roles)
+
+        # ret = json.dumps(ser.data)
+        # page表示页码
+        # http://127.0.0.1:8000/api2/v1/UserGroupPageView/?page=1
+        # return HttpResponse('11')
+        # # 分页的数据，带页数目，和上一页还有下一页的连接
+        # return pg.get_paginated_response(ser.data)

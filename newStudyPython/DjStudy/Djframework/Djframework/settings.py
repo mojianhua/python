@@ -78,22 +78,22 @@ WSGI_APPLICATION = 'Djframework.wsgi.application'
 # https://docs.djangoproject.com/en/1.11/ref/settings/#databases
 
 DATABASES = {
-    # 'default': {
-    #     'ENGINE': 'django.db.backends.mysql',
-    #     'HOST': '127.0.0.1',
-    #     'PORT': 3306,
-    #     'NAME': 'DjangoFramework',
-    #     'USER': 'root',
-    #     'PASSWORD': ''
-    # }
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'HOST':'192.168.118.171',
-        'PORT':3603,
-        'NAME':'DjangoFramework',
-        'USER':'dev',
-        'PASSWORD':'123456'
+        'HOST': '127.0.0.1',
+        'PORT': 3306,
+        'NAME': 'DjangoFramework',
+        'USER': 'root',
+        'PASSWORD': ''
     }
+    # 'default': {
+    #     'ENGINE': 'django.db.backends.mysql',
+    #     'HOST':'192.168.118.171',
+    #     'PORT':3603,
+    #     'NAME':'DjangoFramework',
+    #     'USER':'dev',
+    #     'PASSWORD':'123456'
+    # }
 }
 
 # Password validation
@@ -160,5 +160,7 @@ REST_FRAMEWORK = {
     # 根据urls.py控制版本
     "DEFAULT_VERSIONING_CLASS":"rest_framework.versioning.URLPathVersioning",
     # 全局解析器使用方法
-    "DEFAULT_PARSER_CLASS":["rest_framework.parsers.JSONParser","rest_framework.parsers.FormParser","rest_framework.parsers.MultiPartParser","rest_framework.parsers.FileUploadParser"]
+    "DEFAULT_PARSER_CLASS":["rest_framework.parsers.JSONParser","rest_framework.parsers.FormParser","rest_framework.parsers.MultiPartParser","rest_framework.parsers.FileUploadParser"],
+    #分页数
+    "PAGE_SIZE":2
 }
