@@ -179,7 +179,7 @@ from rest_framework.pagination import PageNumberPagination,LimitOffsetPagination
 
 class MyPages(PageNumberPagination):
     # 每页显示个数
-    page_size = 2
+    page_size = 1
     # 页码的标识
     page_query_param = 'page'
     # 每页传递个数的标识
@@ -198,11 +198,33 @@ class UserGroupPageView(APIView):
         # 分页
         pg = MyPages()
         page_roles = pg.paginate_queryset(queryset=roles,request=request,view=self)
-        print(page_roles)
+        ser = pagerSerializers(instance=page_roles,many=True)
 
         # ret = json.dumps(ser.data)
         # page表示页码
         # http://127.0.0.1:8000/api2/v1/UserGroupPageView/?page=1
-        # return HttpResponse('11')
+        return HttpResponse(ser.data)
         # # 分页的数据，带页数目，和上一页还有下一页的连接
         # return pg.get_paginated_response(ser.data)
+
+
+# 视图
+from rest_framework.generics import GenericAPIView
+
+class NewUserGroupPageView(GenericAPIView):
+    authentication_classes = []
+    permission_classes = []
+    throttle_classes = []
+
+    queryset = api02Model.Role.objects.all()
+    serializer_class = pagerSerializers
+    pagination_class = PageNumberPagination
+
+    def get(self,request,*args,**kwargs):
+        # 获取数据
+        roles = self.get_queryset()
+        # 分页
+        page_roles = self.paginate_queryset(roles)
+        # 获取序列化的数据
+        ser = self.get_serializer(instance=page_roles,many=True)
+        return HttpResponse(ser.data)

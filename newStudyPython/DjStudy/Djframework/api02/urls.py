@@ -16,4 +16,6 @@ urlpatterns = [
     url(r'^(?P<version>[v1|v2]+)/UserGroupView/$',views.UserGroupView.as_view()),
     # 分页
     url(r'^(?P<version>[v1|v2]+)/UserGroupPageView/$', apiViews.UserGroupPageView.as_view()),
+    # 视图
+    url(r'^(?P<version>[v1|v2]+)/NewUserGroupPageView/$', apiViews.NewUserGroupPageView.as_view()),
 ]
