@@ -18,4 +18,7 @@ urlpatterns = [
     url(r'^(?P<version>[v1|v2]+)/UserGroupPageView/$', apiViews.UserGroupPageView.as_view()),
     # 视图
     url(r'^(?P<version>[v1|v2]+)/NewUserGroupPageView/$', apiViews.NewUserGroupPageView.as_view()),
+    # get请求和方法中的list对应
+    url(r'^(?P<version>[v1|v2]+)/NewUserGroupPageView2/$', apiViews.NewUserGroupPageView2.as_view({'get':'list','post':'create'})),
+
 ]

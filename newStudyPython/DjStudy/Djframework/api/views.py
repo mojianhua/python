@@ -12,6 +12,8 @@ from api.utils.Permission import OtherPermisson
 # 引入自定义访问限制
 from api.utils.Throttle import VisteThrottle
 import time
+from rest_framework.response import Response
+
 # Create your views here.
 
 # md5加密
@@ -228,3 +230,24 @@ class NewUserGroupPageView(GenericAPIView):
         # 获取序列化的数据
         ser = self.get_serializer(instance=page_roles,many=True)
         return HttpResponse(ser.data)
+
+from rest_framework.viewsets import GenericViewSet,ModelViewSet
+from rest_framework.mixins import ListModelMixin,CreateModelMixin
+
+class NewUserGroupPageView2(ModelViewSet):
+    authentication_classes = []
+    permission_classes = []
+    throttle_classes = []
+
+    queryset = api02Model.Role.objects.all()
+    serializer_class = pagerSerializers
+    pagination_class = PageNumberPagination
+
+    def list(self,request,*args,**kwargs):
+        # 获取数据
+        roles = self.get_queryset()
+        # 分页
+        page_roles = self.paginate_queryset(roles)
+        # 获取序列化的数据
+        ser = self.get_serializer(instance=page_roles,many=True)
+        return Response(ser.data)
