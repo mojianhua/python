@@ -233,6 +233,7 @@ class NewUserGroupPageView(GenericAPIView):
 
 from rest_framework.viewsets import GenericViewSet,ModelViewSet
 from rest_framework.mixins import ListModelMixin,CreateModelMixin
+from rest_framework.renderers import JSONRenderer,BrowsableAPIRenderer
 
 class NewUserGroupPageView2(ModelViewSet):
     authentication_classes = []
@@ -243,6 +244,8 @@ class NewUserGroupPageView2(ModelViewSet):
     serializer_class = pagerSerializers
     pagination_class = PageNumberPagination
 
+    # 以json方法显示页码:JSONRenderer,浏览器看数据：BrowsableAPIRenderer
+    # renderer_classes = [JSONRenderer,BrowsableAPIRenderer]
     def list(self,request,*args,**kwargs):
         # 获取数据
         roles = self.get_queryset()

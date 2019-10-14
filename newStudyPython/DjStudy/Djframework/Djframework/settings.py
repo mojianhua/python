@@ -162,5 +162,7 @@ REST_FRAMEWORK = {
     # 全局解析器使用方法
     "DEFAULT_PARSER_CLASS":["rest_framework.parsers.JSONParser","rest_framework.parsers.FormParser","rest_framework.parsers.MultiPartParser","rest_framework.parsers.FileUploadParser"],
     #分页数
-    "PAGE_SIZE" : 2
+    "PAGE_SIZE" : 2,
+    # 以json方法显示页码:JSONRenderer,浏览器看数据：BrowsableAPIRenderer
+    "DEFAULT_RENDERER_CLASSES":['rest_framework.renderers.JSONRenderer','rest_framework.renderers.BrowsableAPIRenderer'],
 }
