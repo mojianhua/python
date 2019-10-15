@@ -254,3 +254,20 @@ class NewUserGroupPageView2(ModelViewSet):
         # 获取序列化的数据
         ser = self.get_serializer(instance=page_roles,many=True)
         return Response(ser.data)
+
+# contenttype
+class contenttypeView(APIView):
+    authentication_classes = []
+    permission_classes = []
+    throttle_classes = []
+
+    def get(self,request,*args,**kwargs):
+        # 为学位课"php"添加一个价格策略：一个月9.9
+        # obj1 = models.DergreeCourse.objects.filter(title='php').first()
+        # models.PricePolicy.objects.create(pirce=19.9,period=60,content_object=obj1)
+
+        #根据课程ID获取，并获取这个课程所有价格策略
+        DergreeCourse = models.DergreeCourse.objects.filter(id=1).first()
+        price_police = DergreeCourse.price_policy_list.all()
+        print(price_police)
+        return HttpResponse('abc')

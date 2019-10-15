@@ -32,6 +32,8 @@ urlpatterns = [
     url(r'^api/v1/auth/$',apiViews.AuthView.as_view()),
     url(r'^api/v1/order/$',apiViews.OrderView.as_view()),
     url(r'^api/v1/user/$',apiViews.UserView.as_view()),
+    # contenttype
+    url(r'^api/v1/contenttype/$',apiViews.contenttypeView.as_view()),
     # api02路由
     url(r'^api2/',include('api02.urls'))
 ]
