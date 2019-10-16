@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'api02.apps.Api02Config',
 ]
 
+# 中间件
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -51,6 +52,11 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    # 自定义第一个中间件
+    'middleware.middlewarestudy.middlewareStudy.middlewareStudy',
+    # 自定义第二个中间件
+    'middleware.middlewarestudy.middlewareStudy.middlewareStudy2'
+
 ]
 
 ROOT_URLCONF = 'Djframework.urls'

@@ -220,3 +220,13 @@
                 ret = json.dumps(ser.data,ensure_ascii=True)
                 return HttpResponse(ret)
 '''
+
+'''
+    中间件5个固定方法
+    process_request   处理请求，正序请求
+    process_view      处理视图
+    process_response  处理响应，倒序响应
+    process_exception 处理异常
+    process_template_response  处理页码
+'''
+

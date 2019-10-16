@@ -35,5 +35,7 @@ urlpatterns = [
     # contenttype
     url(r'^api/v1/contenttype/$',apiViews.contenttypeView.as_view()),
     # api02路由
-    url(r'^api2/',include('api02.urls'))
+    url(r'^api2/',include('api02.urls')),
+    # 中间件路由
+    url(r'^middle/',include('middleware.urls')),
 ]
