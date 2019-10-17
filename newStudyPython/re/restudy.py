@@ -60,6 +60,19 @@ print(ret)
 def getpage(url):
     return urlopen(url).read().decode('utf-8')
 
+# 密码组合
+# ^(?![0-9]+$)(?![a-zA-Z]+$)[0-9A-Za-z]{6,10}$
+
+'''
+1. ```?=``` ： 询问后面跟着的东西是否等于这个    /b(?=a)/.test('bab')
+
+2. ```?<=``` ： 询问是否以这个东西开头  /(?<=a)b/.test('ab')
+
+3. ```?!``` : 询问后面跟着的东西是否不是这个  /b(?!a)/.test('bb')
+
+4. ```?<!=``` ：询问是否不是以这个东西开头  /(?<!=a)b/.test('bb')
+'''
+
 def parsePage(s):
     # return re.findall('<div class="item">.*?<div class="pic">.*?<em .*?>(?P<id>\d+).*?<span class="title">(?P<title>.*?)</span>'
     #                  '.*?<span class="rating_num" .*?>(?P<rating_num>.*?)</span>.*?<span>(?P<comment_num>.*?)评价</span>',s,re.S)
