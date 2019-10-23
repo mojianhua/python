@@ -230,3 +230,9 @@
     process_template_response  处理页码
 '''
 
+
+#-----------------------------------------------------Django中反向生成models.py------------------------------------------------------------------#
+'''
+	python manage.py inspectdb > common/model/models.py
+'''
+
