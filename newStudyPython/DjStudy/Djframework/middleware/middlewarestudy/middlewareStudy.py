@@ -16,11 +16,11 @@ class middlewareStudy(MiddlewareMixin):
         # print(request.get_full_path())
 
         # 白名单
-        if request.path_info in URL:
-            # 直接响应，后面程序不执行
-            return None
-        else:
-            return HttpResponse('OUT')
+        # if request.path_info in URL:
+        #     # 直接响应，后面程序不执行
+        #     return None
+        # else:
+        #     return HttpResponse('OUT')
         # # 直接响应，后面程序不执行
         # return HttpResponse('OUT')
 
@@ -57,6 +57,7 @@ class middlewareStudy2(MiddlewareMixin):
     # 处理请求的中间件
     def process_request(self,request):
         print('这是第二个处理请求的中间件')
+        return None
 
     # 处理响应的中间件
     def process_response(self,request,resopnse):

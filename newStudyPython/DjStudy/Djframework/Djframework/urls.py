@@ -38,4 +38,6 @@ urlpatterns = [
     url(r'^api2/',include('api02.urls')),
     # 中间件路由
     url(r'^middle/',include('middleware.urls')),
+    # rabbitmq路由
+    url(r'^mq/', include('rabbitmq.urls')),
 ]

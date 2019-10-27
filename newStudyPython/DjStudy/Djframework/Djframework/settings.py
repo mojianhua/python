@@ -52,10 +52,10 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    # 自定义第一个中间件
-    'middleware.middlewarestudy.middlewareStudy.middlewareStudy',
-    # 自定义第二个中间件
-    'middleware.middlewarestudy.middlewareStudy.middlewareStudy2'
+    # # 自定义第一个中间件
+    # 'middleware.middlewarestudy.middlewareStudy.middlewareStudy',
+    # # 自定义第二个中间件
+    # 'middleware.middlewarestudy.middlewareStudy.middlewareStudy2'
 
 ]
 
