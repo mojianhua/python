@@ -1,8 +1,5 @@
 import pika
-
-username = 'jim'
-password = 'jim'
-host = '39.108.147.32'
+import time
 
 '''
     RabbitMq接收到端
@@ -15,8 +12,6 @@ class RabbitmqReceive(object):
         self.port = port
 
     def connect(self):
-        print(self.username)
-        print(self.password)
         # 定义连接池
         credentials = pika.PlainCredentials(self.username,self.password)
         connection = pika.BlockingConnection(pika.ConnectionParameters(host= self.hosts,port=self.port, credentials=credentials))  # 创建连接
@@ -30,12 +25,13 @@ class RabbitmqReceive(object):
     '''
     def Receive(self, queuename, func):
         self.channel.basic_qos(prefetch_count=1)
-        self.channel.basic_consume(on_message_callback=func,
-                                   queue=queuename,
+        self.channel.basic_consume(queuename,func,
+                                   # queue=queuename,
                                    # no-ack ＝ False，如果消费者遇到情况(its channel is closed, connection is closed, or TCP connection is lost)挂掉了，那么，RabbitMQ会重新将该任务添加到队列中。
-                                   # no_ack=True,
+                                   auto_ack=True,
                                    )
         print('[*] Waiting for messages.To exit press CTRL+C')
+        # 消费队列，死循环
         self.channel.start_consuming()
 
 '''
@@ -54,4 +50,4 @@ if __name__ == '__main__':
     import json
     RabbitmqServer = RabbitmqReceive("jim","jim","39.108.147.32","5672")
     RabbitmqServer.connect()
-    RabbitmqServer.Receive("hello",callback)
+    RabbitmqServer.Receive("hello1",callback)

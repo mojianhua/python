@@ -14,8 +14,6 @@ class RabbitmqServer(object):
         self.port = port
 
     def connect(self):
-        print(self.username)
-        print(self.password)
         # 定义连接池
         credentials = pika.PlainCredentials(self.username,self.password)
         connection = pika.BlockingConnection(pika.ConnectionParameters(host= self.hosts,port=self.port, credentials=credentials))  # 创建连接
@@ -35,18 +33,18 @@ class RabbitmqServer(object):
         self.channel.basic_publish(
             exchange='',
             routing_key=queuename,
-            body=body
+            body=body,
         )
 
-        print("我阿吉发送了 Hello World")
+        # print("我阿吉发送了 Hello World")
         # return HttpResponse('我阿吉发送了 Hello World')
 
 if __name__ == '__main__':
     import json
     RabbitmqServer = RabbitmqServer("jim","jim","39.108.147.32","5672")
     RabbitmqServer.connect()
-    # data = {"code":3}
-    # RabbitmqServer.Message("hello",json.dumps(data))
     body = input('请输入内容')
-    print(body)
-    RabbitmqServer.Message("hello",body)
+    data = {"body":body}
+    RabbitmqServer.Message("hello1",json.dumps(data))
+    # body = input('请输入内容')
+    # RabbitmqServer.Message("hello2",body)
