@@ -41,22 +41,6 @@ class RabbitmqServer(object):
         print("我阿吉发送了 Hello World")
         # return HttpResponse('我阿吉发送了 Hello World')
 
-    '''
-        接收消息
-        :param queuename key
-        :param func 回调方法名
-    '''
-    def Receive(self,queuename,func):
-        self.channel.basic_qos(prefetch_count=1)
-        self.channel.basic_consume(on_message_callback=func,
-                                   queue=queuename,
-                                   # no-ack ＝ False，如果消费者遇到情况(its channel is closed, connection is closed, or TCP connection is lost)挂掉了，那么，RabbitMQ会重新将该任务添加到队列中。
-                                   # no_ack=True,
-                                   )
-        print('[*] Waiting for messages.To exit press CTRL+C')
-        self.channel.start_consuming()
-
-
 '''
     回调函数
     一条消息被一个消费者接收后，该消息就从队列删除
@@ -72,6 +56,8 @@ if __name__ == '__main__':
     import json
     RabbitmqServer = RabbitmqServer("jim","jim","39.108.147.32","5672")
     RabbitmqServer.connect()
-    data = {"code":3}
-    RabbitmqServer.Message("hello",json.dumps(data))
-    RabbitmqServer.Receive("hello",callback)
+    # data = {"code":3}
+    # RabbitmqServer.Message("hello",json.dumps(data))
+    body = input('请输入内容')
+    print(body)
+    RabbitmqServer.Message("hello",body)
