@@ -3,7 +3,7 @@ import sys
 import time
 
 '''
-    安全RabbitMq服务端
+    RabbitMq服务端
 '''
 class RabbitmqServer(object):
 
@@ -16,9 +16,9 @@ class RabbitmqServer(object):
     def connect(self):
         # 定义连接池
         credentials = pika.PlainCredentials(self.username,self.password)
-        connection = pika.BlockingConnection(pika.ConnectionParameters(host= self.hosts,port=self.port, credentials=credentials))  # 创建连接
+        self.connection = pika.BlockingConnection(pika.ConnectionParameters(host= self.hosts,port=self.port, credentials=credentials))  # 创建连接
         # 生成管道
-        self.channel = connection.channel()
+        self.channel = self.connection.channel()
 
     '''
         发送消息
@@ -34,7 +34,14 @@ class RabbitmqServer(object):
             exchange='',
             routing_key=queuename,
             body=body,
+            # 消息持久化
+            properties=pika.BasicProperties(
+                delivery_mode=2
+            )
         )
+
+        # 关闭连接
+        self.connection.close()
 
 if __name__ == '__main__':
     import json
@@ -42,4 +49,4 @@ if __name__ == '__main__':
     RabbitmqServer.connect()
     body = input('请输入内容')
     data = {"body":body}
-    RabbitmqServer.Message("hello1",json.dumps(data))
+    RabbitmqServer.Message("safehello1",json.dumps(data))
