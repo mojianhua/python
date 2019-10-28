@@ -41,17 +41,6 @@ class RabbitmqServer(object):
         print("我阿吉发送了 Hello World")
         # return HttpResponse('我阿吉发送了 Hello World')
 
-'''
-    回调函数
-    一条消息被一个消费者接收后，该消息就从队列删除
-'''
-
-def callback(ch, method, properties, body):
-    print("-->ch", ch)
-    print("-->method", method)
-    print("-->properties", properties)
-    print("[x] Received %r" % body)
-
 if __name__ == '__main__':
     import json
     RabbitmqServer = RabbitmqServer("jim","jim","39.108.147.32","5672")

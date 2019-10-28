@@ -42,7 +42,7 @@ class PricePolicy(models.Model):
     pirce = models.IntegerField()
     period = models.IntegerField()
 
-    content_type = models.ForeignKey(ContentType,verbose_name="关联表的名称")
+    content_type = models.ForeignKey(ContentType,verbose_name="关联表的名称",on_delete=models.CASCADE)
     object_id = models.IntegerField(verbose_name="关联表的数据ID")
     # 帮助你快速实现content_type操作,上面的content_type表跟表里面的object_id对应
     content_object = GenericForeignKey('content_type','object_id')
