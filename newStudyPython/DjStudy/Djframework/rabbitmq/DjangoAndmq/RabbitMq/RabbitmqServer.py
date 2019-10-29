@@ -19,7 +19,14 @@ class RabbitmqServer(object):
         self.connection = pika.BlockingConnection(pika.ConnectionParameters(host= self.hosts,port=self.port, credentials=credentials,virtual_host='test1'))  # 创建连接
         # 生成管道
         self.channel = self.connection.channel()
-        
+
+
+    def sms(self,name,age):
+        i = 4
+        j = 55
+        sum = i + j
+        return str(sum)
+
     '''
         发送消息
         :param queuename key
@@ -41,14 +48,15 @@ class RabbitmqServer(object):
         )
         # 关闭连接
         self.connection.close()
+        return True
 
 
-if __name__ == '__main__':
-    import json
-    RabbitmqServer = RabbitmqServer("jim","jim","39.108.147.32","5672")
-    RabbitmqServer.connect()
-    # body = input('请输入内容')
-    # data = {"body":body}
-    # RabbitmqServer.Message("safehello1",json.dumps(data))
-    body = RabbitmqServer.test('jim123','99')
-    RabbitmqServer.Message("safehello1", body)
+# if __name__ == '__main__':
+#     import json
+#     RabbitmqServer = RabbitmqServer("jim","jim","39.108.147.32","5672")
+#     RabbitmqServer.connect()
+#     # body = input('请输入内容')
+#     # data = {"body":body}
+#     # RabbitmqServer.Message("safehello1",json.dumps(data))
+#     body = RabbitmqServer.test('jim123','99')
+#     RabbitmqServer.Message("safehello1", body)

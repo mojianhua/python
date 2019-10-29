@@ -1,5 +1,6 @@
 import pika
 import time
+from common.utils import SendEmail, Sms
 
 '''
     安全的RabbitMq接收到端
@@ -37,13 +38,11 @@ class RabbitmqReceive(object):
     回调函数
     一条消息被一个消费者接收后，该消息就从队列删除
 '''
-
 def callback(ch, method, properties, body):
-    print("-->ch", ch)
-    print("-->method", method)
-    print("-->properties", properties)
-    print("[x] Received %r" % body)
-    ch.basic_ack(delivery_tag=method.delivery_tag)#  接收到消息后会给rabbitmq发送一个确认
+    data = (eval(body))
+    SendEmail.SendEmail.send_mail('',data['email'],data['title'],data['content'])
+    ack = ch.basic_ack(delivery_tag=method.delivery_tag)#  接收到消息后会给rabbitmq发送一个确认
+    print(ack)
 
 if __name__ == '__main__':
     import json
