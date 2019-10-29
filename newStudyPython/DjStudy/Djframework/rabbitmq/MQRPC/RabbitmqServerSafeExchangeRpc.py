@@ -3,7 +3,7 @@ import sys
 import time
 
 '''
-    安全的RabbitMq服务端
+    安全的RabbitMq服务端,加入广播
 '''
 class RabbitmqServer(object):
 
@@ -25,14 +25,14 @@ class RabbitmqServer(object):
         :param queuename key
         :param body 消息内容
     '''
-    def Message(self,queuename,body):
-        # 创建消息队列，表明我们向消息队列为hello的发送消息，类似redis的key
-        self.channel.queue_declare(queue=queuename)
+    def Message(self,exchange,body):
+        # 创建消息队列，表明我们向消息队列为hello的发送消息，类似redis的key,type类型，fanout,全民广播，direct,组播，topic,根据特征发送
+        self.channel.exchange_declare(exchange=exchange,exchange_type='fanout')
         # routing_key为刚刚的消息队列的名词，body为发送的字符串，类似向key里面塞值
         # 先把数据发给exchange交换器,exchage再发给相应队列
         self.channel.basic_publish(
-            exchange='',
-            routing_key=queuename,
+            exchange='fanout',
+            routing_key='',
             body=body,
             # 消息持久化
             properties=pika.BasicProperties(
@@ -49,4 +49,5 @@ if __name__ == '__main__':
     RabbitmqServer.connect()
     body = input('请输入内容')
     data = {"body":body}
-    RabbitmqServer.Message("safehello1",json.dumps(data))
+    # 广播发送
+    RabbitmqServer.Message("fanout",json.dumps(data))

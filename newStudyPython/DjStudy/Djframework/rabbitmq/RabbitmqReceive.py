@@ -27,7 +27,6 @@ class RabbitmqReceive(object):
         self.channel.basic_qos(prefetch_count=1)
         self.channel.basic_consume(queuename,func,
                                    # queue=queuename,
-                                   # no-ack ＝ False，如果消费者遇到情况(its channel is closed, connection is closed, or TCP connection is lost)挂掉了，那么，RabbitMQ会重新将该任务添加到队列中。
                                    auto_ack=True,
                                    )
         print('[*] Waiting for messages.To exit press CTRL+C')

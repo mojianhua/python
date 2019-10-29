@@ -2,7 +2,7 @@ import pika
 import time
 
 '''
-    安全的RabbitMq接收到端
+    安全的RabbitMq接收到端,加入广播
 '''
 class RabbitmqReceive(object):
     def __init__(self,username,password,hosts,port):
@@ -23,11 +23,19 @@ class RabbitmqReceive(object):
         :param queuename key
         :param func 回调方法名
     '''
-    def Receive(self, queuename, func):
-        self.channel.basic_qos(prefetch_count=1)
-        self.channel.basic_consume(queuename,func,
-                                   # queue=queuename,
-                                   # auto_ack=True,，如果消费者遇到情况(its channel is closed, connection is closed, or TCP connection is lost)挂掉了，那么，RabbitMQ会重新将该任务添加到队列中。
+    def Receive(self, exchange, func):
+        # 广播发送，exchange，指定
+        self.channel.exchange_declare(exchange=exchange,exchange_type='fanout')
+        # 不指定que名，rabbit随机生成名字
+        result = self.channel.queue_declare('',exclusive=True)
+        queue_name = result.method.queue
+        # 绑定转发器
+        self.channel.queue_bind(queue=queue_name,exchange=exchange)
+        # 消费
+        self.channel.basic_consume(queue=queue_name,
+                                   # 如果消费者遇到情况(its channel is closed, connection is closed, or TCP connection is lost)挂掉了，那么，RabbitMQ会重新将该任务添加到队列中。
+                                   # auto_ack=True,
+                                   on_message_callback=func,
                                    )
         print('[*] Waiting for messages.To exit press CTRL+C')
         # 消费队列，死循环
@@ -49,4 +57,4 @@ if __name__ == '__main__':
     import json
     RabbitmqServer = RabbitmqReceive("jim","jim","39.108.147.32","5672")
     RabbitmqServer.connect()
-    RabbitmqServer.Receive("safehello1",callback)
+    RabbitmqServer.Receive("fanout",callback)
