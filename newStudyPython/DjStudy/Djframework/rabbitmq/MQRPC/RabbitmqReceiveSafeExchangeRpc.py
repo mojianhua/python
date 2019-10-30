@@ -1,8 +1,9 @@
 import pika
 import time
+import uuid
 
 '''
-    安全的RabbitMq接收到端,加入广播
+    安全的RabbitMq接收到端,Rpc
 '''
 class RabbitmqReceive(object):
     def __init__(self,username,password,hosts,port):
@@ -32,6 +33,7 @@ class RabbitmqReceive(object):
         回调函数
     '''
     def on_response(self,ch,method,props,body):
+        # props.correlation_id,服务器返回的id
         if self.corr_id == props.correlation_id:
             self.response = body
 
@@ -43,12 +45,12 @@ class RabbitmqReceive(object):
     def call(self, body):
         self.response = None
         # 唯一标识
-        self.corr_id = str(time.time())
-        # 绑定转发器
+        self.corr_id = str(uuid.uuid4())
+        # 发送RPC请求内容到RPC请求队列`rpc_queue`，同时发送的还有`reply_to`和`correlation_id`
         self.channel.basic_publish(
-            exchange='rpc_queue',
-            routing_key='',
-            body=body,
+            exchange='',
+            routing_key='rpc_queue',
+            body=str(body),
             # 消息持久化
             properties=pika.BasicProperties(
                 reply_to=self.queue_name,
