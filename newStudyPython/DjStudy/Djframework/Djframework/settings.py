@@ -41,6 +41,8 @@ INSTALLED_APPS = [
     'api.apps.ApiConfig',
     'rest_framework',
     'api02.apps.Api02Config',
+    'rabbitmq',
+    'djcelery'
 ]
 
 # 中间件
@@ -84,22 +86,22 @@ WSGI_APPLICATION = 'Djframework.wsgi.application'
 # https://docs.djangoproject.com/en/1.11/ref/settings/#databases
 
 DATABASES = {
-    # 'default': {
-    #     'ENGINE': 'django.db.backends.mysql',
-    #     'HOST': '127.0.0.1',
-    #     'PORT': 3306,
-    #     'NAME': 'DjangoFramework',
-    #     'USER': 'root',
-    #     'PASSWORD': ''
-    # }
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'HOST':'192.168.118.171',
-        'PORT':3603,
-        'NAME':'DjangoFramework',
-        'USER':'dev',
-        'PASSWORD':'123456'
+        'HOST': '127.0.0.1',
+        'PORT': 3306,
+        'NAME': 'DjangoFramework',
+        'USER': 'root',
+        'PASSWORD': ''
     }
+    # 'default': {
+    #     'ENGINE': 'django.db.backends.mysql',
+    #     'HOST':'192.168.118.171',
+    #     'PORT':3603,
+    #     'NAME':'DjangoFramework',
+    #     'USER':'dev',
+    #     'PASSWORD':'123456'
+    # }
 }
 
 # Password validation
@@ -172,3 +174,8 @@ REST_FRAMEWORK = {
     # 以json方法显示页码:JSONRenderer,浏览器看数据：BrowsableAPIRenderer
     "DEFAULT_RENDERER_CLASSES":['rest_framework.renderers.JSONRenderer','rest_framework.renderers.BrowsableAPIRenderer'],
 }
+
+# Celery
+from .celeryconfig import *
+BROKER_URL = 'amqp://jim:jim@39.108.147.32:5672/test1'
+CELERY_RESULT_BACKEND = 'amqp://jim:jim@39.108.147.32:5672/test1'

@@ -70,3 +70,17 @@ class mqreceive1(APIView):
         print('[*] Waiting for messages.To exit press CTRL+C')
         channel.start_consuming()
         return HttpResponse('我阿吉发送了 Hello World')
+
+from rabbitmq.CeleryStudyDjango.task1 import CourseTask
+class celeryStudy1(APIView):
+    authentication_classes = []
+    permission_classes = []
+    throttle_classes = []
+
+    def post(self, request, *args, **kwargs):
+        # https://www.imooc.com/video/17955
+        print('start yibu111')
+        # 执行异步
+        CourseTask.delay()
+        print('end yibu111')
+        return HttpResponse(2222)
