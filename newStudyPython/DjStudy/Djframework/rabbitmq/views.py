@@ -78,7 +78,6 @@ class celeryStudy1(APIView):
     throttle_classes = []
 
     def post(self, request, *args, **kwargs):
-        # https://www.imooc.com/video/17955
         print('start yibu111')
         # 执行异步
         CourseTask.delay()

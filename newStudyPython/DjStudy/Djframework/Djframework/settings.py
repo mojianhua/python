@@ -86,22 +86,22 @@ WSGI_APPLICATION = 'Djframework.wsgi.application'
 # https://docs.djangoproject.com/en/1.11/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'HOST': '127.0.0.1',
-        'PORT': 3306,
-        'NAME': 'DjangoFramework',
-        'USER': 'root',
-        'PASSWORD': ''
-    }
     # 'default': {
     #     'ENGINE': 'django.db.backends.mysql',
-    #     'HOST':'192.168.118.171',
-    #     'PORT':3603,
-    #     'NAME':'DjangoFramework',
-    #     'USER':'dev',
-    #     'PASSWORD':'123456'
-    # }
+    #     'HOST': '127.0.0.1',
+    #     'PORT': 3306,
+    #     'NAME': 'DjangoFramework',
+    #     'USER': 'root',
+    #     'PASSWORD': ''
+    # },
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'HOST':'192.168.118.171',
+        'PORT':3603,
+        'NAME':'DjangoFramework',
+        'USER':'dev',
+        'PASSWORD':'123456'
+    }
 }
 
 # Password validation
@@ -175,7 +175,7 @@ REST_FRAMEWORK = {
     "DEFAULT_RENDERER_CLASSES":['rest_framework.renderers.JSONRenderer','rest_framework.renderers.BrowsableAPIRenderer'],
 }
 
-# Celery
+# # Celery
 from .celeryconfig import *
 BROKER_URL = 'amqp://jim:jim@39.108.147.32:5672/test1'
 CELERY_RESULT_BACKEND = 'amqp://jim:jim@39.108.147.32:5672/test1'

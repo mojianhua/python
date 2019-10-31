@@ -1,4 +1,5 @@
 import djcelery
+from datetime import timedelta
 djcelery.setup_loader()
 
 # 设置队列
@@ -37,3 +38,27 @@ CELERY_MAX_TASKS_PER_CHILD = 100
 
 # 最多运行时间以为S为单位
 CELERY_TASK_TIME_LIMIT = 12 * 30
+
+# # 定时任务
+# CELERYBEAT_SCHEDULE = {
+#     'task':'course-task',
+#     # 5s执行一次
+#     'schedule':timedelta(seconds = 5),
+#     # #参数
+#     # 'args':'44'
+#     # 指定队列
+#     'options':{
+#         'queue':'beat_tasks'
+#     }
+# }
+
+CELERYBEAT_SCHEDULE = {
+        'update_info': {
+            'task': 'course-task',
+            "schedule": timedelta(seconds=1),
+        },
+        # # 指定队列
+        # 'options':{
+        #     'queue':'beat_tasks'
+        # }
+}
