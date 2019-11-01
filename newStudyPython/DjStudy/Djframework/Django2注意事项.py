@@ -15,8 +15,8 @@ query = query.encode('utf-8').decode(errors='replace')
 sys.path.insert(0,os.path.join(BASE_DIR,'apps'))
 4、UnicodeDecodeError: 'gbk' codec can't decode byte 0xa6 in position 9737: illegal multibyte sequence
 打开django/views下的debug.py文件，转到line331行：
-　　　with Path(CURRENT_DIR, 'templates', 'technical_500.html').open() as fh
+　　　with Path(CURRENT_DIR, 'templates', 'technical_500.html').open() as fh:
 　　将其改成：
-　　　　with Path(CURRENT_DIR, 'templates', 'technical_500.html').open(encoding="utf-8") as fh
+　　　with Path(CURRENT_DIR, 'templates', 'technical_500.html').open(encoding="utf-8") as fh:
 就成功了。
 '''

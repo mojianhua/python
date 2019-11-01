@@ -72,6 +72,9 @@ class mqreceive1(APIView):
         return HttpResponse('我阿吉发送了 Hello World')
 
 from rabbitmq.CeleryStudyDjango.task1 import CourseTask
+'''
+    celery3使用方式
+'''
 class celeryStudy1(APIView):
     authentication_classes = []
     permission_classes = []
@@ -81,5 +84,26 @@ class celeryStudy1(APIView):
         print('start yibu111')
         # 执行异步
         CourseTask.delay()
+        print('end yibu111')
+        return HttpResponse(2222)
+
+'''
+    celery4使用方式
+'''
+from rabbitmq.CeleryStudyDjango.celery4Task.emailTask import emailTask
+class celery4Study1(APIView):
+    authentication_classes = []
+    permission_classes = []
+    throttle_classes = []
+
+    def post(self, request, *args, **kwargs):
+        print('start yibu111')
+        # 执行异步
+        tid = '11'
+        lang = 'zh-cn'
+        sendData = 'sendData'
+        r = emailTask.EmailTemplet.apply_async([tid, lang, sendData])
+        # r = emailTask.EmailTemplet(self,tid, lang, sendData)
+        print(r)
         print('end yibu111')
         return HttpResponse(2222)

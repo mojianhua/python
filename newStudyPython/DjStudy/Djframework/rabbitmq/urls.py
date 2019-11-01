@@ -23,6 +23,8 @@ urlpatterns = [
     url(r'^(?P<version>[v1|v2]+)/mqStudysend1/$',rabbitmqView.mqStudysend1.as_view()),
     # 第一版接收数据
     url(r'^(?P<version>[v1|v2]+)/mqStudyreceive1/$', rabbitmqView.mqreceive1.as_view()),
-    # celery
+    # celery3
     url(r'^(?P<version>[v1|v2]+)/celeryStudy1/$', rabbitmqView.celeryStudy1.as_view()),
+    # celery4
+    url(r'^(?P<version>[v1|v2]+)/celery4Study1/$', rabbitmqView.celery4Study1.as_view()),
 ]
