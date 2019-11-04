@@ -4,6 +4,7 @@ import os
 from celery import Celery,platforms
 from datetime import timedelta
 import djcelery
+from kombu import *
 
 # 启动配置
 djcelery.setup_loader()
@@ -26,6 +27,16 @@ app.autodiscover_tasks([
 ])
 
 # celery配置
+
+'''
+    CELERY_QUEUES说明
+    django代理中设置
+    Queue:管道名称
+    Exchange-----
+        name:基本跟Queue名称一样
+        type:类型
+'''
+
 app.conf.update(
     CELERY_ACKS_LATE=True,#允许重试
     CELERY_ACCEPT_CONTENT=['pickle', 'json'],
@@ -34,4 +45,11 @@ app.conf.update(
     CELERYD_MAX_TASKS_PER_CHILD=500,#每个worker最多执行500个任务被销毁，可以防止内存泄漏
     BROKER_HEARTBEAT=0,#心跳
     CELERYD_TASK_TIME_LIMIT=12*30,#超时时间
+    CELERY_QUEUES = (
+            Queue('low', Exchange(name='low', type='direct')),
+            Queue('middle', Exchange(name='middle', type='direct')),
+            Queue('high', Exchange(name='high', type='direct')),
+        ),
+    # # 设置默认不存结果
+    # CELERY_IGNORE_RESULT = True
      )
