@@ -23,7 +23,8 @@ platforms.C_FORCE_ROOT = True
 
 # 任务队列
 app.autodiscover_tasks([
-    'rabbitmq.CeleryStudyDjango.celery4Task.emailTask'
+    'rabbitmq.CeleryStudyDjango.celery4Task.emailTask',
+    'rabbitmq.CeleryStudyDjango.celery4Task.emailTaskTest'
 ])
 
 # celery配置
