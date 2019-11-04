@@ -50,10 +50,10 @@ class emailTask(object):
         :return
     '''
     def send_mail_test(self, recv, title, content):
-        user = 'alert@corp.food2china.com'
+        user = 'xxxx'
         host = 'smtp.qiye.163.com'
         port = 465
-        password = 'F2c_2302'
+        password = 'xxxxx'
         msg = MIMEMultipart('alternative')
         msg.attach(MIMEText(content, 'html', 'utf-8'))
         msg['Subject'] = Header(title, 'utf-8')
