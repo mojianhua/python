@@ -92,15 +92,18 @@ class celeryStudy1(APIView):
 '''
 from rabbitmq.CeleryStudyDjango.celery4Task.emailTask import emailTask
 from rabbitmq.CeleryStudyDjango.celery4Task.emailTaskTest import emailTaskTest
-from celery.result import AsyncResult
+from celery.task.control import inspect
+
 class celery4Study1(APIView):
     authentication_classes = []
     permission_classes = []
     throttle_classes = []
 
     def post(self, request, *args, **kwargs):
-        res = AsyncResult("c755204e-1d2c-468a-a79b-1f2e94c57d12")  # 参数为task id
-        print(res.result)
+        # 检查celery是否开启
+        insp = inspect()
+        stats = insp.stats()
+        print(stats)
         print('start yibu111')
         # 执行异步
         tid = '11'
@@ -110,19 +113,13 @@ class celery4Study1(APIView):
             # 写入第一管道
             r = emailTask.EmailTemplet.apply_async([tid, lang, sendData])
             # r = emailTask.EmailTemplet(self,tid, lang, sendData)
-            print(r.ready)
-            print(r.result)
-            print(r.status)
             print('end yibu111')
             # # 写入第二p管道
             r = emailTaskTest.EmailTempletTest.apply_async([tid, lang, sendData])
-            print(r.ready)
-            print(r.result)
-            print(r.status)
             print('end 22222222222222222')
         except Exception as e:
             print(str(e))
         else:
-            print(555)
+            print(99999999999999999999999999999999999999999)
 
         return HttpResponse(2222)
