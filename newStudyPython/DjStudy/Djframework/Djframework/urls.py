@@ -40,4 +40,6 @@ urlpatterns = [
     url(r'^middle/',include('middleware.urls')),
     # rabbitmq路由
     url(r'^mq/', include('rabbitmq.urls')),
+    # AliOss路由
+    url(r'^Alioss/', include('AliOss.urls')),
 ]
