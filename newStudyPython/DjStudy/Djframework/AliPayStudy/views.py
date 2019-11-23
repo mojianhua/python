@@ -42,16 +42,16 @@ class AliPayTest(APIView):
         )
         print(os.path.join(settings.BASE_DIR, 'AliPayStudy/alipay_public_key.pem'))
         print(os.path.join(settings.BASE_DIR, 'AliPayStudy/app_private_key.pem'))
-        # 调用电脑支付接口
+        # 调用电脑支付接口,其他支付方式看文档
         # 电脑网站支付，需要跳转到: https://openapi.alipay.com/gateway.do? + order_string
         # 沙箱环境需要跳转地址为： https://openapi.alipaydev.com/gateway.do? + order_string
-        total_amount = '2.02'  # Decimal类型，所以不能被序列化，所以需要转化未str
-        order_string = alipay.api_alipay_trade_wap_pay(
-            out_trade_no="000000004",  # 订单id
+        total_amount = '6.02'  # Decimal类型，所以不能被序列化，所以需要转化未str
+        order_string = alipay.api_alipay_trade_page_pay(
+            out_trade_no="000000008",  # 订单id
             total_amount=str(total_amount),  # 总结额：加运费
-            subject='天天生鲜4',  # 标题
-            return_url=None,
-            notify_url=None
+            subject='天天生鲜8',  # 标题
+            return_url="https://baidu.com",
+            notify_url="https://baidu.com/notify"  # 可选, 不填则使用默认notify url
         )
 
         # 返回应答
