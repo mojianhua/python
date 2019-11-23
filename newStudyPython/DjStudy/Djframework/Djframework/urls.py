@@ -42,4 +42,6 @@ urlpatterns = [
     url(r'^mq/', include('rabbitmq.urls')),
     # AliOss路由
     url(r'^Alioss/', include('AliOss.urls')),
+    # AliPay路由
+    url(r'^AliPay/', include('AliPayStudy.urls')),
 ]

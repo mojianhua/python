@@ -42,7 +42,8 @@ INSTALLED_APPS = [
     'api02.apps.Api02Config',
     'rabbitmq',
     'djcelery',
-    'AliOss.apps.AliossConfig'
+    'AliOss.apps.AliossConfig',
+    'AliPayStudy.apps.AlipaystudyConfig'
 ]
 
 # 中间件
