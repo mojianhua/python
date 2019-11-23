@@ -27,6 +27,7 @@ class AliPayTest(APIView):
             5、获取支付宝公钥保存到项目里面，以下例子支付宝公钥在，alipay_public_key.pem
             6、获取支付宝公钥保存到项目里面，以下例子电脑私钥是app_private_key.pem
             7、在支付宝那设置（RSA2(SHA256)密钥(推荐)）
+            8、具体试用：https://github.com/fzlee/alipay/blob/master/README.zh-hans.md
         '''
 
         # 初始化
