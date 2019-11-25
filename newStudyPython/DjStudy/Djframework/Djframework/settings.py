@@ -43,7 +43,8 @@ INSTALLED_APPS = [
     'rabbitmq',
     'djcelery',
     'AliOss.apps.AliossConfig',
-    'AliPayStudy.apps.AlipaystudyConfig'
+    'AliPayStudy.apps.AlipaystudyConfig',
+    'modelsUpload.apps.ModelsuploadConfig'
 ]
 
 # 中间件
@@ -180,3 +181,7 @@ REST_FRAMEWORK = {
 from .celeryconfig import *
 BROKER_URL = 'amqp://jim:jim@39.108.147.32:5672/test1'
 CELERY_RESULT_BACKEND = 'amqp://jim:jim@39.108.147.32:5672/test1'
+
+# 若未指定上传文件目录，我们也可以指定MEDIA_ROOT,就不需要指定upload_to,会自动将文件上传到MEDIA_ROOT目录
+MEDIA_ROOT = os.path.join(BASE_DIR,'media')
+MEDIA_URL = '/media/'
