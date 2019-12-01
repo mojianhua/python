@@ -5,3 +5,17 @@ activate 环境名称
 3、安装指定文件python扩展
 pip install -r 文件名
 4、在pycharm的setting选中python路径，默认是在anaconda里面目录的envs
+
+
+mac上使用
+1、创建环境
+conda create --name your_env_name python=python_version package1 package2
+your_env_name: 你的环境名称, 必须;
+python_version: 指定的python版本, 可选;
+package1 package2: 环境是否包含某些包, 可选.
+
+环境列表: conda info --envs or conda env list
+进入环境: conda activate your_env_name
+退出环境: conda deactivate
+复制环境: conda create --name new_env_name --clone old_env_name
+删除环境: conda remove --name your_env_name --all
