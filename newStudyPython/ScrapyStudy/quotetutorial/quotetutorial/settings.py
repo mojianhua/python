@@ -64,10 +64,10 @@ ROBOTSTXT_OBEY = True
 
 # Configure item pipelines
 # See https://docs.scrapy.org/en/latest/topics/item-pipeline.html
-ITEM_PIPELINES = {
-   'quotetutorial.pipelines.QuotetutorialPipeline': 300,
-   'quotetutorial.pipelines.MysqlPipeline': 400,
-}
+# ITEM_PIPELINES = {
+#    'quotetutorial.pipelines.QuotetutorialPipeline': 300,
+#    'quotetutorial.pipelines.MysqlPipeline': 400,
+# }
 
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See https://docs.scrapy.org/en/latest/topics/autothrottle.html
@@ -97,3 +97,9 @@ DB_USER = 'dev'
 DB_PASSWORD = '123456'
 DB_DATABASE = 'Scrapy'
 DB_CHARSET = 'utf8'
+
+DEFAULT_REQUEST_HEADERS = {
+  'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'Accept-Language': 'en',
+}
