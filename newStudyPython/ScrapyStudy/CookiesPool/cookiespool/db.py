@@ -11,9 +11,6 @@ class RedisClient(object):
         :param port: 端口
         :param password: 密码
         """
-        print(host)
-        print(port)
-        print(password)
         self.db = redis.StrictRedis(host=host, port=port, password=password, decode_responses=True)
         self.type = type
         self.website = website

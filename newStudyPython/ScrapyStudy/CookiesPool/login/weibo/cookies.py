@@ -52,14 +52,14 @@ class WeiboCookies():
         :return:
         """
         try:
-            res = WebDriverWait(self.browser,10).until(lambda browser:browser.find_element_by_class_name('nav_left'))
+            res =  WebDriverWait(self.browser, 10).until(lambda browser:browser.find_element_by_class_name('nav-left'))
             if res:
                 return True
             else:
                 return False
-
-            # return bool(
-            #     WebDriverWait(self.browser, 5).until(EC.presence_of_element_located((By.CLASS_NAME, 'lite-iconf-profile'))))
+        # try:
+        #     return bool(
+        #         WebDriverWait(self.browser, 10).until(EC.presence_of_element_located((By.CLASS_NAME, 'nav-left'))))
         except TimeoutException:
             return False
     
