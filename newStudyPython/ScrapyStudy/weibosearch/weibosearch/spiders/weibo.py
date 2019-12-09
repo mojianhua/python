@@ -26,9 +26,4 @@ class WeiboSpider(Spider):
             yield FormRequest(url=url,callback=self.parse_index,formdata=data)
 
     def parse_index(self, response):
-        print(response.text
-
-
-
-
-              )
+        print(response.text)
