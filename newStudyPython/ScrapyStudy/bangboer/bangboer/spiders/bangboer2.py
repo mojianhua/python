@@ -14,7 +14,6 @@ class Bangboer2Spider(scrapy.Spider):
         self.logging = logging.getLogger(__name__)
 
     def start_requests(self):
-        # urlList = ['l9c20','l24c20','l10c20']
         urlList = self.urlList
         for item in urlList:
             url = '{url}'.format(url=self.search_url)+ item
@@ -30,7 +29,6 @@ class Bangboer2Spider(scrapy.Spider):
       for urlType in self.urlList:
           for pagsnum in range(2, int(page) + 1):
               url = '{url}{urlType}/{num}/'.format(url=self.search_url,num=pagsnum,urlType=urlType)
-              print(url)
               yield scrapy.Request(url=url, callback=self.parse)
 
     def info(self,response):
