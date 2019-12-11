@@ -19,7 +19,9 @@ NEWSPIDER_MODULE = 'wangYiStocks.spiders'
 #USER_AGENT = 'wangYiStocks (+http://www.yourdomain.com)'
 
 # Obey robots.txt rules
-ROBOTSTXT_OBEY = True
+
+# 告诉搜索引擎是否搜索引擎
+ROBOTSTXT_OBEY = False
 
 # Configure maximum concurrent requests performed by Scrapy (default: 16)
 #CONCURRENT_REQUESTS = 32
@@ -39,10 +41,17 @@ ROBOTSTXT_OBEY = True
 #TELNETCONSOLE_ENABLED = False
 
 # Override the default request headers:
-#DEFAULT_REQUEST_HEADERS = {
-#   'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
-#   'Accept-Language': 'en',
-#}
+DEFAULT_REQUEST_HEADERS = {
+    'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+    'Accept-Encoding': 'gzip, deflate',
+    'Accept-Language': 'zh-CN,zh;q=0.9',
+    'Cache-Control': 'max-age=0',
+    'Connection': 'keep-alive',
+    'Cookie': 'qgqp_b_id=16f1704715e247d7ed7af67f317fdfd2; em_hq_fls=js; st_si=74501943365729; st_asi=delete; HAList=a-sz-300059-%u4E1C%u65B9%u8D22%u5BCC%2Cf-0-000001-%u4E0A%u8BC1%u6307%u6570; st_pvi=11780549199477; st_sp=2019-11-12%2009%3A18%3A46; st_inirUrl=https%3A%2F%2Fwww.baidu.com%2Flink; st_sn=4; st_psi=20191211101955532-113200301321-7988699485',
+    'Host': '32.push2.eastmoney.com',
+    'Upgrade-Insecure-Requests': '1',
+    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36'
+}
 
 # Enable or disable spider middlewares
 # See https://docs.scrapy.org/en/latest/topics/spider-middleware.html
@@ -64,9 +73,9 @@ ROBOTSTXT_OBEY = True
 
 # Configure item pipelines
 # See https://docs.scrapy.org/en/latest/topics/item-pipeline.html
-#ITEM_PIPELINES = {
-#    'wangYiStocks.pipelines.WangyistocksPipeline': 300,
-#}
+ITEM_PIPELINES = {
+   'wangYiStocks.pipelines.WangyistocksPipeline': 300,
+}
 
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See https://docs.scrapy.org/en/latest/topics/autothrottle.html
@@ -88,3 +97,11 @@ ROBOTSTXT_OBEY = True
 #HTTPCACHE_DIR = 'httpcache'
 #HTTPCACHE_IGNORE_HTTP_CODES = []
 #HTTPCACHE_STORAGE = 'scrapy.extensions.httpcache.FilesystemCacheStorage'
+
+
+DB_HOST = '192.168.118.171'
+DB_PORT = 3603
+DB_USER = 'dev'
+DB_PASSWORD = '123456'
+DB_DATABASE = 'Scrapy'
+DB_CHARSET = 'utf8'
