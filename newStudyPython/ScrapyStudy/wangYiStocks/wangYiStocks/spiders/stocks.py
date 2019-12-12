@@ -4,8 +4,9 @@ import logging
 import json
 import re
 import time
+from scrapy_redis.spiders import RedisCrawlSpider
 
-class StocksSpider(Spider):
+class StocksSpider(RedisCrawlSpider):
     # 东方财富网股票
     name = 'stocks'
     allowed_domains = ['eastmoney.com']

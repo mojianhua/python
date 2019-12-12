@@ -14,4 +14,11 @@
 		spider文件夹 : 存放爬虫文件
 		items ：类似django的form，定义爬取的字段
 		middleware ：中间层处理函数
+		
+	
+	分布式scrapy-redis
+	1、安装scrapy-redis
+	pip install scrapy_redis
+	2、详细使用看(wangYiStocks)项目
+	
 '''

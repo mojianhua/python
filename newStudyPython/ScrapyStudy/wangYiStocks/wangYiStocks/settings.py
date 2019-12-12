@@ -75,6 +75,8 @@ DEFAULT_REQUEST_HEADERS = {
 # See https://docs.scrapy.org/en/latest/topics/item-pipeline.html
 ITEM_PIPELINES = {
    'wangYiStocks.pipelines.WangyistocksPipeline': 300,
+    # 引入scrapy-redis分布式爬虫扩展
+    'scrapy_redis.pipelines.RedisPipeline': 301,
 }
 
 # Enable and configure the AutoThrottle extension (disabled by default)
@@ -98,10 +100,19 @@ ITEM_PIPELINES = {
 #HTTPCACHE_IGNORE_HTTP_CODES = []
 #HTTPCACHE_STORAGE = 'scrapy.extensions.httpcache.FilesystemCacheStorage'
 
-
+# DB配置
 DB_HOST = '192.168.118.171'
 DB_PORT = 3603
 DB_USER = 'dev'
 DB_PASSWORD = '123456'
 DB_DATABASE = 'Scrapy'
 DB_CHARSET = 'utf8'
+
+# scrapy-redis 配置
+SCHEDULER = "scrapy_redis.scheduler.Scheduler"
+DUPEFILTER_CLASS = "scrapy_redis.dupefilter.RFPDupeFilter"
+REDIS_HOST = "192.168.118.123"
+REDIS_PORT = "6379"
+REDIS_PARAMS ={
+    'password': '1qa2ws#ED',  # 服务器的redis对应密码
+}
