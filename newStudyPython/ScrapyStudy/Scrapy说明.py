@@ -63,16 +63,28 @@
 	3、添加爬虫
 		scrapyd-deploy
 	3.1、查看爬虫状态GET请求
-		http://127.0.0.1:6800/daemonstatus.json
+		curl http://127.0.0.1:6800/daemonstatus.json
 	3.2、获取上传爬虫目录
 		curl http://127.0.0.1:6800/listprojects.json
 	4、开始运行爬虫
-	curl http://127.0.0.1:6800/schedule.json -d project=wangYiStocks -d spider=stocks
+		curl http://127.0.0.1:6800/schedule.json -d project=wangYiStocks -d spider=stocks
 	
-	project (string, required)，项目名称。
+	project (string, required)，项目名称。即scrapy.cfg里面deploy的project
 	spider (string, required)，爬虫名称，即 Spider下的name属性指定的。即scrapy crawl [爬虫名称]运行时的名称。
 	setting (string, optional)，运行时的设置文件，默认为项目下settings.py。
 	jobid (string, optional)，任务id，不指定则为默认生成的UUID。
 	_version (string, optional)，运行的项目的版本。
 	任何其他的参数都被传递给爬虫的属性，即scrapy crawl [爬虫名称] -a accounts=testAdmin后面-a所带的参数，在Spider中可通过self.testAdmin来获取值。
+	5、取消任务
+		curl http://127.0.0.1:6800/cancel.json -d project=wangYiStocks -d job=44963ac61d4b11eaadab6c4b903122b5
+	project (string, required)，项目名称。即scrapy.cfg里面deploy的project
+	job (string, optional)，任务id，不指定则为默认生成的UUID。
+
+
+	# python-scrapyd-api，直接通过python管理scrapy
+	1、安装	python-scrapyd-api
+		pip install python-scrapyd-api
+	2、使用方式查看scrapyApi.py文件
+
+	
 '''
