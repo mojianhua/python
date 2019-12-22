@@ -44,8 +44,10 @@ urlpatterns = [
     url(r'^mq/', include('rabbitmq.urls')),
     # AliOss路由
     url(r'^Alioss/', include('AliOss.urls')),
-    # AliPay路由
-    url(r'^AliPay/', include('AliPayStudy.urls')),
+    # AliPay路由支付宝接口路由
+    # url(r'^AliPay/', include('AliPayStudy.urls')),
+    # 微信支付
+    url(r'^WxPay/', include('WxPay.urls')),
     # model文件上传路由
     url(r'^modelsUpload/', include('modelsUpload.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
