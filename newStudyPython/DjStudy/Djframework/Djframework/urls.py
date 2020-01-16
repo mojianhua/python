@@ -21,7 +21,7 @@ from django.conf.urls.static import static
 from django.conf import settings
 
 urlpatterns = [
-    url(r'^admin/', admin.site.urls),
+    # url(r'^admin/', admin.site.urls),
     # FBV方式，以function为单位
     url(r'^users/$', app01views.users),
     url(r'^usersFbv/$', app01views.usersFbv),
@@ -50,6 +50,8 @@ urlpatterns = [
     url(r'^WxPay/', include('WxPay.urls')),
     # model文件上传路由
     url(r'^modelsUpload/', include('modelsUpload.urls')),
+    # 支付paypay
+    url(r'^Paypal/', include('PayPalStudy.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 '''

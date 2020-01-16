@@ -44,7 +44,9 @@ INSTALLED_APPS = [
     'djcelery',
     'AliOss.apps.AliossConfig',
     'AliPayStudy.apps.AlipaystudyConfig',
-    'modelsUpload.apps.ModelsuploadConfig'
+    'PayPalStudy.apps.PaypalstudyConfig',
+    'modelsUpload.apps.ModelsuploadConfig',
+    'paypal.standard.ipn',
 ]
 
 # 中间件
@@ -98,7 +100,7 @@ DATABASES = {
     # },
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'HOST':'192.168.118.171',
+        'HOST':'192.168.118.169',
         'PORT':3603,
         'NAME':'DjangoFramework',
         'USER':'dev',
@@ -185,3 +187,8 @@ CELERY_RESULT_BACKEND = 'amqp://jim:jim@39.108.147.32:5672/test1'
 # 若未指定上传文件目录，我们也可以指定MEDIA_ROOT,就不需要指定upload_to,会自动将文件上传到MEDIA_ROOT目录
 MEDIA_ROOT = os.path.join(BASE_DIR,'media')
 MEDIA_URL = '/media/'
+
+# 此付款机制作为测试用
+PAYPAL_TEST = True
+# 设置收款的 PayPal 电子邮件账户
+PAYPAL_REVEIVER_EMAIL = '1657210793-facilitator@qq.com'
