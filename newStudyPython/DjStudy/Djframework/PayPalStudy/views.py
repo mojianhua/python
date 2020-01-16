@@ -41,11 +41,13 @@ class PayPalTest(APIView):
         # form = PayPalPaymentsForm(initial=paypal_dict)
         # print(form)
 
+        # 支付配置
         paypalrestsdk.configure({
             "mode": "sandbox",  # sandbox or live
             "client_id": "ATEQmbELmKGz1SSEqdsLiDKT7hJFUEMa6bVDkeCeDTA-Clk1zkXAyRyAdg79QmiYzprlEx9l-H1AZDT5",
             "client_secret": "EJ41EU53uhly-niPE7Cb0b7WhXIk2wfzgs5A6jr0cGBtUOwf5xTmm7pj1GqmeVdaztW_yO_icjFi_Kiz"})
 
+        # 创建付款
         payment = paypalrestsdk.Payment({
             "intent": "sale",
             "payer": {
@@ -71,6 +73,7 @@ class PayPalTest(APIView):
         else:
             print(payment.error)
 
+        # 授权付款
         for link in payment.links:
             if link.rel == "approval_url":
                 # Convert to str to avoid Google App Engine Unicode issue
@@ -78,6 +81,7 @@ class PayPalTest(APIView):
                 approval_url = str(link.href)
                 print("Redirect for approval: %s" % (approval_url))
 
+        # 执行付款
         payment = paypalrestsdk.Payment.find("PAYID-LYQDJVY7S787315ML248814G")
 
         if payment.execute({"payer_id": "CNJZ7XSZ642R2"}):
