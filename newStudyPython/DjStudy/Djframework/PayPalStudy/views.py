@@ -23,24 +23,6 @@ class PayPalTest(APIView):
             https://www.kutu66.com//GitHub/article_102910
         '''
 
-        paypal_dict = {
-            "business": settings.PAYPAL_REVEIVER_EMAIL,
-            "amount": "1000.00",
-            "item_name": '测试产品2',
-            "invoice": '0000002',
-            "notify_url": 'www.baidu.com/paypalview/',
-            # "notify_url": www.baidu.com/paypalview/,
-            "return":  'www.baidu.com/ret_paypal/',
-            # "notify_url": www.baidu.com/ret_paypal/,
-            "cancel_return": 'www.baidu.com/can_paypal/',
-            # "notify_url": www.baidu.com/can_paypal/,
-            "custom": "premium_plan",  # Custom command to correlate to some function later (optional)
-        }
-
-        # Create the instance.
-        # form = PayPalPaymentsForm(initial=paypal_dict)
-        # print(form)
-
         # 支付配置
         paypalrestsdk.configure({
             "mode": "sandbox",  # sandbox or live
@@ -58,13 +40,13 @@ class PayPalTest(APIView):
             "transactions": [{
                 "item_list": {
                     "items": [{
-                        "name": "item",
-                        "sku": "item",
-                        "price": "15.00",
+                        "name": "test1",
+                        "sku": "test1",
+                        "price": "99.99",
                         "currency": "USD",
                         "quantity": 1}]},
                 "amount": {
-                    "total": "15.00",
+                    "total": "99.99",
                     "currency": "USD"},
                 "description": "This is the payment transaction description."}]})
 
@@ -82,12 +64,16 @@ class PayPalTest(APIView):
                 print("Redirect for approval: %s" % (approval_url))
 
         # 执行付款
-        payment = paypalrestsdk.Payment.find("PAYID-LYQDJVY7S787315ML248814G")
+        payment = paypalrestsdk.Payment.find("PAYID-LYR3MOY0CW8768545121633R")
 
         if payment.execute({"payer_id": "CNJZ7XSZ642R2"}):
             print("Payment execute successfully")
         else:
             print(payment.error)
+
+        #取付款支付信息
+        payment = paypalrestsdk.Payment.find("PAYID-LYR3MOY0CW8768545121633R")
+        print(payment)
 
         return JsonResponse({"res": 3, "pay_url": 123})
 
