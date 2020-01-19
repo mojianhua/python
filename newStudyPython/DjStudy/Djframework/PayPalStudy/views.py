@@ -3,15 +3,19 @@ from django.http import JsonResponse
 from rest_framework.views import APIView
 from django.conf import settings
 import os
-from paypal.standard.forms import PayPalPaymentsForm
-from django.urls import reverse
+import sys
 import paypalrestsdk
-import logging
+
+from paypalcheckoutsdk.orders import OrdersCreateRequest
+from paypalhttp import HttpError
+from paypalcheckoutsdk.core import PayPalHttpClient, SandboxEnvironment
+from paypalcheckoutsdk.orders import OrdersCaptureRequest
+
 
 '''
-    paypay支付接口
+    paypay支付接口(V1)
 '''
-class PayPalTest(APIView):
+class PayPalTest1(APIView):
     authentication_classes = []
     permission_classes = []
     throttle_classes = []
@@ -78,27 +82,160 @@ class PayPalTest(APIView):
         return JsonResponse({"res": 3, "pay_url": 123})
 
 '''
-    支付宝查看订单接口接口
+    paypay支付接口(V2)
 '''
-class AliPayCheckTest(APIView):
+class PayPalTest2(APIView):
     authentication_classes = []
     permission_classes = []
     throttle_classes = []
-
     def post(self, request, *args, **kwargs):
-        # 初始化
-        alipay = AliPay(
-            appid="2016082000301429",  # 应用id，由于我们是沙箱环境，所以直接拿沙箱应用下的APPID，实际开发环境根据自己实际应用ID填写
-            app_notify_url=None,  # 支付宝默认回调函数，由于我们是本地项目，没有公网ip所以就算填写了，支付宝也访问不过来。
-            app_private_key_path=os.path.join(settings.BASE_DIR, 'AliPayStudy/app_private_key.pem'),
-            # alipay public key, do not use your own public key!
-            alipay_public_key_path=os.path.join(settings.BASE_DIR, 'AliPayStudy/alipay_public_key.pem'),
-            sign_type="RSA2",  # RSA or RSA2
-            debug=True,  # 沙箱环境,所以需要设置为True
+        '''
+            1、安装步骤
+            https://github.com/paypal/Checkout-Python-SDK
+            2、安装扩展
+            pip install paypal-checkout-serversdk
+        '''
+
+        # 支付配置,或客户端ID和密钥
+        client_id = "ATEQmbELmKGz1SSEqdsLiDKT7hJFUEMa6bVDkeCeDTA-Clk1zkXAyRyAdg79QmiYzprlEx9l-H1AZDT5"
+        client_secret = "EJ41EU53uhly-niPE7Cb0b7WhXIk2wfzgs5A6jr0cGBtUOwf5xTmm7pj1GqmeVdaztW_yO_icjFi_Kiz"
+        # Creating an environment
+        environment = SandboxEnvironment(client_id=client_id, client_secret=client_secret)
+        client = PayPalHttpClient(environment)
+
+        # 创建订单
+        request = OrdersCreateRequest()
+        request.prefer('return=representation')
+        request.request_body(
+            {
+                "intent": "CAPTURE",
+                "application_context": {
+                    "return_url": "https://www.example.com/success",
+                    "cancel_url": "https://www.example.com/cancel",
+                    "brand_name": "EXAMPLE INC",
+                    "landing_page": "BILLING",
+                    "shipping_preference": "SET_PROVIDED_ADDRESS",
+                    "user_action": "CONTINUE"
+                },
+                "purchase_units": [
+                    {
+                        "reference_id": "PUHF",
+                        "description": "Sporting Goods",
+
+                        "custom_id": "CUST-HighFashions",
+                        "soft_descriptor": "HighFashions",
+                        "amount": {
+                            "currency_code": "USD",
+                            "value": "220.00",
+                            "breakdown": {
+                                "item_total": {
+                                    "currency_code": "USD",
+                                    "value": "180.00"
+                                },
+                                "shipping": {
+                                    "currency_code": "USD",
+                                    "value": "20.00"
+                                },
+                                "handling": {
+                                    "currency_code": "USD",
+                                    "value": "10.00"
+                                },
+                                "tax_total": {
+                                    "currency_code": "USD",
+                                    "value": "20.00"
+                                },
+                                "shipping_discount": {
+                                    "currency_code": "USD",
+                                    "value": "10"
+                                }
+                            }
+                        },
+                        "items": [
+                            {
+                                "name": "T-Shirt",
+                                "description": "Green XL",
+                                "sku": "sku01",
+                                "unit_amount": {
+                                    "currency_code": "USD",
+                                    "value": "90.00"
+                                },
+                                "tax": {
+                                    "currency_code": "USD",
+                                    "value": "10.00"
+                                },
+                                "quantity": "1",
+                                "category": "PHYSICAL_GOODS"
+                            },
+                            {
+                                "name": "Shoes",
+                                "description": "Running, Size 10.5",
+                                "sku": "sku02",
+                                "unit_amount": {
+                                    "currency_code": "USD",
+                                    "value": "45.00"
+                                },
+                                "tax": {
+                                    "currency_code": "USD",
+                                    "value": "5.00"
+                                },
+                                "quantity": "2",
+                                "category": "PHYSICAL_GOODS"
+                            }
+                        ],
+                        "shipping": {
+                            "method": "United States Postal Service",
+                            "name": {
+                                "full_name": "John Doe"
+                            },
+                            "address": {
+                                "address_line_1": "123 Townsend St",
+                                "address_line_2": "Floor 6",
+                                "admin_area_2": "San Francisco",
+                                "admin_area_1": "CA",
+                                "postal_code": "94107",
+                                "country_code": "US"
+                            }
+                        }
+                    }
+                ]
+            }
         )
-        # 调用支付宝查询接口
-        # 订单支付查询接口                 商户订单号           支付宝交易号
-        # 参数必传其一，由于是测试环境，我们就使用订单编号进行查询
-        # api_alipay_trade_query(self, out_trade_no=None, trade_no=None)
-        data = alipay.api_alipay_trade_query(out_trade_no="000000004")
-        return JsonResponse({"res": 3, "data": data})
+
+        # try:
+        #     # Call API with your client and get a response for your call
+        #     response = client.execute(request)
+        #     print('Order With Complete Payload:')
+        #     print('Status Code:', response.status_code)
+        #     print('Status:', response.result.status)
+        #     print('Order ID:', response.result.id)
+        #     print('Intent:', response.result.intent)
+        #     print('Links:')
+        #     for link in response.result.links:
+        #         print('\t{}: {}\tCall Type: {}'.format(link.rel, link.href, link.method))
+        #         print('Total Amount: {} {}'.format(response.result.purchase_units[0].amount.currency_code,response.result.purchase_units[0].amount.value))
+        #         order = response.result
+        #         print(order)
+        # except IOError as ioe:
+        #     print(ioe)
+        #     if isinstance(ioe, HttpError):
+        #         # Something went wrong server-side
+        #         print(ioe.status_code)
+        #
+        #
+        # # 执行支付，翻来例子（https://www.example.com/success?token=0GY18103X3714024Y&PayerID=CNJZ7XSZ642R2），传token作为订单id,执行支付
+        # request = OrdersCaptureRequest("0GY18103X3714024Y")
+        # try:
+        #     response = client.execute(request)
+        #     order = response.result.id
+        #     print(order)
+        # except IOError as ioe:
+        #     if isinstance(ioe, HttpError):
+        #         # Something went wrong server-side
+        #         print(ioe.status_code)
+        #         print(ioe.headers)
+        #         print(ioe)
+        #     else:
+        #         # Something went wrong client side
+        #         print(ioe)
+
+        return JsonResponse({"res": 3, "pay_url": 123})
