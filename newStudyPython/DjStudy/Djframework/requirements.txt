@@ -3,7 +3,7 @@ aliyun-python-sdk-core-v3==2.13.11
 aliyun-python-sdk-kms==2.8.0
 amqp==1.4.9
 anyjson==0.3.3
-Babel==2.7.0
+Babel==2.9.1
 billiard==3.3.0.23
 bunch==1.0.1
 celery==3.1.26.post2
