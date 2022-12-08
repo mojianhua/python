@@ -1,5 +1,5 @@
 arrow==0.15.5
-certifi==2019.11.28
+certifi==2022.12.7
 kazoo==2.6.1
 python-dateutil==2.8.1
 redis==3.3.11
